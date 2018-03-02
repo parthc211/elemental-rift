@@ -1,0 +1,283 @@
+fileFormatVersion: 2
+guid: 93d3745f756a587458076d24588d50f2
+timeCreated: 1519843824
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Arm_Left
+    100002: Arm_Right
+    100004: Center_Knuckle_Left
+    100006: Center_Knuckle_Right
+    100008: CTRL_Global_Left
+    100010: CTRL_Global_Right
+    100012: CTRL_Index_Finger_1_Left
+    100014: CTRL_Index_Finger_1_Right
+    100016: CTRL_Index_Finger_2_Left
+    100018: CTRL_Index_Finger_2_Right
+    100020: CTRL_Index_Finger_3_Left
+    100022: CTRL_Index_Finger_3_Right
+    100024: CTRL_Little_Finger_1_Left
+    100026: CTRL_Little_Finger_1_Right
+    100028: CTRL_Little_Finger_2_Left
+    100030: CTRL_Little_Finger_2_Right
+    100032: CTRL_Little_Finger_3_Left
+    100034: CTRL_Little_Finger_3_Right
+    100036: CTRL_Middle_Finger_1_Left
+    100038: CTRL_Middle_Finger_1_Right
+    100040: CTRL_Middle_Finger_2_Left
+    100042: CTRL_Middle_Finger_2_Right
+    100044: CTRL_Middle_Finger_3_Left
+    100046: CTRL_Middle_Finger_3_Right
+    100048: CTRL_Ring_Finger_1_Left
+    100050: CTRL_Ring_Finger_1_Right
+    100052: CTRL_Ring_Finger_2_Left
+    100054: CTRL_Ring_Finger_2_Right
+    100056: CTRL_Ring_Finger_3_Left
+    100058: CTRL_Ring_Finger_3_Right
+    100060: CTRL_Thumb_1_Left
+    100062: CTRL_Thumb_1_Right
+    100064: CTRL_Thumb_2_Left
+    100066: CTRL_Thumb_2_Right
+    100068: CTRL_Wrist_Left
+    100070: CTRL_Wrist_Right
+    100072: Hand_Left
+    100074: Hand_Right
+    100076: //RootNode
+    100078: Index_Finger_1_Left
+    100080: Index_Finger_1_Right
+    100082: Index_Finger_2_Left
+    100084: Index_Finger_2_Right
+    100086: Index_Finger_3_Left
+    100088: Index_Finger_3_Right
+    100090: Index_Finger_4_Left
+    100092: Index_Finger_4_Right
+    100094: Left
+    100096: Little_Finger_1_Left
+    100098: Little_Finger_1_Right
+    100100: Little_Finger_2_Left
+    100102: Little_Finger_2_Right
+    100104: Little_Finger_3_Left
+    100106: Little_Finger_3_Right
+    100108: Little_Finger_4_Left
+    100110: Little_Finger_4_Right
+    100112: Middle_Finger_1_Left
+    100114: Middle_Finger_1_Right
+    100116: Middle_Finger_2_Left
+    100118: Middle_Finger_2_Right
+    100120: Middle_Finger_3_Left
+    100122: Middle_Finger_3_Right
+    100124: Middle_Finger_4_Left
+    100126: Middle_Finger_4_Right
+    100128: Palm_Left
+    100130: Palm_Right
+    100132: polySurface1
+    100134: Right
+    100136: Ring_Finger_1_Left
+    100138: Ring_Finger_1_Right
+    100140: Ring_Finger_2_Left
+    100142: Ring_Finger_2_Right
+    100144: Ring_Finger_3_Left
+    100146: Ring_Finger_3_Right
+    100148: Ring_Finger_4_Left
+    100150: Ring_Finger_4_Right
+    100152: Thumb_1_Left
+    100154: Thumb_1_Right
+    100156: Thumb_2_Left
+    100158: Thumb_2_Right
+    100160: Thumb_3_Left
+    100162: Thumb_3_Right
+    100164: Thumb_4_Left
+    100166: Thumb_4_Right
+    100168: Wrist_Left
+    100170: Wrist_Right
+    400000: Arm_Left
+    400002: Arm_Right
+    400004: Center_Knuckle_Left
+    400006: Center_Knuckle_Right
+    400008: CTRL_Global_Left
+    400010: CTRL_Global_Right
+    400012: CTRL_Index_Finger_1_Left
+    400014: CTRL_Index_Finger_1_Right
+    400016: CTRL_Index_Finger_2_Left
+    400018: CTRL_Index_Finger_2_Right
+    400020: CTRL_Index_Finger_3_Left
+    400022: CTRL_Index_Finger_3_Right
+    400024: CTRL_Little_Finger_1_Left
+    400026: CTRL_Little_Finger_1_Right
+    400028: CTRL_Little_Finger_2_Left
+    400030: CTRL_Little_Finger_2_Right
+    400032: CTRL_Little_Finger_3_Left
+    400034: CTRL_Little_Finger_3_Right
+    400036: CTRL_Middle_Finger_1_Left
+    400038: CTRL_Middle_Finger_1_Right
+    400040: CTRL_Middle_Finger_2_Left
+    400042: CTRL_Middle_Finger_2_Right
+    400044: CTRL_Middle_Finger_3_Left
+    400046: CTRL_Middle_Finger_3_Right
+    400048: CTRL_Ring_Finger_1_Left
+    400050: CTRL_Ring_Finger_1_Right
+    400052: CTRL_Ring_Finger_2_Left
+    400054: CTRL_Ring_Finger_2_Right
+    400056: CTRL_Ring_Finger_3_Left
+    400058: CTRL_Ring_Finger_3_Right
+    400060: CTRL_Thumb_1_Left
+    400062: CTRL_Thumb_1_Right
+    400064: CTRL_Thumb_2_Left
+    400066: CTRL_Thumb_2_Right
+    400068: CTRL_Wrist_Left
+    400070: CTRL_Wrist_Right
+    400072: Hand_Left
+    400074: Hand_Right
+    400076: //RootNode
+    400078: Index_Finger_1_Left
+    400080: Index_Finger_1_Right
+    400082: Index_Finger_2_Left
+    400084: Index_Finger_2_Right
+    400086: Index_Finger_3_Left
+    400088: Index_Finger_3_Right
+    400090: Index_Finger_4_Left
+    400092: Index_Finger_4_Right
+    400094: Left
+    400096: Little_Finger_1_Left
+    400098: Little_Finger_1_Right
+    400100: Little_Finger_2_Left
+    400102: Little_Finger_2_Right
+    400104: Little_Finger_3_Left
+    400106: Little_Finger_3_Right
+    400108: Little_Finger_4_Left
+    400110: Little_Finger_4_Right
+    400112: Middle_Finger_1_Left
+    400114: Middle_Finger_1_Right
+    400116: Middle_Finger_2_Left
+    400118: Middle_Finger_2_Right
+    400120: Middle_Finger_3_Left
+    400122: Middle_Finger_3_Right
+    400124: Middle_Finger_4_Left
+    400126: Middle_Finger_4_Right
+    400128: Palm_Left
+    400130: Palm_Right
+    400132: polySurface1
+    400134: Right
+    400136: Ring_Finger_1_Left
+    400138: Ring_Finger_1_Right
+    400140: Ring_Finger_2_Left
+    400142: Ring_Finger_2_Right
+    400144: Ring_Finger_3_Left
+    400146: Ring_Finger_3_Right
+    400148: Ring_Finger_4_Left
+    400150: Ring_Finger_4_Right
+    400152: Thumb_1_Left
+    400154: Thumb_1_Right
+    400156: Thumb_2_Left
+    400158: Thumb_2_Right
+    400160: Thumb_3_Left
+    400162: Thumb_3_Right
+    400164: Thumb_4_Left
+    400166: Thumb_4_Right
+    400168: Wrist_Left
+    400170: Wrist_Right
+    4300000: Hand_Right
+    4300002: polySurface1
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Hand_Right
+    13700002: polySurface1
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Nail_Mat
+    second: {fileID: 2100000, guid: 16158fd3163a0144686d1960b20d466d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Skin_Mat
+    second: {fileID: 2100000, guid: e8807298f5a982d41b00d7c1f22feee1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Skin_Nails_Right_Mat
+    second: {fileID: 2100000, guid: 213107da91b9d874e84c2f548be99d60, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Skin_Right_Mat
+    second: {fileID: 2100000, guid: c1b0fd5f7e5428e40a90d7d85a0f8495, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

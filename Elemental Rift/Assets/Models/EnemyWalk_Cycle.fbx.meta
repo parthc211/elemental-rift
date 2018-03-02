@@ -1,0 +1,207 @@
+fileFormatVersion: 2
+guid: 56bdf2fa653ce334e8d49ca67eec84a4
+timeCreated: 1517970926
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Ankle_Left
+    100002: Ankle_Right
+    100004: Body
+    100006: Chin
+    100008: Collar_Bone_Left
+    100010: Collar_Bone_Right
+    100012: CTRL_Global
+    100014: Elbow_Left
+    100016: Elbow_Right
+    100018: Foot_Left
+    100020: Foot_Right
+    100022: Head
+    100024: Index_1_Left
+    100026: Index_1_Right
+    100028: Index_2_Left
+    100030: Index_2_Right
+    100032: Jaw
+    100034: Jaw_Base
+    100036: Knee_Left
+    100038: Knee_Right
+    100040: Middle_1_Left
+    100042: Middle_1_Right
+    100044: Middle_2_Left
+    100046: Middle_2_Right
+    100048: Neck
+    100050: Pelvis
+    100052: Shoulder_Left
+    100054: Shoulder_Right
+    100056: Spine_1
+    100058: Spine_2
+    100060: Spine_3
+    100062: Spine_4
+    100064: Spine_Main
+    100066: Thigh_Left
+    100068: Thigh_Right
+    100070: Thumb_1_Left
+    100072: Thumb_1_Right
+    100074: Thumb_2_Left
+    100076: Thumb_2_Right
+    100078: //RootNode
+    100080: Wrist_Left
+    100082: Wrist_Right
+    400000: Ankle_Left
+    400002: Ankle_Right
+    400004: Body
+    400006: Chin
+    400008: Collar_Bone_Left
+    400010: Collar_Bone_Right
+    400012: CTRL_Global
+    400014: Elbow_Left
+    400016: Elbow_Right
+    400018: Foot_Left
+    400020: Foot_Right
+    400022: Head
+    400024: Index_1_Left
+    400026: Index_1_Right
+    400028: Index_2_Left
+    400030: Index_2_Right
+    400032: Jaw
+    400034: Jaw_Base
+    400036: Knee_Left
+    400038: Knee_Right
+    400040: Middle_1_Left
+    400042: Middle_1_Right
+    400044: Middle_2_Left
+    400046: Middle_2_Right
+    400048: Neck
+    400050: Pelvis
+    400052: Shoulder_Left
+    400054: Shoulder_Right
+    400056: Spine_1
+    400058: Spine_2
+    400060: Spine_3
+    400062: Spine_4
+    400064: Spine_Main
+    400066: Thigh_Left
+    400068: Thigh_Right
+    400070: Thumb_1_Left
+    400072: Thumb_1_Right
+    400074: Thumb_2_Left
+    400076: Thumb_2_Right
+    400078: //RootNode
+    400080: Wrist_Left
+    400082: Wrist_Right
+    2100000: Minion_Base_Mat
+    2100002: Minion_Highlight_Mat
+    2100004: Minion_Eyes_Mat
+    2100006: Minion_Badge_Mat
+    4300000: Body
+    7400000: EnemyWalk
+    9500000: //RootNode
+    13700000: Body
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: EnemyWalk
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

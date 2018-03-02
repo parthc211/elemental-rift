@@ -1,0 +1,172 @@
+fileFormatVersion: 2
+guid: 52788d7c80307554abb989f5292b86d9
+timeCreated: 1519843822
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Arm_Right
+    100002: Center_Knuckle_Right
+    100004: Hand_Left
+    100006: Hand_Right
+    100008: //RootNode
+    100010: Index_Finger_1_Right
+    100012: Index_Finger_2_Right
+    100014: Index_Finger_3_Right
+    100016: Index_Finger_4_Right
+    100018: Left
+    100020: Little_Finger_1_Right
+    100022: Little_Finger_2_Right
+    100024: Little_Finger_3_Right
+    100026: Little_Finger_4_Right
+    100028: Middle_Finger_1_Right
+    100030: Middle_Finger_2_Right
+    100032: Middle_Finger_3_Right
+    100034: Middle_Finger_4_Right
+    100036: Palm_Right
+    100038: polySurface1
+    100040: Right
+    100042: Ring_Finger_1_Right
+    100044: Ring_Finger_2_Right
+    100046: Ring_Finger_3_Right
+    100048: Ring_Finger_4_Right
+    100050: Thumb_1_Right
+    100052: Thumb_2_Right
+    100054: Thumb_3_Right
+    100056: Thumb_4_Right
+    100058: Wrist_Right
+    400000: Arm_Right
+    400002: Center_Knuckle_Right
+    400004: Hand_Left
+    400006: Hand_Right
+    400008: //RootNode
+    400010: Index_Finger_1_Right
+    400012: Index_Finger_2_Right
+    400014: Index_Finger_3_Right
+    400016: Index_Finger_4_Right
+    400018: Left
+    400020: Little_Finger_1_Right
+    400022: Little_Finger_2_Right
+    400024: Little_Finger_3_Right
+    400026: Little_Finger_4_Right
+    400028: Middle_Finger_1_Right
+    400030: Middle_Finger_2_Right
+    400032: Middle_Finger_3_Right
+    400034: Middle_Finger_4_Right
+    400036: Palm_Right
+    400038: polySurface1
+    400040: Right
+    400042: Ring_Finger_1_Right
+    400044: Ring_Finger_2_Right
+    400046: Ring_Finger_3_Right
+    400048: Ring_Finger_4_Right
+    400050: Thumb_1_Right
+    400052: Thumb_2_Right
+    400054: Thumb_3_Right
+    400056: Thumb_4_Right
+    400058: Wrist_Right
+    2300000: polySurface1
+    3300000: polySurface1
+    4300000: Hand_Right
+    4300002: polySurface1
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Hand_Right
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Nail_Mat
+    second: {fileID: 2100000, guid: 18ec2d0a80d514840aafe948075b5d00, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Skin_Mat
+    second: {fileID: 2100000, guid: 41d982390241b2e49be18cc3521b0c63, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Skin_Nails_Right_Mat
+    second: {fileID: 2100000, guid: 31ec8897f6967aa4aa36ed30e194ecfd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Skin_Right_Mat
+    second: {fileID: 2100000, guid: 48ad9fffc429c2242b366d9de797e096, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

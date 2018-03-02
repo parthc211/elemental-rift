@@ -1,0 +1,223 @@
+fileFormatVersion: 2
+guid: a2d15202cf289f345877ab796ef0134c
+timeCreated: 1519850012
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Leaf_Bottom
+    100002: Leaf_Bottom_1
+    100004: Leaf_Bottom_2
+    100006: Leaf_Bottom_3
+    100008: Leaf_Bottom_4
+    100010: Leaf_Bottom_5
+    100012: Leaf_Bottom_6
+    100014: Leaf_Bottom_7
+    100016: Leaf_Middle
+    100018: Leaf_Middle_1
+    100020: Leaf_Middle_2
+    100022: Leaf_Middle_3
+    100024: Leaf_Middle_4
+    100026: Leaf_Middle_5
+    100028: Leaf_Middle_6
+    100030: Leaf_Top
+    100032: Leaf_Top_1
+    100034: Leaf_Top_2
+    100036: Leaf_Top_3
+    100038: Leaf_Top_4
+    100040: Leaf_Top_5
+    100042: Leaf_Top_6
+    100044: Leaves
+    100046: Palm_Base
+    100048: Palm_Main
+    100050: Palm_Top
+    100052: //RootNode
+    400000: Leaf_Bottom
+    400002: Leaf_Bottom_1
+    400004: Leaf_Bottom_2
+    400006: Leaf_Bottom_3
+    400008: Leaf_Bottom_4
+    400010: Leaf_Bottom_5
+    400012: Leaf_Bottom_6
+    400014: Leaf_Bottom_7
+    400016: Leaf_Middle
+    400018: Leaf_Middle_1
+    400020: Leaf_Middle_2
+    400022: Leaf_Middle_3
+    400024: Leaf_Middle_4
+    400026: Leaf_Middle_5
+    400028: Leaf_Middle_6
+    400030: Leaf_Top
+    400032: Leaf_Top_1
+    400034: Leaf_Top_2
+    400036: Leaf_Top_3
+    400038: Leaf_Top_4
+    400040: Leaf_Top_5
+    400042: Leaf_Top_6
+    400044: Leaves
+    400046: Palm_Base
+    400048: Palm_Main
+    400050: Palm_Top
+    400052: //RootNode
+    2300000: Leaf_Bottom_2
+    2300002: Leaf_Bottom_3
+    2300004: Leaf_Bottom_4
+    2300006: Leaf_Bottom_5
+    2300008: Leaf_Bottom_6
+    2300010: Leaf_Bottom_7
+    2300012: Leaf_Middle_1
+    2300014: Leaf_Middle_2
+    2300016: Leaf_Middle_3
+    2300018: Leaf_Middle_4
+    2300020: Leaf_Middle_5
+    2300022: Leaf_Middle_6
+    2300024: Leaf_Top_1
+    2300026: Leaf_Top_2
+    2300028: Leaf_Top_3
+    2300030: Leaf_Top_4
+    2300032: Leaf_Top_5
+    2300034: Leaf_Top_6
+    2300036: Palm_Base
+    2300038: Palm_Main
+    2300040: Palm_Top
+    3300000: Leaf_Bottom_2
+    3300002: Leaf_Bottom_3
+    3300004: Leaf_Bottom_4
+    3300006: Leaf_Bottom_5
+    3300008: Leaf_Bottom_6
+    3300010: Leaf_Bottom_7
+    3300012: Leaf_Middle_1
+    3300014: Leaf_Middle_2
+    3300016: Leaf_Middle_3
+    3300018: Leaf_Middle_4
+    3300020: Leaf_Middle_5
+    3300022: Leaf_Middle_6
+    3300024: Leaf_Top_1
+    3300026: Leaf_Top_2
+    3300028: Leaf_Top_3
+    3300030: Leaf_Top_4
+    3300032: Leaf_Top_5
+    3300034: Leaf_Top_6
+    3300036: Palm_Base
+    3300038: Palm_Main
+    3300040: Palm_Top
+    4300000: Palm_Main
+    4300002: Palm_Top
+    4300004: Leaf_Middle_1
+    4300006: Leaf_Middle_2
+    4300008: Leaf_Middle_3
+    4300010: Leaf_Middle_4
+    4300012: Leaf_Middle_5
+    4300014: Leaf_Middle_6
+    4300016: Leaf_Top_1
+    4300018: Leaf_Top_2
+    4300020: Leaf_Top_3
+    4300022: Leaf_Top_4
+    4300024: Leaf_Top_5
+    4300026: Leaf_Top_6
+    4300028: Leaf_Bottom_2
+    4300030: Leaf_Bottom_3
+    4300032: Leaf_Bottom_4
+    4300034: Leaf_Bottom_5
+    4300036: Leaf_Bottom_7
+    4300038: Leaf_Bottom_6
+    4300040: Palm_Base
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Leaf_Mat
+    second: {fileID: 2100000, guid: 5b58b1cd7b835ea48a7553800d587aa9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Palm_Base_Mat
+    second: {fileID: 2100000, guid: ef8f807825564c04293c391f357d0a06, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Palm_Main_Mat
+    second: {fileID: 2100000, guid: 38eb628792dc6f444a788764a2b9501b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Palm_Top_Mat
+    second: {fileID: 2100000, guid: a0d302ba6c5e28440b5f4930cdb1af98, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

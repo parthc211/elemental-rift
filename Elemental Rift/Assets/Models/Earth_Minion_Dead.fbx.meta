@@ -1,0 +1,173 @@
+fileFormatVersion: 2
+guid: 70737ff840f60e04cb81e4d33b2d9848
+timeCreated: 1519272784
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Arm_Left
+    100002: Arm_Right
+    100004: Badge
+    100006: //RootNode
+    100008: Foot_Left
+    100010: Foot_Right
+    100012: Groin
+    100014: Hand_Left
+    100016: Hand_Right
+    100018: Head
+    100020: Leg_Left
+    100022: Leg_Right
+    100024: Shoulder_Left
+    100026: Shoulder_Right
+    100028: Torso
+    400000: Arm_Left
+    400002: Arm_Right
+    400004: Badge
+    400006: //RootNode
+    400008: Foot_Left
+    400010: Foot_Right
+    400012: Groin
+    400014: Hand_Left
+    400016: Hand_Right
+    400018: Head
+    400020: Leg_Left
+    400022: Leg_Right
+    400024: Shoulder_Left
+    400026: Shoulder_Right
+    400028: Torso
+    2300000: Arm_Left
+    2300002: Arm_Right
+    2300004: Badge
+    2300006: Foot_Left
+    2300008: Foot_Right
+    2300010: Groin
+    2300012: Hand_Left
+    2300014: Hand_Right
+    2300016: Head
+    2300018: Leg_Left
+    2300020: Leg_Right
+    2300022: Shoulder_Left
+    2300024: Shoulder_Right
+    2300026: Torso
+    3300000: Arm_Left
+    3300002: Arm_Right
+    3300004: Badge
+    3300006: Foot_Left
+    3300008: Foot_Right
+    3300010: Groin
+    3300012: Hand_Left
+    3300014: Hand_Right
+    3300016: Head
+    3300018: Leg_Left
+    3300020: Leg_Right
+    3300022: Shoulder_Left
+    3300024: Shoulder_Right
+    3300026: Torso
+    4300000: Head
+    4300002: Groin
+    4300004: Leg_Left
+    4300006: Foot_Left
+    4300008: Torso
+    4300010: Badge
+    4300012: Hand_Left
+    4300014: Arm_Left
+    4300016: Shoulder_Left
+    4300018: Leg_Right
+    4300020: Foot_Right
+    4300022: Hand_Right
+    4300024: Arm_Right
+    4300026: Shoulder_Right
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Minion_Base_Mat
+    second: {fileID: 2100000, guid: c2480a70fdec3174da96a452137fc8ea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Minion_Eyes_Mat
+    second: {fileID: 2100000, guid: 327d9d58a6bc1594d863ba339db83320, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Minion_Highlight_Mat
+    second: {fileID: 2100000, guid: 7024ca07de06cbd46b0389ac849a2bfb, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,205 @@
+fileFormatVersion: 2
+guid: 732e6d7bb8df61047b47ddc666a625f6
+timeCreated: 1519144997
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Arm_Left
+    100002: Arm_Right
+    100004: Center_Knuckle_Left
+    100006: Center_Knuckle_Right
+    100008: Hand_Left
+    100010: Hand_Right
+    100012: Index_Finger_1_Left
+    100014: Index_Finger_1_Right
+    100016: Index_Finger_2_Left
+    100018: Index_Finger_2_Right
+    100020: Index_Finger_3_Left
+    100022: Index_Finger_3_Right
+    100024: Index_Finger_4_Left
+    100026: Index_Finger_4_Right
+    100028: Left
+    100030: Little_Finger_1_Left
+    100032: Little_Finger_1_Right
+    100034: Little_Finger_2_Left
+    100036: Little_Finger_2_Right
+    100038: Little_Finger_3_Left
+    100040: Little_Finger_3_Right
+    100042: Little_Finger_4_Left
+    100044: Little_Finger_4_Right
+    100046: Middle_Finger_1_Left
+    100048: Middle_Finger_1_Right
+    100050: Middle_Finger_2_Left
+    100052: Middle_Finger_2_Right
+    100054: Middle_Finger_3_Left
+    100056: Middle_Finger_3_Right
+    100058: Middle_Finger_4_Left
+    100060: Middle_Finger_4_Right
+    100062: Palm_Left
+    100064: Palm_Right
+    100066: polySurface1
+    100068: Right
+    100070: Ring_Finger_1_Left
+    100072: Ring_Finger_1_Right
+    100074: Ring_Finger_2_Left
+    100076: Ring_Finger_2_Right
+    100078: Ring_Finger_3_Left
+    100080: Ring_Finger_3_Right
+    100082: Ring_Finger_4_Left
+    100084: Ring_Finger_4_Right
+    100086: //RootNode
+    100088: Thumb_1_Left
+    100090: Thumb_1_Right
+    100092: Thumb_2_Left
+    100094: Thumb_2_Right
+    100096: Thumb_3_Left
+    100098: Thumb_3_Right
+    100100: Thumb_4_Left
+    100102: Thumb_4_Right
+    100104: Wrist_Left
+    100106: Wrist_Right
+    400000: Arm_Left
+    400002: Arm_Right
+    400004: Center_Knuckle_Left
+    400006: Center_Knuckle_Right
+    400008: Hand_Left
+    400010: Hand_Right
+    400012: Index_Finger_1_Left
+    400014: Index_Finger_1_Right
+    400016: Index_Finger_2_Left
+    400018: Index_Finger_2_Right
+    400020: Index_Finger_3_Left
+    400022: Index_Finger_3_Right
+    400024: Index_Finger_4_Left
+    400026: Index_Finger_4_Right
+    400028: Left
+    400030: Little_Finger_1_Left
+    400032: Little_Finger_1_Right
+    400034: Little_Finger_2_Left
+    400036: Little_Finger_2_Right
+    400038: Little_Finger_3_Left
+    400040: Little_Finger_3_Right
+    400042: Little_Finger_4_Left
+    400044: Little_Finger_4_Right
+    400046: Middle_Finger_1_Left
+    400048: Middle_Finger_1_Right
+    400050: Middle_Finger_2_Left
+    400052: Middle_Finger_2_Right
+    400054: Middle_Finger_3_Left
+    400056: Middle_Finger_3_Right
+    400058: Middle_Finger_4_Left
+    400060: Middle_Finger_4_Right
+    400062: Palm_Left
+    400064: Palm_Right
+    400066: polySurface1
+    400068: Right
+    400070: Ring_Finger_1_Left
+    400072: Ring_Finger_1_Right
+    400074: Ring_Finger_2_Left
+    400076: Ring_Finger_2_Right
+    400078: Ring_Finger_3_Left
+    400080: Ring_Finger_3_Right
+    400082: Ring_Finger_4_Left
+    400084: Ring_Finger_4_Right
+    400086: //RootNode
+    400088: Thumb_1_Left
+    400090: Thumb_1_Right
+    400092: Thumb_2_Left
+    400094: Thumb_2_Right
+    400096: Thumb_3_Left
+    400098: Thumb_3_Right
+    400100: Thumb_4_Left
+    400102: Thumb_4_Right
+    400104: Wrist_Left
+    400106: Wrist_Right
+    2100000: Skin_Right_Mat
+    2100002: Skin_Nails_Right_Mat
+    2100004: Skin_Mat
+    2100006: Nail_Mat
+    4300000: Hand_Right
+    4300002: polySurface1
+    7400000: Arms_2.5
+    9500000: //RootNode
+    13700000: Hand_Right
+    13700002: polySurface1
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
