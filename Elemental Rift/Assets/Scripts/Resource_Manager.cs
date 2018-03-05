@@ -123,7 +123,7 @@ public class Resource_Manager : MonoBehaviour {
         waterflag = true;
     }
 
-    void SetZeroFlag()
+    public void SetZeroFlag()
     {
         earthflag = false;
         fireflag = false;
