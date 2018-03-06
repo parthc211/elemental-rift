@@ -10,6 +10,7 @@ public class RockEnemyAI : MonoBehaviour
     public float movementSpeed = 2.0f;
     public float meleeRange = 1.0f;
     public float walkTimer = 2.0f;
+    public float health = 50f;
 
     public FieldOfView fov;
     public Transform target;
@@ -21,6 +22,7 @@ public class RockEnemyAI : MonoBehaviour
     public GameObject EnemyBulletPrefab;
 
     private GameObject Player;
+    private RockEnemyPatrol enemyPatrol;
     private float resetWalkTimer;
 
     private Animator enemyAnim;
@@ -30,6 +32,7 @@ public class RockEnemyAI : MonoBehaviour
         fov = GetComponent<FieldOfView>();
         enemyAnim = GetComponent<Animator>();
         Player = GameObject.FindGameObjectWithTag("Player");
+        enemyPatrol = GetComponent<RockEnemyPatrol>();
 
         resetWalkTimer = walkTimer;
     }
@@ -40,39 +43,46 @@ public class RockEnemyAI : MonoBehaviour
         //Find player, return if no player found
         if (fov.visibleTargets.Count == 0)
         {
-            enemyAnim.SetBool("isIdle", true);
-            return;
+            //enemyAnim.SetBool("isIdle", true);
+            //return;
+            enemyPatrol.Patrol();
+            
         }
-
-
-        target = fov.visibleTargets[0];
-
-        //Redundancy check for player
-        if (target == null)
-            return;
-
-        //Distance between Enemy and player
-        distanceBetweenPlayer = Vector3.Distance(target.position, transform.position);
-
-        //Face the player
-        LookAtPlayer();
-
-
-        if (distanceBetweenPlayer >= minDistance)
+        else
         {
-            MoveTowardsPlayer(distanceBetweenPlayer);
-        }
-        else if (distanceBetweenPlayer < minDistance)
-        {
-            //Debug.Log("Attack PLayer");
-            AttackPlayer();
+            target = fov.visibleTargets[0];
+
+            //Redundancy check for player
+            if (target == null)
+                return;
+
+            //Distance between Enemy and player
+            distanceBetweenPlayer = Vector3.Distance(target.position, transform.position);
+
+            //Face the player
+            LookAtPlayer();
+
+
+            if (distanceBetweenPlayer >= minDistance)
+            {
+                MoveTowardsPlayer(distanceBetweenPlayer);
+            }
+            else if (distanceBetweenPlayer < minDistance)
+            {
+                //Debug.Log("Attack PLayer");
+                AttackPlayer();
+            }
+
+            //Knockback the player if he is in melee range
+            if (distanceBetweenPlayer <= meleeRange)
+            {
+                knockBackPlayer(distanceBetweenPlayer);
+            }
         }
 
-        //Knockback the player if he is in melee range
-        if (distanceBetweenPlayer <= meleeRange)
-        {
-            knockBackPlayer(distanceBetweenPlayer);
-        }
+
+
+        
         
         
     }

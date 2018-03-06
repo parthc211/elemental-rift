@@ -9,6 +9,7 @@ public class EnemyKnockBack : MonoBehaviour
 
     private bool knock = false;
     private float knockTimer = 2f;
+    private Collider knockCollider;
 
     public Animator enemyAnim;
 
@@ -18,32 +19,27 @@ public class EnemyKnockBack : MonoBehaviour
         enemyAnim = GetComponent<Animator>();
         enemyHealth = gameObject.GetComponent<EnemyHealth>();
 	}
-	
 
-	void Update ()
+
+    void Update()
     {
-        //if(knock == true)
-        //{
-        //    knockTimer -= Time.deltaTime;
-        //    if(knockTimer<=0)
-        //    {
-        //        enemyAnim.SetBool("isKnock", false);
-        //        enemyAnim.SetBool("isAttacking", true);
-        //       // enemyAnim.SetBool("isIdle", true);
-        //        //enemyAnim.SetBool("isWalking", true);
-        //        knockTimer = 2f;
-        //        knock = false;
-        //    }
-           
-        //}
-		
-	}
+        if (knock == true && !knockCollider)
+        {
+
+            Debug.Log("reset");
+            enemyAnim.SetBool("isKnock", false);
+            enemyAnim.SetBool("isAttacking", true);
+            knock = false;
+
+        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "KnockSpell")
         {
-            //knock = true;
+            knock = true;
+            knockCollider = other;
             enemyAnim.SetBool("isAttacking", false);
             enemyAnim.SetBool("isKnock", true);
             //enemyAnim.SetBool("isIdle", false);            
@@ -52,4 +48,6 @@ public class EnemyKnockBack : MonoBehaviour
             enemyHealth.TakeDamage(30f);
         }
     }
+
+    
 }

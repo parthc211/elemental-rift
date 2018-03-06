@@ -307,6 +307,8 @@ GameObject:
   - component: {fileID: 114346788654703240}
   - component: {fileID: 114175088222192374}
   - component: {fileID: 114343979288699472}
+  - component: {fileID: 114923784946762310}
+  - component: {fileID: 114888670794541652}
   m_Layer: 10
   m_Name: EnemyIdle
   m_TagString: RockEnemy
@@ -1228,7 +1230,7 @@ Transform:
   - {fileID: 4650529753463726}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 83.206, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 196.661, z: 0}
 --- !u!4 &4678646777691250
 Transform:
   m_ObjectHideFlags: 1
@@ -1517,10 +1519,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 5
-  minDistance: 8
+  minDistance: 5
   movementSpeed: 2
-  meleeRange: 5
+  meleeRange: 1
   walkTimer: 2
+  health: 50
   fov: {fileID: 0}
   target: {fileID: 0}
   distanceBetweenPlayer: 0
@@ -1566,23 +1569,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 5
-  minDistance: 20
+  minDistance: 5
   movementSpeed: 2
-  meleeRange: 8
+  meleeRange: 1
   fov: {fileID: 0}
   target: {fileID: 0}
   distanceBetweenPlayer: 0
-  SpawnPoint: {fileID: 4365480918186154}
-  EnemyBulletPrefab: {fileID: 1389306547191884, guid: 7cd5abd769b0ac54fae51284c6cefa3e,
-    type: 2}
+  SpawnPoint: {fileID: 0}
+  EnemyBulletPrefab: {fileID: 0}
   Player: {fileID: 0}
   attackTime: 4
-  stomp: {fileID: 7400000, guid: 760eeef3f004b3340b1617f471472dda, type: 3}
-  stompColider: {fileID: 1901617335503962, guid: e1fd26d7b3b96f2439ad580eba0ded4c,
-    type: 2}
-  stompLoc: {fileID: 4650529753463726}
-  stompEffect: {fileID: 1643335233085270, guid: 89c0cc74946cf2b4c95d00b8216b0d18,
-    type: 2}
+  stomp: {fileID: 0}
+  stompColider: {fileID: 0}
+  stompLoc: {fileID: 0}
+  stompEffect: {fileID: 0}
 --- !u!114 &114343979288699472
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1594,7 +1594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daeed413c96a806498d5c60c1586e7c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropObj: {fileID: 1769616297339154, guid: 44662d264ef4d644dac7f4cfd1aa6045, type: 2}
+  dropObj: {fileID: 0}
 --- !u!114 &114346673843600034
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1606,14 +1606,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df05475b86d57a643b44841eed84b2ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyFreezeMaterial:
-  - {fileID: 2100000, guid: a014e4f4ca2df1c4c945b5939595984f, type: 2}
-  - {fileID: 2100000, guid: a014e4f4ca2df1c4c945b5939595984f, type: 2}
-  - {fileID: 2100000, guid: a014e4f4ca2df1c4c945b5939595984f, type: 2}
-  - {fileID: 2100000, guid: a014e4f4ca2df1c4c945b5939595984f, type: 2}
-  freezeSpawn: {fileID: 4464752365178882}
-  FreezeSpellPrefab: {fileID: 1471880171831886, guid: f6cff39668f388945a578f833878802e,
-    type: 2}
+  EnemyFreezeMaterial: []
+  freezeSpawn: {fileID: 0}
+  FreezeSpellPrefab: {fileID: 0}
 --- !u!114 &114346788654703240
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1625,7 +1620,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daeed413c96a806498d5c60c1586e7c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropObj: {fileID: 1069121688121184, guid: 53ba511a5b9b58a4187ec9129d68e38c, type: 2}
+  dropObj: {fileID: 0}
 --- !u!114 &114454356997361152
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1763,7 +1758,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   healthBar: {fileID: 114618315704937718}
-  deadEnemy: {fileID: 1308138339374974, guid: 4a5a2dceadd2bee4bbd23b9b54c721f9, type: 2}
+  deadEnemy: {fileID: 0}
 --- !u!114 &114785020878268780
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1785,6 +1780,33 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &114888670794541652
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1471115147508680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daeed413c96a806498d5c60c1586e7c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropObj: {fileID: 1769616297339154, guid: c212b1e79d568cb4a96835327a7f662b, type: 2}
+--- !u!114 &114923784946762310
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1471115147508680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 957adf47a99ad534c92ae26cf7162364, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathGO: {fileID: 0}
+  pathNodeIndex: 0
+  rotationSpeed: 5
+  movementSpeed: 5
 --- !u!137 &137359856886224498
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

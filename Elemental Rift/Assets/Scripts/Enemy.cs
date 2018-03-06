@@ -6,25 +6,25 @@ public class Enemy : MonoBehaviour
 {
 
     public float health = 50f;
-    private EnemyPatrol patrol;
+    //private EnemyPatrol patrol;
     public float timer = 3f;
     public bool smallEnemy = true;
     private void Awake()
     {
-        patrol = GetComponent<EnemyPatrol>();
+        //patrol = GetComponent<EnemyPatrol>();
     }
     private void Update()
     {
-        if(patrol.enabled==false)
-        {
-            timer -= Time.deltaTime;
-            if (timer <= 0)
-            {
-                patrol.enabled = true;
-                timer = 3f;
-            }
+        //if(patrol.enabled==false)
+        //{
+        //    timer -= Time.deltaTime;
+        //    if (timer <= 0)
+        //    {
+        //        patrol.enabled = true;
+        //        timer = 3f;
+        //    }
                 
-        }
+        //}
     }
 
     private void OnTriggerEnter(Collider other)
@@ -40,7 +40,7 @@ public class Enemy : MonoBehaviour
     public void TakeDamage()
     {
        
-        patrol.enabled = false;
+        //patrol.enabled = false;
 
     }
    

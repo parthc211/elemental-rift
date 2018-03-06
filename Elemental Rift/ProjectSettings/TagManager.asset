@@ -28,6 +28,7 @@ TagManager:
   - KeyRed
   - KeyOrange
   - KeyPink
+  - ShockwaveSpell
   layers:
   - Default
   - TransparentFX
