@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 13168cdd4649571419c207134d04b45a
-timeCreated: 1519152192
+guid: 77f2bdc370113a049aefb4ba1973346d
+timeCreated: 1520300592
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -39,33 +39,33 @@ ModelImporter:
     100062: CTRL_Wrist_Right
     100064: Elbow_Left
     100066: Elbow_Right
-    100068: Foot_Left
-    100070: Foot_Right
-    100072: Head
-    100074: Index_1_Left
-    100076: Index_1_Right
-    100078: Index_2_Left
-    100080: Index_2_Right
-    100082: Jaw
-    100084: Jaw_Base
-    100086: Knee_Left
-    100088: Knee_Right
-    100090: Leg_Left
-    100092: Leg_Right
-    100094: Middle_1_Left
-    100096: Middle_1_Right
-    100098: Middle_2_Left
-    100100: Middle_2_Right
-    100102: Neck
-    100104: Pelvis
-    100106: Shoulder_Left
-    100108: Shoulder_Right
-    100110: Spine_1
-    100112: Spine_2
-    100114: Spine_3
-    100116: Spine_4
-    100118: Spine_Main
-    100120: //RootNode
+    100068: //RootNode
+    100070: Foot_Left
+    100072: Foot_Right
+    100074: Head
+    100076: Index_1_Left
+    100078: Index_1_Right
+    100080: Index_2_Left
+    100082: Index_2_Right
+    100084: Jaw
+    100086: Jaw_Base
+    100088: Knee_Left
+    100090: Knee_Right
+    100092: Leg_Left
+    100094: Leg_Right
+    100096: Middle_1_Left
+    100098: Middle_1_Right
+    100100: Middle_2_Left
+    100102: Middle_2_Right
+    100104: Neck
+    100106: Pelvis
+    100108: Shoulder_Left
+    100110: Shoulder_Right
+    100112: Spine_1
+    100114: Spine_2
+    100116: Spine_3
+    100118: Spine_4
+    100120: Spine_Main
     100122: Thigh_Left
     100124: Thigh_Right
     100126: Thumb_1_Left
@@ -108,33 +108,33 @@ ModelImporter:
     400062: CTRL_Wrist_Right
     400064: Elbow_Left
     400066: Elbow_Right
-    400068: Foot_Left
-    400070: Foot_Right
-    400072: Head
-    400074: Index_1_Left
-    400076: Index_1_Right
-    400078: Index_2_Left
-    400080: Index_2_Right
-    400082: Jaw
-    400084: Jaw_Base
-    400086: Knee_Left
-    400088: Knee_Right
-    400090: Leg_Left
-    400092: Leg_Right
-    400094: Middle_1_Left
-    400096: Middle_1_Right
-    400098: Middle_2_Left
-    400100: Middle_2_Right
-    400102: Neck
-    400104: Pelvis
-    400106: Shoulder_Left
-    400108: Shoulder_Right
-    400110: Spine_1
-    400112: Spine_2
-    400114: Spine_3
-    400116: Spine_4
-    400118: Spine_Main
-    400120: //RootNode
+    400068: //RootNode
+    400070: Foot_Left
+    400072: Foot_Right
+    400074: Head
+    400076: Index_1_Left
+    400078: Index_1_Right
+    400080: Index_2_Left
+    400082: Index_2_Right
+    400084: Jaw
+    400086: Jaw_Base
+    400088: Knee_Left
+    400090: Knee_Right
+    400092: Leg_Left
+    400094: Leg_Right
+    400096: Middle_1_Left
+    400098: Middle_1_Right
+    400100: Middle_2_Left
+    400102: Middle_2_Right
+    400104: Neck
+    400106: Pelvis
+    400108: Shoulder_Left
+    400110: Shoulder_Right
+    400112: Spine_1
+    400114: Spine_2
+    400116: Spine_3
+    400118: Spine_4
+    400120: Spine_Main
     400122: Thigh_Left
     400124: Thigh_Right
     400126: Thumb_1_Left
@@ -148,7 +148,7 @@ ModelImporter:
     2100004: Minion_Eyes_Mat
     2100006: Minion_Badge_Mat
     4300000: Body
-    7400000: EnemyAttack
+    7400000: EnemyProjectile
     9500000: //RootNode
     13700000: Body
   externalObjects: {}
@@ -179,7 +179,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: EnemyAttack
+      name: EnemyProjectile
       takeName: Take 001
       firstFrame: 1
       lastFrame: 30
@@ -202,8 +202,15 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.7885891
-        functionName: Attack
+      - time: 1
+        functionName: SetWalkTimer
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.7704141
+        functionName: AttackWithEnemyBullet
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
