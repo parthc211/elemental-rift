@@ -124,6 +124,12 @@ public class Input_Manager : MonoBehaviour {
     public GameObject telekTool;
     public GameObject eqTool;
 
+    public GameObject hands;
+    private Animator handAnim;
+    bool weldAnim = false;
+    bool shieldAnim = false;
+    bool telekAnim = false;
+
     [HideInInspector]
     public Vector3 initialfb;
     [HideInInspector]
@@ -148,7 +154,7 @@ public class Input_Manager : MonoBehaviour {
         knockbackProj.gameObject.SetActive(false);
 
         weldGO.SetActive(false);
-        
+        handAnim = hands.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -214,11 +220,18 @@ public class Input_Manager : MonoBehaviour {
             if (Input.GetMouseButtonUp(0) || resource_Manager.earthRune < telekCost)
             {
                 telekUse = false;
+                
+                if (telekAnim == true)
+                {
+                    handAnim.Play("TelekExit");
+                    telekAnim = false;
+                }
             }
 
             if (carrying)
             {
                 //Carry(carriedObject);
+                
                 earthAuraL.SetActive(true);
                 earthAuraR.SetActive(true);
                 if (telekUse == false)
@@ -235,6 +248,7 @@ public class Input_Manager : MonoBehaviour {
                 if (telekUse == true)
                 {
                     PickUp();
+                    
                     resource_Manager.earthRune -= Time.deltaTime * 1.5f;
                     earthAuraL.SetActive(true);
                     earthAuraR.SetActive(true);
@@ -243,7 +257,11 @@ public class Input_Manager : MonoBehaviour {
 
             if (telekUse == false)
             {
-
+                if (telekAnim == true)
+                {
+                    handAnim.Play("TelekExit");
+                    telekAnim = false;
+                }
                 earthAuraL.SetActive(false);
                 earthAuraR.SetActive(false);
             }
@@ -261,15 +279,22 @@ public class Input_Manager : MonoBehaviour {
 
         if (shieldFlag == true)
         {
+            
             if (Input.GetMouseButtonUp(0) || resource_Manager.waterRune < shieldCost)
             {
                 shieldUse = false;
+                if (shieldAnim == true)
+                {
+                    handAnim.Play("ShieldExit");
+                    shieldAnim = false;
+                }
                 waterAuraL.SetActive(false);
                 waterAuraR.SetActive(false);
             }
 
             if(shieldUse == true)
             {
+                
                 IceShieldPrefab.SetActive(true);
                 resource_Manager.waterRune -= Time.deltaTime * 1.5f;
                 waterAuraL.SetActive(true);
@@ -278,6 +303,7 @@ public class Input_Manager : MonoBehaviour {
             }
             else
             {
+
                 IceShieldPrefab.SetActive(false);
                 waterAuraL.SetActive(false);
                 waterAuraR.SetActive(false);
@@ -288,6 +314,11 @@ public class Input_Manager : MonoBehaviour {
         {
             shieldUse = false;
             IceShieldPrefab.SetActive(false);
+            if (shieldAnim == true)
+            {
+                handAnim.Play("ShieldExit");
+                shieldAnim = false;
+            }
             waterAuraL.SetActive(false);
             waterAuraR.SetActive(false);
 
@@ -295,9 +326,16 @@ public class Input_Manager : MonoBehaviour {
 
         if (weldFlag == true)
         {
+            
             if (Input.GetMouseButtonUp(0) || resource_Manager.fireRune < weldCost)
             {
                 weldUse = false;
+                if(weldAnim == true)
+                {
+                    handAnim.Play("WeldExit");
+                    weldAnim = false;
+                }
+                
                 fireAuraL.SetActive(false);
                 fireAuraR.SetActive(false);
 
@@ -320,6 +358,11 @@ public class Input_Manager : MonoBehaviour {
         else
         {
             weldUse = false;
+            if (weldAnim == true)
+            {
+                handAnim.Play("WeldExit");
+                weldAnim = false;
+            }
             weldGO.SetActive(false);
             fireAuraL.SetActive(false);
             fireAuraR.SetActive(false);
@@ -348,44 +391,9 @@ public class Input_Manager : MonoBehaviour {
             if (carrying)
             {
                 Carry(carriedObject);
-                //earthAuraL.SetActive(true);
-                //earthAuraR.SetActive(true);
-                //if (telekUse == false)
-                //{
-                //    DropObject();
-                //    earthAuraL.SetActive(false);
-                //    earthAuraR.SetActive(false);
-                //}
-
-                //resource_Manager.earthRune -= Time.deltaTime * 1.5f;
+                
             }
-        //    else
-        //    {
-        //        if (telekUse == true)
-        //        {
-        //            PickUp();
-        //            resource_Manager.earthRune -= Time.deltaTime * 1.5f;
-        //            earthAuraL.SetActive(true);
-        //            earthAuraR.SetActive(true);
-        //        }
-        //    }
-
-        //    if (telekUse == false)
-        //    {
-
-        //        earthAuraL.SetActive(false);
-        //        earthAuraR.SetActive(false);
-        //    }
-        //}
-        //else
-        //{
-        //    if (carrying)
-        //    {
-        //        DropObject();
-
-        //    }
-        //    earthAuraL.SetActive(false);
-        //    earthAuraR.SetActive(false);
+        
         }
     }
     void CastSpell()
@@ -399,6 +407,7 @@ public class Input_Manager : MonoBehaviour {
             if (Physics.Raycast(camera.transform.position, rayDir, out hit, spellRange))
             {
                 resource_Manager.fireRune -= fireballCost;
+                handAnim.Play("Fireball");
                 //Instantiate(volcano, hit.point + Vector3.up * 2.5f, Quaternion.identity);
                 initialfb = new Vector3(camera.transform.position.x, camera.transform.position.y + 7.0f, camera.transform.position.z);
                 finalfb = hit.point;
@@ -409,12 +418,14 @@ public class Input_Manager : MonoBehaviour {
         if (weldFlag == true && resource_Manager.fireRune >= weldCost)
         {
             weldUse = true;
-            
+            handAnim.Play("Weld");
+            weldAnim = true;
         }
 
         if (freezeFlag == true && resource_Manager.waterRune >= freezeCost)
         {
             resource_Manager.waterRune -= freezeCost;
+            handAnim.Play("Freeze");
             Vector3 startPos = camera.transform.position ;
             Vector3 dir = reticleImage.transform.position - (startPos + Vector3.down * 0.01f);
             GameObject projectile = Instantiate(freezeEffect, startPos + Vector3.down * 0.5f, Quaternion.LookRotation(dir));
@@ -427,13 +438,15 @@ public class Input_Manager : MonoBehaviour {
         if (shieldFlag == true && resource_Manager.waterRune >= shieldCost)
         {
             shieldUse = true;
-            
+            handAnim.Play("Shield");
+            shieldAnim = true;
         }
 
         if (eqFlag == true && resource_Manager.earthRune >= eqCost)
         {
 
             resource_Manager.earthRune -= eqCost;
+            handAnim.Play("Shockwave");
             //GameObject knock = Instantiate(knockBackEffect, hit.point + Vector3.up * 1.0f, transform.rotation);
             //Destroy(knock, 2f);
 
@@ -457,6 +470,8 @@ public class Input_Manager : MonoBehaviour {
         if (telekFlag == true && resource_Manager.earthRune >= telekCost)
         {
             telekUse = true;
+            handAnim.Play("Telek");
+            telekAnim = true;
         }
     }
 
