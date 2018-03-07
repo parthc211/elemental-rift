@@ -5,6 +5,7 @@ using UnityEngine;
 public class weldObj : MonoBehaviour {
 
     public GameObject welded;
+    public GameObject broken;
     public GameObject unwelded;
     bool weld;
 
@@ -46,9 +47,10 @@ public class weldObj : MonoBehaviour {
             //unwelded.SetActive(true);
             dm = gameObject.GetComponentInChildren<DestoyMe>();
             dm.destroy();
+            weld = false;
             Instantiate(unwelded, gameObject.transform);
 
-            weld = false;
+           
             return;
         }
 
@@ -58,9 +60,30 @@ public class weldObj : MonoBehaviour {
             //welded.SetActive(true);
             dm = gameObject.GetComponentInChildren<DestoyMe>();
             dm.destroy();
-            Instantiate(welded, gameObject.transform);
             weld = true;
+            Instantiate(welded, gameObject.transform);
+            
             return;
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(weld == false)
+        {
+            if(other.tag == "Player")
+            {
+                dm = gameObject.GetComponentInChildren<DestoyMe>();
+                dm.destroy();
+                Instantiate(broken, gameObject.transform);
+                Invoke("CreateUnwelded", 2.0f);
+            }
+        }
+    }
+
+    void CreateUnwelded()
+    {
+        Instantiate(unwelded, gameObject.transform);
+        weld = false;
     }
 }

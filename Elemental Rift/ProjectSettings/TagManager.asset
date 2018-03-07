@@ -28,6 +28,7 @@ TagManager:
   - KeyRed
   - KeyOrange
   - KeyPink
+  - weld
   layers:
   - Default
   - TransparentFX

@@ -166,19 +166,21 @@ public class Input_Manager : MonoBehaviour {
                     //fireProj.gameObject.GetComponent<Material>().color = Color.red;
                     fireProj.gameObject.SetActive(true);
                     fireProjOff.gameObject.SetActive(false);
+                    fireProj.gameObject.transform.position = rayInfo.point + Vector3.up * 2.5f;
+                    fireProj.gameObject.transform.rotation = Quaternion.Euler(90, 0, -gameObject.transform.rotation.eulerAngles.y);
                 }
                 else
                 {
                     //fireProj.gameObject.GetComponent<Shader>(). = Color.grey;
                     fireProj.gameObject.SetActive(false);
                     fireProjOff.gameObject.SetActive(true);
+                    fireProjOff.gameObject.transform.position = rayInfo.point + Vector3.up * 2.5f;
+                    fireProjOff.gameObject.transform.rotation = Quaternion.Euler(90, 0, -gameObject.transform.rotation.eulerAngles.y);
                 }
                 //fireProj.gameObject.SetActive(true);
-                fireProj.gameObject.transform.position = rayInfo.point + Vector3.up * 2.5f;
-                fireProj.gameObject.transform.rotation = Quaternion.Euler(90, 0, -gameObject.transform.rotation.eulerAngles.y);
-                fireProjOff.gameObject.transform.position = rayInfo.point + Vector3.up * 2.5f;
-                fireProjOff.gameObject.transform.rotation = Quaternion.Euler(90, 0, -gameObject.transform.rotation.eulerAngles.y);
-                knockbackProj.gameObject.SetActive(false);
+                
+                
+               // knockbackProj.gameObject.SetActive(false);
                 
             }
             else
@@ -192,6 +194,7 @@ public class Input_Manager : MonoBehaviour {
         else
         {
             fireProj.gameObject.SetActive(false);
+            fireProjOff.gameObject.SetActive(false);
         }
         
 
