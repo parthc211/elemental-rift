@@ -379,7 +379,7 @@ public class Input_Manager : MonoBehaviour {
 
             knockSphereCollider.enabled = true;
             knockSphereCollider.radius += colliderIncrease * Time.deltaTime;
-            Destroy(knock, 2f);
+            Destroy(knock, 1f);
         }
 
         if (telekFlag == true && resource_Manager.earthRune >= telekCost)
