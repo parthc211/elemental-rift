@@ -3067,13 +3067,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1636094835528880}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d49b1a900758c344bb339327493124e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
-  health: 100
+  health: 200
   splatterImage: {fileID: 0}
   splatterColor: {r: 0.99264705, g: 0, b: 0, a: 0.913}
   splatterSpeed: 2
@@ -3110,7 +3110,7 @@ MonoBehaviour:
   freezeEffect: {fileID: 1599519043915132, guid: 98677c5f62743ae46a9f37d5ed75c95c,
     type: 2}
   IceShieldPrefab: {fileID: 1497894897210372}
-  knockBackEffect: {fileID: 1419126310487920, guid: 43e5bd1896cb0bd46b2f59bac438f07c,
+  knockBackEffect: {fileID: 1572524195086654, guid: fe86be7c62258c447b03684ce0b7599c,
     type: 2}
   weldGO: {fileID: 1081067629447544}
   fireballCost: 35
@@ -3166,12 +3166,12 @@ MonoBehaviour:
   telekDistance: 10
   telekSmooth: 8
   colliderIncrease: 500
-  fireAuraR: {fileID: 1729655751428860, guid: a3e92c0c7a442c448afceb3a0f0d93ba, type: 2}
-  fireAuraL: {fileID: 1729655751428860, guid: a3e92c0c7a442c448afceb3a0f0d93ba, type: 2}
-  earthAuraR: {fileID: 1537884289557568, guid: 693a9cadb23843b4cb597768e38da64a, type: 2}
-  earthAuraL: {fileID: 1537884289557568, guid: 693a9cadb23843b4cb597768e38da64a, type: 2}
-  waterAuraR: {fileID: 1667220102955100, guid: 621f6f9a7172c76449bb5682dccfe17d, type: 2}
-  waterAuraL: {fileID: 1667220102955100, guid: 621f6f9a7172c76449bb5682dccfe17d, type: 2}
+  fireAuraR: {fileID: 1364534524057524, guid: df87eecf2fe510e46962868699e56dc3, type: 2}
+  fireAuraL: {fileID: 1364534524057524, guid: df87eecf2fe510e46962868699e56dc3, type: 2}
+  earthAuraR: {fileID: 1073502905731978, guid: a91bbea39f099014a9b16931d341e020, type: 2}
+  earthAuraL: {fileID: 1073502905731978, guid: a91bbea39f099014a9b16931d341e020, type: 2}
+  waterAuraR: {fileID: 1910163666185760, guid: c508c061841bdbf4c9589e4f11701b60, type: 2}
+  waterAuraL: {fileID: 1910163666185760, guid: c508c061841bdbf4c9589e4f11701b60, type: 2}
   weldTool: {fileID: 0}
   fireballTool: {fileID: 0}
   freezeTool: {fileID: 0}

@@ -11,6 +11,8 @@ public class RockEnemyAI : MonoBehaviour
     public float meleeRange = 1.0f;
     public float walkTimer = 2.0f;
     public float health = 50f;
+    public float stompTimer = 5.0f;
+    public float attackTimer = 2.0f;
 
     public FieldOfView fov;
     public Transform target;
@@ -24,6 +26,8 @@ public class RockEnemyAI : MonoBehaviour
     private GameObject Player;
     private RockEnemyPatrol enemyPatrol;
     private float resetWalkTimer;
+    private float resetStompTimer;
+    public float resetAttackTimer;
 
     private Animator enemyAnim;
 
@@ -35,6 +39,8 @@ public class RockEnemyAI : MonoBehaviour
         enemyPatrol = GetComponent<RockEnemyPatrol>();
 
         resetWalkTimer = walkTimer;
+        resetStompTimer = 0.0f;
+        resetAttackTimer = 0.0f;
     }
 
     void Update()
@@ -67,24 +73,17 @@ public class RockEnemyAI : MonoBehaviour
             {
                 MoveTowardsPlayer(distanceBetweenPlayer);
             }
-            else if (distanceBetweenPlayer < minDistance)
+            else if (distanceBetweenPlayer < minDistance && distanceBetweenPlayer > meleeRange)
             {
-                //Debug.Log("Attack PLayer");
                 AttackPlayer();
             }
 
             //Knockback the player if he is in melee range
-            if (distanceBetweenPlayer <= meleeRange)
+            else if (distanceBetweenPlayer <= meleeRange)
             {
-                knockBackPlayer(distanceBetweenPlayer);
+                KnockBackPlayer(distanceBetweenPlayer);
             }
         }
-
-
-
-        
-        
-        
     }
 
     void LookAtPlayer()
@@ -97,58 +96,82 @@ public class RockEnemyAI : MonoBehaviour
 
 
     void MoveTowardsPlayer(float distBetweenPlayer)
-    {      
-
+    {
         if (resetWalkTimer >= 0.0f)
         {
             enemyAnim.SetBool("isWalking", true);
             enemyAnim.SetBool("isIdle", false);
             enemyAnim.SetBool("isAttacking", false);
-            enemyAnim.SetBool("isStomp", false);
+            //enemyAnim.SetBool("isStomp", false);
 
             transform.position = Vector3.MoveTowards(transform.position, target.position, movementSpeed * Time.deltaTime);
 
             //Decrement the walktimer every frame the enemy is walking towards the player
             resetWalkTimer -= Time.deltaTime;
-
-            Debug.Log(resetWalkTimer);
         }
         else
         {
             enemyAnim.SetBool("isAttacking", true);
             //enemyAnim.SetTrigger("isAttack");
             enemyAnim.SetBool("isWalking", false);
-            enemyAnim.SetBool("isStomp", false);
+            //enemyAnim.SetBool("isStomp", false);
             enemyAnim.SetBool("isIdle", false);
         }
     }
 
     void AttackPlayer()
     {
-        Debug.Log("Attack Player");
-        //attack animation
-        enemyAnim.SetBool("isAttacking", true);
-        // enemyAnim.SetTrigger("isAttack");
-        enemyAnim.SetBool("isIdle", false);
-        enemyAnim.SetBool("isWalking", false);
-        enemyAnim.SetBool("isStomp", false);
+        if (resetAttackTimer <= 0.0f)
+        {
+            //attack animation
+            enemyAnim.SetBool("isAttacking", true);
+            // enemyAnim.SetTrigger("isAttack");
+            enemyAnim.SetBool("isIdle", false);
+            enemyAnim.SetBool("isWalking", false);
+            //enemyAnim.SetBool("isStomp", false);
 
-        //trigger event to reset walktimer to 2 seconds once the attack animation is complete
-        //walktimer = 2.0f;
+            //trigger event to reset walktimer to 2 seconds once the attack animation is complete
+            //walktimer = 2.0f;
+        }
+        else
+        {
+            //Debug.Log("Counting down Attack timer: " + resetAttackTimer);
+            enemyAnim.SetBool("isAttacking", false);
+            enemyAnim.SetBool("isIdle", false);
+            enemyAnim.SetBool("isWalking", false);
+            resetAttackTimer -= Time.deltaTime;
+        }
     }
 
-    void knockBackPlayer(float distBetweenPlayer)
+    void KnockBackPlayer(float distBetweenPlayer)
     {
         /*
 		 * Depending on the animation and the reaction on the player we might have to change the if condition
 		 * Not sure what it will be, will know more after testing
 		 */
 
+        if (resetStompTimer <= 0.0f)
+        {
             Debug.Log("Knockback Player");
-            enemyAnim.SetBool("isStomp", true);
+
+            // enemyAnim.SetBool("isStomp", true);
+            enemyAnim.SetTrigger("isStomp");
             enemyAnim.SetBool("isWalking", false);
             enemyAnim.SetBool("isAttacking", false);
             enemyAnim.SetBool("isIdle", false);
+
+            //TODO: Change damage after testing
+            //Player.GetComponent<Player_health>().takedmg(1);
+        }
+        else
+        {
+            enemyAnim.ResetTrigger("isStomp");
+            enemyAnim.SetBool("isWalking", false);
+            enemyAnim.SetBool("isAttacking", false);
+            enemyAnim.SetBool("isIdle", false);
+
+            resetStompTimer -= Time.deltaTime;
+        }
     }
 
     public void AttackWithEnemyBullet()
@@ -159,9 +182,23 @@ public class RockEnemyAI : MonoBehaviour
         bullet.GetComponent<EnemyBullet>().SetDirection(direction);
     }
 
+
+    //Change the name of the function to something like setTimer
     public void SetWalkTimer()
     {
-        Debug.Log("set walk timer");
         resetWalkTimer = walkTimer;
+        resetAttackTimer = attackTimer;
+    }
+
+    public void StompPlayer()
+    {
+        Debug.Log("Stomp Player");
+        Player.GetComponent<Player_health>().takedmg(1);
+    }
+
+    public void SetStompTimer()
+    {
+        Debug.Log("Reset Stomp Timer");
+        resetStompTimer = stompTimer;
     }
 }

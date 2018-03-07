@@ -301,7 +301,6 @@ GameObject:
   - component: {fileID: 114346673843600034}
   - component: {fileID: 114454356997361152}
   - component: {fileID: 114516437341907848}
-  - component: {fileID: 114218462191768336}
   - component: {fileID: 65865585227457526}
   - component: {fileID: 114690739870096668}
   - component: {fileID: 114346788654703240}
@@ -309,6 +308,7 @@ GameObject:
   - component: {fileID: 114343979288699472}
   - component: {fileID: 114923784946762310}
   - component: {fileID: 114888670794541652}
+  - component: {fileID: 114184570536398538}
   m_Layer: 10
   m_Name: EnemyIdle
   m_TagString: RockEnemy
@@ -1230,7 +1230,7 @@ Transform:
   - {fileID: 4650529753463726}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 196.661, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 83.206, z: 0}
 --- !u!4 &4678646777691250
 Transform:
   m_ObjectHideFlags: 1
@@ -1519,17 +1519,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 5
-  minDistance: 5
+  minDistance: 9
   movementSpeed: 2
-  meleeRange: 1
+  meleeRange: 7
   walkTimer: 2
   health: 50
+  stompTimer: 2
   fov: {fileID: 0}
   target: {fileID: 0}
   distanceBetweenPlayer: 0
   EnemyBulletSpawnPoint: {fileID: 4365480918186154}
   EnemyBulletPrefab: {fileID: 1389306547191884, guid: 7cd5abd769b0ac54fae51284c6cefa3e,
     type: 2}
+--- !u!114 &114184570536398538
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1471115147508680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daeed413c96a806498d5c60c1586e7c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropObj: {fileID: 1069121688121184, guid: 53ba511a5b9b58a4187ec9129d68e38c, type: 2}
 --- !u!114 &114216602383801204
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1557,32 +1570,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114218462191768336
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1471115147508680}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42b713c17bc090d4d9d1cbcff5674fd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationSpeed: 5
-  minDistance: 5
-  movementSpeed: 2
-  meleeRange: 1
-  fov: {fileID: 0}
-  target: {fileID: 0}
-  distanceBetweenPlayer: 0
-  SpawnPoint: {fileID: 0}
-  EnemyBulletPrefab: {fileID: 0}
-  Player: {fileID: 0}
-  attackTime: 4
-  stomp: {fileID: 0}
-  stompColider: {fileID: 0}
-  stompLoc: {fileID: 0}
-  stompEffect: {fileID: 0}
 --- !u!114 &114343979288699472
 MonoBehaviour:
   m_ObjectHideFlags: 1
