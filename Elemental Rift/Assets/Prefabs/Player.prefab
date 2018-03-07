@@ -1562,9 +1562,9 @@ Transform:
   m_LocalPosition: {x: -0.016, y: -0.0185, z: -0.0263}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4700359256566616}
   - {fileID: 4920548796972606}
   - {fileID: 4215156231020890}
+  - {fileID: 4700359256566616}
   m_Father: {fileID: 4721488529248656}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1652,7 +1652,7 @@ Transform:
   m_Children:
   - {fileID: 4436093460606246}
   m_Father: {fileID: 4151998774965982}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4237221918736426
 Transform:
@@ -1660,13 +1660,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1636094835528880}
-<<<<<<< HEAD
-  m_LocalRotation: {x: -0, y: -0.21545646, z: -0, w: 0.97651345}
-  m_LocalPosition: {x: 119.1, y: 161.65, z: 705.1}
-=======
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 612.33, y: 153.12, z: 198.05}
->>>>>>> Master
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4350550139370824}
@@ -2246,7 +2241,7 @@ Transform:
   m_Children:
   - {fileID: 4634879070090168}
   m_Father: {fileID: 4151998774965982}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4721488529248656
 Transform:
@@ -2535,7 +2530,7 @@ Transform:
   m_Children:
   - {fileID: 4999793330769922}
   m_Father: {fileID: 4151998774965982}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4923225104800912
 Transform:
@@ -3062,7 +3057,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
-  health: 200
+  health: 100
   splatterImage: {fileID: 0}
   splatterColor: {r: 0.99264705, g: 0, b: 0, a: 0.913}
   splatterSpeed: 2
@@ -3099,7 +3094,7 @@ MonoBehaviour:
   freezeEffect: {fileID: 1599519043915132, guid: 98677c5f62743ae46a9f37d5ed75c95c,
     type: 2}
   IceShieldPrefab: {fileID: 1497894897210372}
-  knockBackEffect: {fileID: 1572524195086654, guid: fe86be7c62258c447b03684ce0b7599c,
+  knockBackEffect: {fileID: 1419126310487920, guid: 43e5bd1896cb0bd46b2f59bac438f07c,
     type: 2}
   weldGO: {fileID: 1081067629447544}
   fireballCost: 35
@@ -3157,31 +3152,19 @@ MonoBehaviour:
   telekDistance: 15
   telekSmooth: 8
   colliderIncrease: 500
-<<<<<<< HEAD
-  fireAuraR: {fileID: 1364534524057524, guid: df87eecf2fe510e46962868699e56dc3, type: 2}
-  fireAuraL: {fileID: 1364534524057524, guid: df87eecf2fe510e46962868699e56dc3, type: 2}
-  earthAuraR: {fileID: 1073502905731978, guid: a91bbea39f099014a9b16931d341e020, type: 2}
-  earthAuraL: {fileID: 1073502905731978, guid: a91bbea39f099014a9b16931d341e020, type: 2}
-  waterAuraR: {fileID: 1910163666185760, guid: c508c061841bdbf4c9589e4f11701b60, type: 2}
-  waterAuraL: {fileID: 1910163666185760, guid: c508c061841bdbf4c9589e4f11701b60, type: 2}
-=======
   fireAuraR: {fileID: 1228427276165936}
   fireAuraL: {fileID: 1494279091595982}
   earthAuraR: {fileID: 1694877071362182}
   earthAuraL: {fileID: 1020264714549640}
   waterAuraR: {fileID: 1387178873859920}
   waterAuraL: {fileID: 1530202714698508}
->>>>>>> Master
   weldTool: {fileID: 0}
   fireballTool: {fileID: 0}
   freezeTool: {fileID: 0}
   shieldTool: {fileID: 0}
   telekTool: {fileID: 0}
   eqTool: {fileID: 0}
-<<<<<<< HEAD
-=======
   hands: {fileID: 1006522485564852}
->>>>>>> Master
   initialfb: {x: 0, y: 0, z: 0}
   finalfb: {x: 0, y: 0, z: 0}
   telekUse: 0
@@ -14568,54 +14551,6 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     speedModifier:
-<<<<<<< HEAD
-      serializedVersion: 2
-      minMaxState: 0
-      scalar: 1
-      minScalar: 1
-      maxCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 2
-          time: 0
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        - serializedVersion: 2
-          time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      minCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 2
-          time: 0
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        - serializedVersion: 2
-          time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-    inWorldSpace: 0
-  InheritVelocityModule:
-    enabled: 0
-    m_Mode: 0
-    m_Curve:
-=======
->>>>>>> Master
       serializedVersion: 2
       minMaxState: 0
       scalar: 1
@@ -21311,54 +21246,6 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     speedModifier:
-<<<<<<< HEAD
-=======
-      serializedVersion: 2
-      minMaxState: 0
-      scalar: 1
-      minScalar: 1
-      maxCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 2
-          time: 0
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        - serializedVersion: 2
-          time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      minCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 2
-          time: 0
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        - serializedVersion: 2
-          time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-    inWorldSpace: 0
-  InheritVelocityModule:
-    enabled: 0
-    m_Mode: 0
-    m_Curve:
->>>>>>> Master
       serializedVersion: 2
       minMaxState: 0
       scalar: 1
@@ -28150,54 +28037,6 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     speedModifier:
-<<<<<<< HEAD
-      serializedVersion: 2
-      minMaxState: 0
-      scalar: 1
-      minScalar: 1
-      maxCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 2
-          time: 0
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        - serializedVersion: 2
-          time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      minCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 2
-          time: 0
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        - serializedVersion: 2
-          time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-    inWorldSpace: 0
-  InheritVelocityModule:
-    enabled: 0
-    m_Mode: 0
-    m_Curve:
-=======
->>>>>>> Master
       serializedVersion: 2
       minMaxState: 0
       scalar: 1
@@ -34989,54 +34828,6 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     speedModifier:
-<<<<<<< HEAD
-=======
-      serializedVersion: 2
-      minMaxState: 0
-      scalar: 1
-      minScalar: 1
-      maxCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 2
-          time: 0
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        - serializedVersion: 2
-          time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      minCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 2
-          time: 0
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        - serializedVersion: 2
-          time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-    inWorldSpace: 1
-  InheritVelocityModule:
-    enabled: 0
-    m_Mode: 0
-    m_Curve:
->>>>>>> Master
       serializedVersion: 2
       minMaxState: 0
       scalar: 1
@@ -41732,8 +41523,6 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     speedModifier:
-<<<<<<< HEAD
-=======
       serializedVersion: 2
       minMaxState: 0
       scalar: 1
@@ -41779,102 +41568,6 @@ ParticleSystem:
     enabled: 0
     m_Mode: 0
     m_Curve:
->>>>>>> Master
-      serializedVersion: 2
-      minMaxState: 0
-      scalar: 1
-      minScalar: 1
-      maxCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 2
-          time: 0
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        - serializedVersion: 2
-          time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      minCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 2
-          time: 0
-<<<<<<< HEAD
-=======
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        - serializedVersion: 2
-          time: 1
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-  ForceModule:
-    enabled: 0
-    x:
-      serializedVersion: 2
-      minMaxState: 0
-      scalar: 0
-      minScalar: 0
-      maxCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 2
-          time: 0
->>>>>>> Master
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        - serializedVersion: 2
-          time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-<<<<<<< HEAD
-    inWorldSpace: 0
-  InheritVelocityModule:
-    enabled: 0
-    m_Mode: 0
-    m_Curve:
-=======
-      minCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 2
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        - serializedVersion: 2
-          time: 1
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-    y:
->>>>>>> Master
       serializedVersion: 2
       minMaxState: 0
       scalar: 0
@@ -41915,7 +41608,6 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-<<<<<<< HEAD
   ForceModule:
     enabled: 0
     x:
@@ -41960,105 +41652,10 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     y:
-=======
-    z:
->>>>>>> Master
       serializedVersion: 2
       minMaxState: 0
       scalar: 0
       minScalar: 0
-<<<<<<< HEAD
-=======
-      maxCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 2
-          time: 0
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        - serializedVersion: 2
-          time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      minCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 2
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        - serializedVersion: 2
-          time: 1
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-    inWorldSpace: 0
-    randomizePerFrame: 0
-  ExternalForcesModule:
-    enabled: 0
-    multiplier: 1
-  ClampVelocityModule:
-    enabled: 0
-    x:
-      serializedVersion: 2
-      minMaxState: 0
-      scalar: 1
-      minScalar: 1
-      maxCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 2
-          time: 0
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        - serializedVersion: 2
-          time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      minCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 2
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        - serializedVersion: 2
-          time: 1
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-    y:
-      serializedVersion: 2
-      minMaxState: 0
-      scalar: 1
-      minScalar: 1
->>>>>>> Master
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -55415,54 +55012,6 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     speedModifier:
-<<<<<<< HEAD
-      serializedVersion: 2
-      minMaxState: 0
-      scalar: 1
-      minScalar: 1
-      maxCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 2
-          time: 0
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        - serializedVersion: 2
-          time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      minCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 2
-          time: 0
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        - serializedVersion: 2
-          time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-    inWorldSpace: 0
-  InheritVelocityModule:
-    enabled: 0
-    m_Mode: 0
-    m_Curve:
-=======
->>>>>>> Master
       serializedVersion: 2
       minMaxState: 0
       scalar: 1
@@ -68941,47 +68490,6 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    speedModifier:
-      serializedVersion: 2
-      minMaxState: 0
-      scalar: 1
-      minScalar: 1
-      maxCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 2
-          time: 0
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        - serializedVersion: 2
-          time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      minCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 2
-          time: 0
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        - serializedVersion: 2
-          time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
     inWorldSpace: 1
   InheritVelocityModule:
     enabled: 0
@@ -72316,68 +71824,6 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-<<<<<<< HEAD
-=======
-      minCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 2
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        - serializedVersion: 2
-          time: 1
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-    speedModifier:
-      serializedVersion: 2
-      minMaxState: 0
-      scalar: 1
-      minScalar: 1
-      maxCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 2
-          time: 0
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        - serializedVersion: 2
-          time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      minCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 2
-          time: 0
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        - serializedVersion: 2
-          time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
->>>>>>> Master
     inWorldSpace: 0
   InheritVelocityModule:
     enabled: 0
