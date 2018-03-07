@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 56bdf2fa653ce334e8d49ca67eec84a4
-timeCreated: 1517970926
+guid: 62e8152e11b1f674585d8e41401ad036
+timeCreated: 1520449171
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -17,34 +17,34 @@ ModelImporter:
     100018: Foot_Left
     100020: Foot_Right
     100022: Head
-    100024: Index_1_Left
-    100026: Index_1_Right
-    100028: Index_2_Left
-    100030: Index_2_Right
-    100032: Jaw
-    100034: Jaw_Base
-    100036: Knee_Left
-    100038: Knee_Right
-    100040: Middle_1_Left
-    100042: Middle_1_Right
-    100044: Middle_2_Left
-    100046: Middle_2_Right
-    100048: Neck
-    100050: Pelvis
-    100052: Shoulder_Left
-    100054: Shoulder_Right
-    100056: Spine_1
-    100058: Spine_2
-    100060: Spine_3
-    100062: Spine_4
-    100064: Spine_Main
-    100066: Thigh_Left
-    100068: Thigh_Right
-    100070: Thumb_1_Left
-    100072: Thumb_1_Right
-    100074: Thumb_2_Left
-    100076: Thumb_2_Right
-    100078: //RootNode
+    100024: //RootNode
+    100026: Index_1_Left
+    100028: Index_1_Right
+    100030: Index_2_Left
+    100032: Index_2_Right
+    100034: Jaw
+    100036: Jaw_Base
+    100038: Knee_Left
+    100040: Knee_Right
+    100042: Middle_1_Left
+    100044: Middle_1_Right
+    100046: Middle_2_Left
+    100048: Middle_2_Right
+    100050: Neck
+    100052: Pelvis
+    100054: Shoulder_Left
+    100056: Shoulder_Right
+    100058: Spine_1
+    100060: Spine_2
+    100062: Spine_3
+    100064: Spine_4
+    100066: Spine_Main
+    100068: Thigh_Left
+    100070: Thigh_Right
+    100072: Thumb_1_Left
+    100074: Thumb_1_Right
+    100076: Thumb_2_Left
+    100078: Thumb_2_Right
     100080: Wrist_Left
     100082: Wrist_Right
     400000: Ankle_Left
@@ -59,34 +59,34 @@ ModelImporter:
     400018: Foot_Left
     400020: Foot_Right
     400022: Head
-    400024: Index_1_Left
-    400026: Index_1_Right
-    400028: Index_2_Left
-    400030: Index_2_Right
-    400032: Jaw
-    400034: Jaw_Base
-    400036: Knee_Left
-    400038: Knee_Right
-    400040: Middle_1_Left
-    400042: Middle_1_Right
-    400044: Middle_2_Left
-    400046: Middle_2_Right
-    400048: Neck
-    400050: Pelvis
-    400052: Shoulder_Left
-    400054: Shoulder_Right
-    400056: Spine_1
-    400058: Spine_2
-    400060: Spine_3
-    400062: Spine_4
-    400064: Spine_Main
-    400066: Thigh_Left
-    400068: Thigh_Right
-    400070: Thumb_1_Left
-    400072: Thumb_1_Right
-    400074: Thumb_2_Left
-    400076: Thumb_2_Right
-    400078: //RootNode
+    400024: //RootNode
+    400026: Index_1_Left
+    400028: Index_1_Right
+    400030: Index_2_Left
+    400032: Index_2_Right
+    400034: Jaw
+    400036: Jaw_Base
+    400038: Knee_Left
+    400040: Knee_Right
+    400042: Middle_1_Left
+    400044: Middle_1_Right
+    400046: Middle_2_Left
+    400048: Middle_2_Right
+    400050: Neck
+    400052: Pelvis
+    400054: Shoulder_Left
+    400056: Shoulder_Right
+    400058: Spine_1
+    400060: Spine_2
+    400062: Spine_3
+    400064: Spine_4
+    400066: Spine_Main
+    400068: Thigh_Left
+    400070: Thigh_Right
+    400072: Thumb_1_Left
+    400074: Thumb_1_Right
+    400076: Thumb_2_Left
+    400078: Thumb_2_Right
     400080: Wrist_Left
     400082: Wrist_Right
     2100000: Minion_Base_Mat
@@ -94,7 +94,7 @@ ModelImporter:
     2100004: Minion_Eyes_Mat
     2100006: Minion_Badge_Mat
     4300000: Body
-    7400000: EnemyWalk
+    7400000: Take 001
     9500000: //RootNode
     13700000: Body
   externalObjects: {}
@@ -123,35 +123,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: EnemyWalk
-      takeName: Take 001
-      firstFrame: 1
-      lastFrame: 20
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 1
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []
