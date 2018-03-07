@@ -28,7 +28,11 @@ TagManager:
   - KeyRed
   - KeyOrange
   - KeyPink
+<<<<<<< HEAD
   - ShockwaveSpell
+=======
+  - weld
+>>>>>>> Master
   layers:
   - Default
   - TransparentFX
@@ -41,7 +45,7 @@ TagManager:
   - Player
   - Obstacles
   - Enemy
-  - 
+  - IgnoreDirLight
   - 
   - 
   - 
