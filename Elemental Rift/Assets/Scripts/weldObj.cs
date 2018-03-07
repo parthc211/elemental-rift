@@ -76,7 +76,7 @@ public class weldObj : MonoBehaviour {
                 dm = gameObject.GetComponentInChildren<DestoyMe>();
                 dm.destroy();
                 Instantiate(broken, gameObject.transform);
-                Invoke("CreateUnwelded", 2.0f);
+                Invoke("CreateUnwelded", 3.0f);
             }
         }
     }
