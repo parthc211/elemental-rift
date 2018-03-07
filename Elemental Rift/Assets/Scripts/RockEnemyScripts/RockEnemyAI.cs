@@ -91,6 +91,9 @@ public class RockEnemyAI : MonoBehaviour
         Vector3 relativePos = target.position - transform.position;
         Quaternion rotation = Quaternion.LookRotation(relativePos);
 
+        rotation.x = 0;
+        rotation.z = 0;
+
         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, rotationSpeed * Time.deltaTime);
     }
 
@@ -135,9 +138,8 @@ public class RockEnemyAI : MonoBehaviour
         }
         else
         {
-            //Debug.Log("Counting down Attack timer: " + resetAttackTimer);
             enemyAnim.SetBool("isAttacking", false);
-            enemyAnim.SetBool("isIdle", false);
+            enemyAnim.SetBool("isIdle", true);
             enemyAnim.SetBool("isWalking", false);
             resetAttackTimer -= Time.deltaTime;
         }
@@ -159,8 +161,7 @@ public class RockEnemyAI : MonoBehaviour
             enemyAnim.SetBool("isWalking", false);
             enemyAnim.SetBool("isAttacking", false);
             enemyAnim.SetBool("isIdle", false);
-
-            //TODO: Change damage after testing
+            
             //Player.GetComponent<Player_health>().takedmg(1);
         }
         else
@@ -168,7 +169,7 @@ public class RockEnemyAI : MonoBehaviour
             enemyAnim.ResetTrigger("isStomp");
             enemyAnim.SetBool("isWalking", false);
             enemyAnim.SetBool("isAttacking", false);
-            enemyAnim.SetBool("isIdle", false);
+			enemyAnim.SetBool("isIdle", true);
 
             resetStompTimer -= Time.deltaTime;
         }
@@ -186,12 +187,14 @@ public class RockEnemyAI : MonoBehaviour
     //Change the name of the function to something like setTimer
     public void SetWalkTimer()
     {
+		Debug.Log ("animation Event");
         resetWalkTimer = walkTimer;
         resetAttackTimer = attackTimer;
     }
 
     public void StompPlayer()
     {
+        //TODO: Change damage after testing
         Debug.Log("Stomp Player");
         Player.GetComponent<Player_health>().takedmg(1);
     }

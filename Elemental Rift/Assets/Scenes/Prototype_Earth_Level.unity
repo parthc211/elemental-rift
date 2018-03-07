@@ -43274,6 +43274,12 @@ Prefab:
       propertyPath: health
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 114914015868012446, guid: 8be7f84b62b7acc4bb1ed32690aefb45,
+        type: 2}
+      propertyPath: knockBackEffect
+      value: 
+      objectReference: {fileID: 1419126310487920, guid: 43e5bd1896cb0bd46b2f59bac438f07c,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8be7f84b62b7acc4bb1ed32690aefb45, type: 2}
   m_IsPrefabParent: 0

@@ -9,7 +9,7 @@ public class EnemyKnockBack : MonoBehaviour
 
     private bool knock = false;
     private float knockTimer = 2f;
-    private Collider knockCollider;
+    public Collider knockCollider;
 
     public Animator enemyAnim;
 
