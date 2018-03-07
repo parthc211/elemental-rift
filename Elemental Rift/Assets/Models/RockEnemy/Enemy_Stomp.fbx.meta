@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 760eeef3f004b3340b1617f471472dda
-timeCreated: 1519153311
+guid: 6cf22c30e2499de43806c858ed8be09b
+timeCreated: 1520449271
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -148,7 +148,7 @@ ModelImporter:
     2100004: Minion_Eyes_Mat
     2100006: Minion_Badge_Mat
     4300000: Body
-    7400000: EnemyStomp
+    7400000: Take 001
     9500000: //RootNode
     13700000: Body
   externalObjects: {}
@@ -179,7 +179,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: EnemyStomp
+      name: Take 001
       takeName: Take 001
       firstFrame: 1
       lastFrame: 30
@@ -202,14 +202,14 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.802589
+      - time: 0.826602
         functionName: StompPlayer
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 1
+      - time: 0.99926144
         functionName: SetStompTimer
         data: 
         objectReferenceParameter: {instanceID: 0}

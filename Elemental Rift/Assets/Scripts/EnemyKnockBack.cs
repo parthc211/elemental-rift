@@ -36,7 +36,7 @@ public class EnemyKnockBack : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "KnockSpell")
+        if (other.gameObject.tag == "ShockwaveSpell")
         {
             knock = true;
             knockCollider = other;
