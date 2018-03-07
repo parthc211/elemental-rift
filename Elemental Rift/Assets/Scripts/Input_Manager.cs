@@ -24,6 +24,7 @@ public class Input_Manager : MonoBehaviour {
     public GameObject target;
     
     public Projector fireballDecal;
+    public Projector fireballDecalOff;
     public Projector knockbackDecal;
 
     public Sprite fireBallSprite;
@@ -91,12 +92,13 @@ public class Input_Manager : MonoBehaviour {
     private float shieldTimer;
 
     private Projector fireProj;
+    private Projector fireProjOff;
     private Projector knockbackProj;
     private RaycastHit rayInfo;
     
     private GameObject carriedObject;
     private bool carrying = false;
-    public float telekDistance = 5.0f;
+    public float telekDistance = 10.0f;
     public float telekSmooth = 4.0f;
 
     private bool weldUse = false;
@@ -122,6 +124,12 @@ public class Input_Manager : MonoBehaviour {
     public GameObject telekTool;
     public GameObject eqTool;
 
+    public GameObject hands;
+    private Animator handAnim;
+    bool weldAnim = false;
+    bool shieldAnim = false;
+    bool telekAnim = false;
+
     [HideInInspector]
     public Vector3 initialfb;
     [HideInInspector]
@@ -139,11 +147,14 @@ public class Input_Manager : MonoBehaviour {
         fireProj = Instantiate(fireballDecal);
         fireProj.gameObject.SetActive(false);
 
+        fireProjOff = Instantiate(fireballDecalOff);
+        fireProjOff.gameObject.SetActive(false);
+
         knockbackProj = Instantiate(knockbackDecal);
         knockbackProj.gameObject.SetActive(false);
 
         weldGO.SetActive(false);
-        
+        handAnim = hands.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -156,21 +167,40 @@ public class Input_Manager : MonoBehaviour {
         {
             if (Physics.Raycast(camera.transform.position, rayDir, out rayInfo, spellRange))
             {
-                fireProj.gameObject.SetActive(true);
-                fireProj.gameObject.transform.position = rayInfo.point + Vector3.up * 2.5f;
-                fireProj.gameObject.transform.rotation = Quaternion.Euler(90, 0, -gameObject.transform.rotation.eulerAngles.y);
-                knockbackProj.gameObject.SetActive(false);
+                if (resource_Manager.fireRune >= fireballCost)
+                {
+                    //fireProj.gameObject.GetComponent<Material>().color = Color.red;
+                    fireProj.gameObject.SetActive(true);
+                    fireProjOff.gameObject.SetActive(false);
+                    fireProj.gameObject.transform.position = rayInfo.point + Vector3.up * 2.5f;
+                    fireProj.gameObject.transform.rotation = Quaternion.Euler(90, 0, -gameObject.transform.rotation.eulerAngles.y);
+                }
+                else
+                {
+                    //fireProj.gameObject.GetComponent<Shader>(). = Color.grey;
+                    fireProj.gameObject.SetActive(false);
+                    fireProjOff.gameObject.SetActive(true);
+                    fireProjOff.gameObject.transform.position = rayInfo.point + Vector3.up * 2.5f;
+                    fireProjOff.gameObject.transform.rotation = Quaternion.Euler(90, 0, -gameObject.transform.rotation.eulerAngles.y);
+                }
+                //fireProj.gameObject.SetActive(true);
+                
+                
+               // knockbackProj.gameObject.SetActive(false);
+                
             }
             else
             {
                 //reticleImage.sprite = outOfRangeReticle;
                 fireProj.gameObject.SetActive(false);
-                
+                fireProjOff.gameObject.SetActive(false);
+
             }
         }
         else
         {
             fireProj.gameObject.SetActive(false);
+            fireProjOff.gameObject.SetActive(false);
         }
         
 
@@ -184,20 +214,27 @@ public class Input_Manager : MonoBehaviour {
         {
             CastSpell();
         }
-            
-        if(telekFlag == true)
+
+        if (telekFlag == true)
         {
             if (Input.GetMouseButtonUp(0) || resource_Manager.earthRune < telekCost)
             {
                 telekUse = false;
+                
+                if (telekAnim == true)
+                {
+                    handAnim.Play("TelekExit");
+                    telekAnim = false;
+                }
             }
 
             if (carrying)
             {
-                Carry(carriedObject);
+                //Carry(carriedObject);
+                
                 earthAuraL.SetActive(true);
                 earthAuraR.SetActive(true);
-                if(telekUse == false)
+                if (telekUse == false)
                 {
                     DropObject();
                     earthAuraL.SetActive(false);
@@ -208,9 +245,10 @@ public class Input_Manager : MonoBehaviour {
             }
             else
             {
-                if(telekUse == true)
+                if (telekUse == true)
                 {
                     PickUp();
+                    
                     resource_Manager.earthRune -= Time.deltaTime * 1.5f;
                     earthAuraL.SetActive(true);
                     earthAuraR.SetActive(true);
@@ -219,33 +257,44 @@ public class Input_Manager : MonoBehaviour {
 
             if (telekUse == false)
             {
-                
+                if (telekAnim == true)
+                {
+                    handAnim.Play("TelekExit");
+                    telekAnim = false;
+                }
                 earthAuraL.SetActive(false);
                 earthAuraR.SetActive(false);
             }
         }
         else
         {
-            if(carrying)
+            if (carrying)
             {
                 DropObject();
-                
+
             }
             earthAuraL.SetActive(false);
             earthAuraR.SetActive(false);
         }
 
-        if(shieldFlag == true)
+        if (shieldFlag == true)
         {
+            
             if (Input.GetMouseButtonUp(0) || resource_Manager.waterRune < shieldCost)
             {
                 shieldUse = false;
+                if (shieldAnim == true)
+                {
+                    handAnim.Play("ShieldExit");
+                    shieldAnim = false;
+                }
                 waterAuraL.SetActive(false);
                 waterAuraR.SetActive(false);
             }
 
             if(shieldUse == true)
             {
+                
                 IceShieldPrefab.SetActive(true);
                 resource_Manager.waterRune -= Time.deltaTime * 1.5f;
                 waterAuraL.SetActive(true);
@@ -254,6 +303,7 @@ public class Input_Manager : MonoBehaviour {
             }
             else
             {
+
                 IceShieldPrefab.SetActive(false);
                 waterAuraL.SetActive(false);
                 waterAuraR.SetActive(false);
@@ -264,6 +314,11 @@ public class Input_Manager : MonoBehaviour {
         {
             shieldUse = false;
             IceShieldPrefab.SetActive(false);
+            if (shieldAnim == true)
+            {
+                handAnim.Play("ShieldExit");
+                shieldAnim = false;
+            }
             waterAuraL.SetActive(false);
             waterAuraR.SetActive(false);
 
@@ -271,9 +326,16 @@ public class Input_Manager : MonoBehaviour {
 
         if (weldFlag == true)
         {
+            
             if (Input.GetMouseButtonUp(0) || resource_Manager.fireRune < weldCost)
             {
                 weldUse = false;
+                if(weldAnim == true)
+                {
+                    handAnim.Play("WeldExit");
+                    weldAnim = false;
+                }
+                
                 fireAuraL.SetActive(false);
                 fireAuraR.SetActive(false);
 
@@ -296,6 +358,11 @@ public class Input_Manager : MonoBehaviour {
         else
         {
             weldUse = false;
+            if (weldAnim == true)
+            {
+                handAnim.Play("WeldExit");
+                weldAnim = false;
+            }
             weldGO.SetActive(false);
             fireAuraL.SetActive(false);
             fireAuraR.SetActive(false);
@@ -316,6 +383,19 @@ public class Input_Manager : MonoBehaviour {
        
     }
 
+    private void FixedUpdate()
+    {
+        if (telekFlag == true)
+        {
+
+            if (carrying)
+            {
+                Carry(carriedObject);
+                
+            }
+        
+        }
+    }
     void CastSpell()
     {
         
@@ -327,8 +407,9 @@ public class Input_Manager : MonoBehaviour {
             if (Physics.Raycast(camera.transform.position, rayDir, out hit, spellRange))
             {
                 resource_Manager.fireRune -= fireballCost;
+                handAnim.Play("Fireball");
                 //Instantiate(volcano, hit.point + Vector3.up * 2.5f, Quaternion.identity);
-                initialfb = new Vector3(camera.transform.position.x, camera.transform.position.y + 3.0f, camera.transform.position.z);
+                initialfb = new Vector3(camera.transform.position.x, camera.transform.position.y + 7.0f, camera.transform.position.z);
                 finalfb = hit.point;
                 Instantiate(fireballPrefab, initialfb, Quaternion.identity);
             }
@@ -337,12 +418,14 @@ public class Input_Manager : MonoBehaviour {
         if (weldFlag == true && resource_Manager.fireRune >= weldCost)
         {
             weldUse = true;
-            
+            handAnim.Play("Weld");
+            weldAnim = true;
         }
 
         if (freezeFlag == true && resource_Manager.waterRune >= freezeCost)
         {
             resource_Manager.waterRune -= freezeCost;
+            handAnim.Play("Freeze");
             Vector3 startPos = camera.transform.position ;
             Vector3 dir = reticleImage.transform.position - (startPos + Vector3.down * 0.01f);
             GameObject projectile = Instantiate(freezeEffect, startPos + Vector3.down * 0.5f, Quaternion.LookRotation(dir));
@@ -355,13 +438,15 @@ public class Input_Manager : MonoBehaviour {
         if (shieldFlag == true && resource_Manager.waterRune >= shieldCost)
         {
             shieldUse = true;
-            
+            handAnim.Play("Shield");
+            shieldAnim = true;
         }
 
         if (eqFlag == true && resource_Manager.earthRune >= eqCost)
         {
 
             resource_Manager.earthRune -= eqCost;
+            handAnim.Play("Shockwave");
             //GameObject knock = Instantiate(knockBackEffect, hit.point + Vector3.up * 1.0f, transform.rotation);
             //Destroy(knock, 2f);
 
@@ -385,13 +470,36 @@ public class Input_Manager : MonoBehaviour {
         if (telekFlag == true && resource_Manager.earthRune >= telekCost)
         {
             telekUse = true;
+            handAnim.Play("Telek");
+            telekAnim = true;
         }
     }
 
     void Carry(GameObject carried)
     {
-        carried.transform.position = Vector3.Lerp(carried.transform.position, camera.transform.position + camera.transform.forward * telekDistance, Time.deltaTime * telekSmooth);
-        carriedObject.transform.rotation = Quaternion.identity;
+        Vector3 currentObjPos = carried.transform.position;
+        Vector3 telekDist = camera.transform.position + camera.transform.forward * telekDistance;
+        //carried.transform.position = Vector3.Lerp(carried.transform.position, camera.transform.position + camera.transform.forward * telekDistance, Time.deltaTime * telekSmooth);
+        //carriedObject.transform.rotation = Quaternion.identity;
+        Vector3 difference = telekDist - currentObjPos;
+
+        //float thrustfactor = Vector3.Distance(currentObjPos, telekDist);
+        float thrustfactor = Vector3.Magnitude(difference);
+        if (thrustfactor < 2f )
+        {
+            carried.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            carried.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+            carried.GetComponent<Rigidbody>().AddForce(Vector3.zero, ForceMode.Force);
+        }
+        else
+        {
+            //carried.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+            float thrust = Mathf.Lerp(-1f, 1f, thrustfactor);
+            carried.GetComponent<Rigidbody>().AddForce(difference * 120f , ForceMode.Force);
+        }
+        
+
+
     }
 
     void PickUp()
@@ -413,6 +521,9 @@ public class Input_Manager : MonoBehaviour {
     {
         carrying = false;
         carriedObject.GetComponent<Rigidbody>().useGravity = true;
+        carriedObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        carriedObject.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+        carriedObject.GetComponent<Rigidbody>().AddForce(Vector3.zero, ForceMode.Force);
         carriedObject = null;
     }
     void CheckSpellAvailability()

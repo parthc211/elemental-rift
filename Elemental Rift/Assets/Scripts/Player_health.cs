@@ -22,6 +22,11 @@ public class Player_health : MonoBehaviour {
     private CamShake camShake;
     private bool damaged;
 
+    //private Transform lastCheckpoint;
+    private Vector3 lastCheckPointPos;
+    private Quaternion lastCheckPointRot;
+    private Resource_Manager resource_manager;
+  
     
 	// Use this for initialization
 	void Start () {
@@ -29,7 +34,13 @@ public class Player_health : MonoBehaviour {
         damaged = false;
 
         camShake = Camera.main.gameObject.GetComponent<CamShake>();
-	}
+        resource_manager = gameObject.GetComponent<Resource_Manager>();
+        lastCheckPointPos = transform.position;
+        lastCheckPointRot = transform.rotation;
+        //lastCheckpoint = gameObject.transform;
+        //Debug.Log(lastCheckpoint.position);
+       // Debug.Log(lastCheckpoint.rotation);
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -39,7 +50,7 @@ public class Player_health : MonoBehaviour {
         
 
         DamageSplatter();
-        CheckDead();
+        
         HealPlayer();
         if (Input.GetKeyDown(KeyCode.Q))
         {
@@ -56,13 +67,15 @@ public class Player_health : MonoBehaviour {
             fadeHealth.color = new Color(1, 1, 1, 1.0f - healthRatio);
         }
 
-        dmgTimer += Time.deltaTime;
+        //dmgTimer += Time.deltaTime;
 
-        if (dmgTimer < 4)
-            imStopDmg = true;
-        else
-            imStopDmg = false;
-	}
+        //if (dmgTimer < 4)
+        //    imStopDmg = true;
+        //else
+        //    imStopDmg = false;
+
+        CheckDead();
+    }
 
     private void HealPlayer()
     {
@@ -130,8 +143,18 @@ public class Player_health : MonoBehaviour {
     void CheckDead()
     {
         if (health <= 0)
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-
+        {
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            gameObject.transform.position = lastCheckPointPos;
+            gameObject.transform.rotation = lastCheckPointRot;
+           // Debug.Log(lastCheckpoint.position);
+           // Debug.Log(lastCheckpoint.rotation);
+            resource_manager.SetZeroFlag();
+            resource_manager.fireRune = 0;
+            resource_manager.waterRune = 0;
+            resource_manager.earthRune = 0;
+            health = 100.0f;
+        }
     }
 
     public void bulletdmg()
@@ -150,5 +173,13 @@ public class Player_health : MonoBehaviour {
     {
         health -= 4.0f;
         damaged = true;
+    }
+
+    public void SetCheckpoint(Vector3 pos, Quaternion rot)
+    {
+        lastCheckPointPos = pos;
+        lastCheckPointRot = rot;
+        //Debug.Log(lastCheckpoint.position);
+       // Debug.Log(lastCheckpoint.rotation);
     }
 }
