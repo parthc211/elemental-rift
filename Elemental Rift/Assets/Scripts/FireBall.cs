@@ -14,6 +14,8 @@ public class FireBall : MonoBehaviour {
     private float speed;
     private float timeToReachTargetPosition;
     private float time;
+
+    public GameObject afterEffect;
     // Use this for initialization
     void Start() {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -39,6 +41,8 @@ public class FireBall : MonoBehaviour {
         if (time >= 1)
         {
             colliderObj = (GameObject)Instantiate(blastCollider, transform.position, transform.rotation);
+            GameObject ae = (GameObject)Instantiate(afterEffect, finalPos, Quaternion.identity);
+            Destroy(ae, 1.5f);
             Destroy(gameObject);
         }
     }

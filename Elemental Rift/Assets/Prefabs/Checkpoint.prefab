@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 65509649231349834}
   - component: {fileID: 23181610753217466}
   - component: {fileID: 114617947639878202}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Checkpoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ Transform:
   m_GameObject: {fileID: 1546707867498622}
   m_LocalRotation: {x: -0, y: -0.16443284, z: -0, w: 0.9863883}
   m_LocalPosition: {x: 605.35, y: 150.26, z: 221.29}
-  m_LocalScale: {x: 44.18171, y: 13.118436, z: 1.8493944}
+  m_LocalScale: {x: 66.81531, y: 13.118436, z: 1.8493944}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0

@@ -24,6 +24,7 @@ public class Input_Manager : MonoBehaviour {
     public GameObject target;
     
     public Projector fireballDecal;
+    public Projector fireballDecalOff;
     public Projector knockbackDecal;
 
     public Sprite fireBallSprite;
@@ -91,12 +92,13 @@ public class Input_Manager : MonoBehaviour {
     private float shieldTimer;
 
     private Projector fireProj;
+    private Projector fireProjOff;
     private Projector knockbackProj;
     private RaycastHit rayInfo;
     
     private GameObject carriedObject;
     private bool carrying = false;
-    public float telekDistance = 5.0f;
+    public float telekDistance = 10.0f;
     public float telekSmooth = 4.0f;
 
     private bool weldUse = false;
@@ -139,6 +141,9 @@ public class Input_Manager : MonoBehaviour {
         fireProj = Instantiate(fireballDecal);
         fireProj.gameObject.SetActive(false);
 
+        fireProjOff = Instantiate(fireballDecalOff);
+        fireProjOff.gameObject.SetActive(false);
+
         knockbackProj = Instantiate(knockbackDecal);
         knockbackProj.gameObject.SetActive(false);
 
@@ -156,16 +161,32 @@ public class Input_Manager : MonoBehaviour {
         {
             if (Physics.Raycast(camera.transform.position, rayDir, out rayInfo, spellRange))
             {
-                fireProj.gameObject.SetActive(true);
+                if (resource_Manager.fireRune >= fireballCost)
+                {
+                    //fireProj.gameObject.GetComponent<Material>().color = Color.red;
+                    fireProj.gameObject.SetActive(true);
+                    fireProjOff.gameObject.SetActive(false);
+                }
+                else
+                {
+                    //fireProj.gameObject.GetComponent<Shader>(). = Color.grey;
+                    fireProj.gameObject.SetActive(false);
+                    fireProjOff.gameObject.SetActive(true);
+                }
+                //fireProj.gameObject.SetActive(true);
                 fireProj.gameObject.transform.position = rayInfo.point + Vector3.up * 2.5f;
                 fireProj.gameObject.transform.rotation = Quaternion.Euler(90, 0, -gameObject.transform.rotation.eulerAngles.y);
+                fireProjOff.gameObject.transform.position = rayInfo.point + Vector3.up * 2.5f;
+                fireProjOff.gameObject.transform.rotation = Quaternion.Euler(90, 0, -gameObject.transform.rotation.eulerAngles.y);
                 knockbackProj.gameObject.SetActive(false);
+                
             }
             else
             {
                 //reticleImage.sprite = outOfRangeReticle;
                 fireProj.gameObject.SetActive(false);
-                
+                fireProjOff.gameObject.SetActive(false);
+
             }
         }
         else
@@ -184,8 +205,8 @@ public class Input_Manager : MonoBehaviour {
         {
             CastSpell();
         }
-            
-        if(telekFlag == true)
+
+        if (telekFlag == true)
         {
             if (Input.GetMouseButtonUp(0) || resource_Manager.earthRune < telekCost)
             {
@@ -194,10 +215,10 @@ public class Input_Manager : MonoBehaviour {
 
             if (carrying)
             {
-                Carry(carriedObject);
+                //Carry(carriedObject);
                 earthAuraL.SetActive(true);
                 earthAuraR.SetActive(true);
-                if(telekUse == false)
+                if (telekUse == false)
                 {
                     DropObject();
                     earthAuraL.SetActive(false);
@@ -208,7 +229,7 @@ public class Input_Manager : MonoBehaviour {
             }
             else
             {
-                if(telekUse == true)
+                if (telekUse == true)
                 {
                     PickUp();
                     resource_Manager.earthRune -= Time.deltaTime * 1.5f;
@@ -219,23 +240,23 @@ public class Input_Manager : MonoBehaviour {
 
             if (telekUse == false)
             {
-                
+
                 earthAuraL.SetActive(false);
                 earthAuraR.SetActive(false);
             }
         }
         else
         {
-            if(carrying)
+            if (carrying)
             {
                 DropObject();
-                
+
             }
             earthAuraL.SetActive(false);
             earthAuraR.SetActive(false);
         }
 
-        if(shieldFlag == true)
+        if (shieldFlag == true)
         {
             if (Input.GetMouseButtonUp(0) || resource_Manager.waterRune < shieldCost)
             {
@@ -316,6 +337,54 @@ public class Input_Manager : MonoBehaviour {
        
     }
 
+    private void FixedUpdate()
+    {
+        if (telekFlag == true)
+        {
+
+            if (carrying)
+            {
+                Carry(carriedObject);
+                //earthAuraL.SetActive(true);
+                //earthAuraR.SetActive(true);
+                //if (telekUse == false)
+                //{
+                //    DropObject();
+                //    earthAuraL.SetActive(false);
+                //    earthAuraR.SetActive(false);
+                //}
+
+                //resource_Manager.earthRune -= Time.deltaTime * 1.5f;
+            }
+        //    else
+        //    {
+        //        if (telekUse == true)
+        //        {
+        //            PickUp();
+        //            resource_Manager.earthRune -= Time.deltaTime * 1.5f;
+        //            earthAuraL.SetActive(true);
+        //            earthAuraR.SetActive(true);
+        //        }
+        //    }
+
+        //    if (telekUse == false)
+        //    {
+
+        //        earthAuraL.SetActive(false);
+        //        earthAuraR.SetActive(false);
+        //    }
+        //}
+        //else
+        //{
+        //    if (carrying)
+        //    {
+        //        DropObject();
+
+        //    }
+        //    earthAuraL.SetActive(false);
+        //    earthAuraR.SetActive(false);
+        }
+    }
     void CastSpell()
     {
         
@@ -328,7 +397,7 @@ public class Input_Manager : MonoBehaviour {
             {
                 resource_Manager.fireRune -= fireballCost;
                 //Instantiate(volcano, hit.point + Vector3.up * 2.5f, Quaternion.identity);
-                initialfb = new Vector3(camera.transform.position.x, camera.transform.position.y + 3.0f, camera.transform.position.z);
+                initialfb = new Vector3(camera.transform.position.x, camera.transform.position.y + 7.0f, camera.transform.position.z);
                 finalfb = hit.point;
                 Instantiate(fireballPrefab, initialfb, Quaternion.identity);
             }
@@ -390,8 +459,29 @@ public class Input_Manager : MonoBehaviour {
 
     void Carry(GameObject carried)
     {
-        carried.transform.position = Vector3.Lerp(carried.transform.position, camera.transform.position + camera.transform.forward * telekDistance, Time.deltaTime * telekSmooth);
-        carriedObject.transform.rotation = Quaternion.identity;
+        Vector3 currentObjPos = carried.transform.position;
+        Vector3 telekDist = camera.transform.position + camera.transform.forward * telekDistance;
+        //carried.transform.position = Vector3.Lerp(carried.transform.position, camera.transform.position + camera.transform.forward * telekDistance, Time.deltaTime * telekSmooth);
+        //carriedObject.transform.rotation = Quaternion.identity;
+        Vector3 difference = telekDist - currentObjPos;
+
+        //float thrustfactor = Vector3.Distance(currentObjPos, telekDist);
+        float thrustfactor = Vector3.Magnitude(difference);
+        if (thrustfactor < 2f )
+        {
+            carried.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            carried.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+            carried.GetComponent<Rigidbody>().AddForce(Vector3.zero, ForceMode.Force);
+        }
+        else
+        {
+            //carried.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+            float thrust = Mathf.Lerp(-1f, 1f, thrustfactor);
+            carried.GetComponent<Rigidbody>().AddForce(difference * 120f , ForceMode.Force);
+        }
+        
+
+
     }
 
     void PickUp()
@@ -413,6 +503,9 @@ public class Input_Manager : MonoBehaviour {
     {
         carrying = false;
         carriedObject.GetComponent<Rigidbody>().useGravity = true;
+        carriedObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        carriedObject.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+        carriedObject.GetComponent<Rigidbody>().AddForce(Vector3.zero, ForceMode.Force);
         carriedObject = null;
     }
     void CheckSpellAvailability()
