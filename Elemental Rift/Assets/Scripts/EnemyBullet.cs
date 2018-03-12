@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class EnemyBullet : MonoBehaviour {
 
-    private float bulletSpeed = 1.2f;
+    public float bulletSpeed = 1.2f;
     private Vector3 _direction;
 
     private GameObject Player;
-    private float damageAmount = 15f;
+    public float damageAmount = 25f;
     bool getDir = true;
     private void Awake()
     {
@@ -55,7 +55,7 @@ public class EnemyBullet : MonoBehaviour {
             Destroy(gameObject);
         }
 
-        if(other.gameObject.tag == "RockEnemy")
+        if(other.gameObject.tag == "RockEnemy" || other.gameObject.tag == "WaterAura" || other.gameObject.tag == "FireAura" || other.gameObject.tag == "EarthAura")
         {
             return;
         }

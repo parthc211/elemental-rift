@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 199679280318157422}
   m_Layer: 0
   m_Name: FreezeSpell
-  m_TagString: Untagged
+  m_TagString: FreezeProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

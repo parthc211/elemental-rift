@@ -26,7 +26,7 @@ public class FireDmg : MonoBehaviour {
 
             if (col.CompareTag("RockEnemy"))
             {
-                col.GetComponent<EnemyHealth>().TakeDamage(40f);
+                col.GetComponent<EnemyHealth>().TakeDamage(30f);
             }
             //if(col.CompareTag("FireButton"))
             //{

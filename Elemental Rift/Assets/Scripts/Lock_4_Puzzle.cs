@@ -11,10 +11,10 @@ public class Lock_4_Puzzle : MonoBehaviour {
 
     private bool canMove = false;
     public bool needPlayer = false;
-
+    public GameObject highlight;
     // Use this for initialization
     void Start () {
-        
+        highlight.SetActive(false);
     }
 	
 	// Update is called once per frame
@@ -23,6 +23,7 @@ public class Lock_4_Puzzle : MonoBehaviour {
                 && lock3.GetComponent<LocknKeyPuzzle>().isActive == true && lock4.GetComponent<LocknKeyPuzzle>().isActive == true)
         {
             canMove = true;
+            highlight.SetActive(true);
             if (needPlayer == false)
             {
                 gameObject.GetComponent<QuickMover>().isMoving = true;

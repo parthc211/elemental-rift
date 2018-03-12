@@ -7,25 +7,23 @@ public class Lock_1_Puzzle : MonoBehaviour {
     public GameObject lock1;
     private bool canMove = false;
     public bool needPlayer = false;
-    public Color changeCol;
+    public GameObject highlight;
 	// Use this for initialization
 	void Start () {
-		
-	}
+        highlight.SetActive(false);
+    }
 	
 	// Update is called once per frame
 	void Update () {
 		if(lock1.GetComponent<LocknKeyPuzzle>().isActive == true)
         {
             canMove = true;
+            highlight.SetActive(true);
             if (needPlayer == false)
             {
                 gameObject.GetComponent<QuickMover>().isMoving = true;
             }
-            else
-            {
-                gameObject.GetComponent<Material>().color = Color.Lerp(Color.grey, Color.black, Mathf.PingPong(Time.time, 1)); 
-            }
+            
         }
         
 	}

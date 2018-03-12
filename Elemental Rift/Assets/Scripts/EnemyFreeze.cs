@@ -42,7 +42,7 @@ public class EnemyFreeze : MonoBehaviour
             {
                 enemyFreeze = false;
                 freezeTimer = 5f;                
-                GetComponent<EnemyMovement>().enabled = true;
+                GetComponent<RockEnemyAI>().enabled = true;
                 enemyAnim.enabled = true;
             }
         }
@@ -65,7 +65,7 @@ public class EnemyFreeze : MonoBehaviour
             //Destroy(other.gameObject);
             //GameObject freeze = Instantiate(FreezeSpellPrefab, freezeSpawn.position, Quaternion.identity);
             enemyFreeze = true;
-            GetComponent<EnemyMovement>().enabled = false;
+            GetComponent<RockEnemyAI>().enabled = false;
             enemyAnim.enabled = false;
            // Destroy(freeze, 5f);
 

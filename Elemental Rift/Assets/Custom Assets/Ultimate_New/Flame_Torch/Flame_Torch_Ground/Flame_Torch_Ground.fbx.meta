@@ -1,7 +1,7 @@
 fileFormatVersion: 2
-guid: 86306d2475b5d234a984a7b41fe85ae7
-timeCreated: 1519843823
-licenseType: Pro
+guid: 0e7b93bd001292a41ac354a7f233f520
+timeCreated: 1520489175
+licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -11,6 +11,8 @@ ModelImporter:
     400000: Base
     400002: Bowl
     400004: //RootNode
+    2100000: Base_Mat
+    2100002: Bowl_Mat
     2300000: Base
     2300002: Bowl
     3300000: Base
@@ -18,22 +20,12 @@ ModelImporter:
     4300000: Base
     4300002: Bowl
     9500000: //RootNode
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Base_Mat
-    second: {fileID: 2100000, guid: f94ce89f22ab9404dbb38b3224ba4d69, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Bowl_Mat
-    second: {fileID: 2100000, guid: f6cfd5a8276c4144ab690061bc99d857, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -71,6 +63,8 @@ ModelImporter:
     optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88

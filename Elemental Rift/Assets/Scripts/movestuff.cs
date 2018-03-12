@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class movestuff : MonoBehaviour {
 
-	public GameObject toMove;
+	public GameObject lock1;
     public GameObject dest;
-    public bool moveIt = false;
+    //public bool moveIt = false;
     // Use this for initialization
     void Start()
     {
@@ -16,17 +16,10 @@ public class movestuff : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (moveIt == true)
+        if (lock1.GetComponent<LocknKeyPuzzle>().isActive == true)
         {
-            toMove.transform.position = Vector3.MoveTowards(toMove.transform.position, dest.transform.position, 30 * Time.deltaTime);
+            gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, dest.transform.position, 30 * Time.deltaTime);
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.tag == "Player")
-        {
-            moveIt = true;
-        }
-    }
 }

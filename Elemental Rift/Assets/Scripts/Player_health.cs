@@ -129,16 +129,7 @@ public class Player_health : MonoBehaviour {
         }
     }
 
-    private void OnCollisionStay(Collision collision)
-    {
-        if (collision.gameObject.tag == "GreenLava")
-            health -= 0.1f;
-
-        if (collision.gameObject.tag == "Lava")
-            health -= 5.0f;
-
-       
-    }
+    
 
     void CheckDead()
     {
@@ -159,7 +150,7 @@ public class Player_health : MonoBehaviour {
 
     public void bulletdmg()
     {
-        health -= 20.0f;
+        health -= 25.0f;
         damaged = true;
     }
 

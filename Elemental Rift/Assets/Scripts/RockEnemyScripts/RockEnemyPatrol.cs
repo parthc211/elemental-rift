@@ -9,6 +9,8 @@ public class RockEnemyPatrol : MonoBehaviour {
 	public float rotationSpeed = 5.0f;
 	public float movementSpeed = 5.0f;
 
+    public string pathName;
+
 	private Transform targetPathNode;
 	private int wayPointsCount;
 
@@ -16,7 +18,11 @@ public class RockEnemyPatrol : MonoBehaviour {
 
 	void Start ()
 	{
-		pathGO = GameObject.Find ("Path");
+		pathGO = GameObject.Find (pathName);
+
+        if (!pathGO)
+            return;
+
 		wayPointsCount = getWayPointsCount (pathGO.transform);
         enemyAnim = GetComponent<Animator>();
 	}
@@ -28,6 +34,9 @@ public class RockEnemyPatrol : MonoBehaviour {
 
 	public void GetNextPathNode ()
 	{
+        if (!pathGO)
+            return;
+
 		targetPathNode = pathGO.transform.GetChild (pathNodeIndex);
 		pathNodeIndex = (pathNodeIndex + 1) % wayPointsCount;
 	}
@@ -56,6 +65,9 @@ public class RockEnemyPatrol : MonoBehaviour {
 
     public void Patrol()
     {
+        if (!pathGO)
+            return;
+
         if (targetPathNode == null)
         {
             GetNextPathNode();
