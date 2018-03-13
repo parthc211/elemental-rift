@@ -1518,10 +1518,10 @@ MonoBehaviour:
   minDistance: 9
   movementSpeed: 2
   meleeRange: 7
-  walkTimer: 2
+  walkTimer: 0.5
   health: 50
   stompTimer: 2
-  attackTimer: 2
+  attackTimer: 1
   fov: {fileID: 0}
   target: {fileID: 0}
   distanceBetweenPlayer: 0
@@ -1595,14 +1595,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13eca78166da5104cb61dfb00f2e0139, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewRadius: 40
+  viewRadius: 55
   viewAngle: 360
   targetMask:
     serializedVersion: 2
     m_Bits: 256
   obstacleMask:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 8704
   visibleTargets: []
 --- !u!114 &114618315704937718
 MonoBehaviour:

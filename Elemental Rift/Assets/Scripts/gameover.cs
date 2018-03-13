@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class gameover : MonoBehaviour {
 
@@ -18,7 +19,7 @@ public class gameover : MonoBehaviour {
     {
         if(other.tag == "Player")
         {
-            Application.Quit();
+            SceneManager.LoadScene("Final_GDCScreen");
         }
     }
 }

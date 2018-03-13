@@ -528,6 +528,7 @@ public class Input_Manager : MonoBehaviour {
                 carrying = true;
                 carriedObject = hit.collider.gameObject;
                 carriedObject.GetComponent<Rigidbody>().useGravity = false;
+                carriedObject.GetComponent<pickupable>().TelekEffectOn();
                 
             }
         }
@@ -536,6 +537,7 @@ public class Input_Manager : MonoBehaviour {
     public void DropObject()
     {
         carrying = false;
+        carriedObject.GetComponent<pickupable>().TelekEffectOff();
         carriedObject.GetComponent<Rigidbody>().useGravity = true;
         carriedObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
         carriedObject.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;

@@ -52,7 +52,7 @@ public class Player_health : MonoBehaviour {
         DamageSplatter();
         
         HealPlayer();
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.O))
         {
             health -= 10.0f;
             damaged = true;

@@ -196,7 +196,7 @@ public class RockEnemyAI : MonoBehaviour
     {
         //TODO: Change damage after testing
         Debug.Log("Stomp Player");
-        Player.GetComponent<Player_health>().takedmg(1);
+        Player.GetComponent<Player_health>().takedmg(40);
     }
 
     public void SetStompTimer()

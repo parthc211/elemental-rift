@@ -21,4 +21,11 @@ public class death : MonoBehaviour {
             collision.transform.gameObject.GetComponent<Player_health>().takedmg(101f);
         }
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.transform.tag == "Player")
+        {
+            other.transform.gameObject.GetComponent<Player_health>().takedmg(101f);
+        }
+    }
 }
