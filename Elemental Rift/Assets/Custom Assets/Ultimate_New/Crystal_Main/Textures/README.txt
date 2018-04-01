@@ -1,1 +1,0 @@
-The 3 Shards of Crystals use same textures as in the Crystal_Shards Folder

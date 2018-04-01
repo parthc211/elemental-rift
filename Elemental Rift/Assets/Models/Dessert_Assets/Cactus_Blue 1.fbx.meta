@@ -1,0 +1,446 @@
+fileFormatVersion: 2
+guid: 158d370cacc436b43980b61f8ad62210
+timeCreated: 1517947601
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Cactus_Main
+    100004: Thorn_1
+    100006: Thorn_1 1
+    100008: Thorn_1 2
+    100010: Thorn_1 3
+    100012: Thorn_1 4
+    100014: Thorn_1 5
+    100016: Thorn_1 6
+    100018: Thorn_1 7
+    100020: Thorn_2
+    100022: Thorn_2 1
+    100024: Thorn_2 2
+    100026: Thorn_2 3
+    100028: Thorn_2 4
+    100030: Thorn_2 5
+    100032: Thorn_2 6
+    100034: Thorn_2 7
+    100036: Thorn_3
+    100038: Thorn_3 1
+    100040: Thorn_3 2
+    100042: Thorn_3 3
+    100044: Thorn_3 4
+    100046: Thorn_3 5
+    100048: Thorn_3 6
+    100050: Thorn_3 7
+    100052: Thorn_4
+    100054: Thorn_4 1
+    100056: Thorn_4 2
+    100058: Thorn_4 3
+    100060: Thorn_4 4
+    100062: Thorn_4 5
+    100064: Thorn_4 6
+    100066: Thorn_4 7
+    100068: Thorn_5
+    100070: Thorn_5 1
+    100072: Thorn_5 2
+    100074: Thorn_5 3
+    100076: Thorn_5 4
+    100078: Thorn_5 5
+    100080: Thorn_5 6
+    100082: Thorn_5 7
+    100084: Thorn_6
+    100086: Thorn_6 1
+    100088: Thorn_6 2
+    100090: Thorn_6 3
+    100092: Thorn_6 4
+    100094: Thorn_6 5
+    100096: Thorn_6 6
+    100098: Thorn_6 7
+    100100: Thorn_7
+    100102: Thorn_7 1
+    100104: Thorn_7 2
+    100106: Thorn_7 3
+    100108: Thorn_7 4
+    100110: Thorn_7 5
+    100112: Thorn_7 6
+    100114: Thorn_7 7
+    100116: Thorn_8
+    100118: Thorn_8 1
+    100120: Thorn_8 2
+    100122: Thorn_8 3
+    100124: Thorn_8 4
+    100126: Thorn_8 5
+    100128: Thorn_8 6
+    100130: Thorn_8 7
+    100132: Thorn_Stem_1
+    100134: Thorn_Stem_2
+    100136: Thorn_Stem_3
+    100138: Thorn_Stem_4
+    100140: Thorn_Stem_5
+    100142: Thorn_Stem_6
+    100144: Thorn_Stem_7
+    100146: Thorn_Stem_8
+    100148: Thorns
+    400000: //RootNode
+    400002: Cactus_Main
+    400004: Thorn_1
+    400006: Thorn_1 1
+    400008: Thorn_1 2
+    400010: Thorn_1 3
+    400012: Thorn_1 4
+    400014: Thorn_1 5
+    400016: Thorn_1 6
+    400018: Thorn_1 7
+    400020: Thorn_2
+    400022: Thorn_2 1
+    400024: Thorn_2 2
+    400026: Thorn_2 3
+    400028: Thorn_2 4
+    400030: Thorn_2 5
+    400032: Thorn_2 6
+    400034: Thorn_2 7
+    400036: Thorn_3
+    400038: Thorn_3 1
+    400040: Thorn_3 2
+    400042: Thorn_3 3
+    400044: Thorn_3 4
+    400046: Thorn_3 5
+    400048: Thorn_3 6
+    400050: Thorn_3 7
+    400052: Thorn_4
+    400054: Thorn_4 1
+    400056: Thorn_4 2
+    400058: Thorn_4 3
+    400060: Thorn_4 4
+    400062: Thorn_4 5
+    400064: Thorn_4 6
+    400066: Thorn_4 7
+    400068: Thorn_5
+    400070: Thorn_5 1
+    400072: Thorn_5 2
+    400074: Thorn_5 3
+    400076: Thorn_5 4
+    400078: Thorn_5 5
+    400080: Thorn_5 6
+    400082: Thorn_5 7
+    400084: Thorn_6
+    400086: Thorn_6 1
+    400088: Thorn_6 2
+    400090: Thorn_6 3
+    400092: Thorn_6 4
+    400094: Thorn_6 5
+    400096: Thorn_6 6
+    400098: Thorn_6 7
+    400100: Thorn_7
+    400102: Thorn_7 1
+    400104: Thorn_7 2
+    400106: Thorn_7 3
+    400108: Thorn_7 4
+    400110: Thorn_7 5
+    400112: Thorn_7 6
+    400114: Thorn_7 7
+    400116: Thorn_8
+    400118: Thorn_8 1
+    400120: Thorn_8 2
+    400122: Thorn_8 3
+    400124: Thorn_8 4
+    400126: Thorn_8 5
+    400128: Thorn_8 6
+    400130: Thorn_8 7
+    400132: Thorn_Stem_1
+    400134: Thorn_Stem_2
+    400136: Thorn_Stem_3
+    400138: Thorn_Stem_4
+    400140: Thorn_Stem_5
+    400142: Thorn_Stem_6
+    400144: Thorn_Stem_7
+    400146: Thorn_Stem_8
+    400148: Thorns
+    2300000: Cactus_Main
+    2300002: Thorn_1
+    2300004: Thorn_1 1
+    2300006: Thorn_1 2
+    2300008: Thorn_1 3
+    2300010: Thorn_1 4
+    2300012: Thorn_1 5
+    2300014: Thorn_1 6
+    2300016: Thorn_1 7
+    2300018: Thorn_2
+    2300020: Thorn_2 1
+    2300022: Thorn_2 2
+    2300024: Thorn_2 3
+    2300026: Thorn_2 4
+    2300028: Thorn_2 5
+    2300030: Thorn_2 6
+    2300032: Thorn_2 7
+    2300034: Thorn_3
+    2300036: Thorn_3 1
+    2300038: Thorn_3 2
+    2300040: Thorn_3 3
+    2300042: Thorn_3 4
+    2300044: Thorn_3 5
+    2300046: Thorn_3 6
+    2300048: Thorn_3 7
+    2300050: Thorn_4
+    2300052: Thorn_4 1
+    2300054: Thorn_4 2
+    2300056: Thorn_4 3
+    2300058: Thorn_4 4
+    2300060: Thorn_4 5
+    2300062: Thorn_4 6
+    2300064: Thorn_4 7
+    2300066: Thorn_5
+    2300068: Thorn_5 1
+    2300070: Thorn_5 2
+    2300072: Thorn_5 3
+    2300074: Thorn_5 4
+    2300076: Thorn_5 5
+    2300078: Thorn_5 6
+    2300080: Thorn_5 7
+    2300082: Thorn_6
+    2300084: Thorn_6 1
+    2300086: Thorn_6 2
+    2300088: Thorn_6 3
+    2300090: Thorn_6 4
+    2300092: Thorn_6 5
+    2300094: Thorn_6 6
+    2300096: Thorn_6 7
+    2300098: Thorn_7
+    2300100: Thorn_7 1
+    2300102: Thorn_7 2
+    2300104: Thorn_7 3
+    2300106: Thorn_7 4
+    2300108: Thorn_7 5
+    2300110: Thorn_7 6
+    2300112: Thorn_7 7
+    2300114: Thorn_8
+    2300116: Thorn_8 1
+    2300118: Thorn_8 2
+    2300120: Thorn_8 3
+    2300122: Thorn_8 4
+    2300124: Thorn_8 5
+    2300126: Thorn_8 6
+    2300128: Thorn_8 7
+    3300000: Cactus_Main
+    3300002: Thorn_1
+    3300004: Thorn_1 1
+    3300006: Thorn_1 2
+    3300008: Thorn_1 3
+    3300010: Thorn_1 4
+    3300012: Thorn_1 5
+    3300014: Thorn_1 6
+    3300016: Thorn_1 7
+    3300018: Thorn_2
+    3300020: Thorn_2 1
+    3300022: Thorn_2 2
+    3300024: Thorn_2 3
+    3300026: Thorn_2 4
+    3300028: Thorn_2 5
+    3300030: Thorn_2 6
+    3300032: Thorn_2 7
+    3300034: Thorn_3
+    3300036: Thorn_3 1
+    3300038: Thorn_3 2
+    3300040: Thorn_3 3
+    3300042: Thorn_3 4
+    3300044: Thorn_3 5
+    3300046: Thorn_3 6
+    3300048: Thorn_3 7
+    3300050: Thorn_4
+    3300052: Thorn_4 1
+    3300054: Thorn_4 2
+    3300056: Thorn_4 3
+    3300058: Thorn_4 4
+    3300060: Thorn_4 5
+    3300062: Thorn_4 6
+    3300064: Thorn_4 7
+    3300066: Thorn_5
+    3300068: Thorn_5 1
+    3300070: Thorn_5 2
+    3300072: Thorn_5 3
+    3300074: Thorn_5 4
+    3300076: Thorn_5 5
+    3300078: Thorn_5 6
+    3300080: Thorn_5 7
+    3300082: Thorn_6
+    3300084: Thorn_6 1
+    3300086: Thorn_6 2
+    3300088: Thorn_6 3
+    3300090: Thorn_6 4
+    3300092: Thorn_6 5
+    3300094: Thorn_6 6
+    3300096: Thorn_6 7
+    3300098: Thorn_7
+    3300100: Thorn_7 1
+    3300102: Thorn_7 2
+    3300104: Thorn_7 3
+    3300106: Thorn_7 4
+    3300108: Thorn_7 5
+    3300110: Thorn_7 6
+    3300112: Thorn_7 7
+    3300114: Thorn_8
+    3300116: Thorn_8 1
+    3300118: Thorn_8 2
+    3300120: Thorn_8 3
+    3300122: Thorn_8 4
+    3300124: Thorn_8 5
+    3300126: Thorn_8 6
+    3300128: Thorn_8 7
+    4300000: Thorn_1
+    4300002: Thorn_2
+    4300004: Thorn_3
+    4300006: Thorn_4
+    4300008: Thorn_5
+    4300010: Thorn_6
+    4300012: Thorn_7
+    4300014: Thorn_8
+    4300016: Thorn_1
+    4300018: Thorn_2
+    4300020: Thorn_3
+    4300022: Thorn_4
+    4300024: Thorn_5
+    4300026: Thorn_6
+    4300028: Thorn_7
+    4300030: Thorn_8
+    4300032: Thorn_1
+    4300034: Thorn_2
+    4300036: Thorn_3
+    4300038: Thorn_4
+    4300040: Thorn_5
+    4300042: Thorn_6
+    4300044: Thorn_7
+    4300046: Thorn_8
+    4300048: Thorn_1
+    4300050: Thorn_2
+    4300052: Thorn_3
+    4300054: Thorn_4
+    4300056: Thorn_5
+    4300058: Thorn_6
+    4300060: Thorn_7
+    4300062: Thorn_8
+    4300064: Thorn_1
+    4300066: Thorn_2
+    4300068: Thorn_3
+    4300070: Thorn_4
+    4300072: Thorn_5
+    4300074: Thorn_6
+    4300076: Thorn_7
+    4300078: Thorn_8
+    4300080: Thorn_1
+    4300082: Thorn_2
+    4300084: Thorn_3
+    4300086: Thorn_4
+    4300088: Thorn_5
+    4300090: Thorn_6
+    4300092: Thorn_7
+    4300094: Thorn_8
+    4300096: Thorn_1
+    4300098: Thorn_2
+    4300100: Thorn_3
+    4300102: Thorn_4
+    4300104: Thorn_5
+    4300106: Thorn_6
+    4300108: Thorn_7
+    4300110: Thorn_8
+    4300112: Thorn_1
+    4300114: Thorn_2
+    4300116: Thorn_3
+    4300118: Thorn_4
+    4300120: Thorn_5
+    4300122: Thorn_6
+    4300124: Thorn_7
+    4300126: Thorn_8
+    4300128: Cactus_Main
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Main_Cactus_Crown_Mat
+    second: {fileID: 2100000, guid: b77c041a62462e4498744bb63bab2e37, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Main_Cactus_Mat
+    second: {fileID: 2100000, guid: d39acc2384eb30641bfbcd9f19849c45, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Thorn_Mat
+    second: {fileID: 2100000, guid: 3bf08248e76a02643b3cf824443ac738, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
