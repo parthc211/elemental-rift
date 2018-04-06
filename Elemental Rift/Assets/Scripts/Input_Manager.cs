@@ -61,9 +61,10 @@ public class Input_Manager : MonoBehaviour {
     public Image spellLogoImage;
 
     public Image uiBck;
-    public Sprite uiBckRed;
-    public Sprite uiBckBlue;
-    public Sprite uiBckGreen;
+    public Sprite uiBckFire;
+    public Sprite uiBckWater;
+    public Sprite uiBckEarth;
+    public Sprite uiBckAir;
 
     public Image wheelFireballBack;
     public Image wheelWeldBack;
@@ -116,6 +117,8 @@ public class Input_Manager : MonoBehaviour {
     public Material[] earthHandL;
     public Material[] waterHandR;
     public Material[] waterHandL;
+    public Material[] airHandR;
+    public Material[] airHandL;
 
     public GameObject HandLeft;
     public GameObject HandRight;
@@ -179,7 +182,7 @@ public class Input_Manager : MonoBehaviour {
             {
                 if (resource_Manager.fireRune >= fireballCost)
                 {
-                    //fireProj.gameObject.GetComponent<Material>().color = Color.red;
+                    //fireProj.gameObject.GetComponent<Material>().color = Color.Fire;
                     fireProj.gameObject.SetActive(true);
                     fireProjOff.gameObject.SetActive(false);
                     fireProj.gameObject.transform.position = rayInfo.point + Vector3.up * 2.5f;
@@ -227,7 +230,7 @@ public class Input_Manager : MonoBehaviour {
 
         if (telekFlag == true)
         {
-            if (Input.GetMouseButtonUp(0) || resource_Manager.earthRune < telekCost)
+            if (Input.GetMouseButtonUp(0) || resource_Manager.airRune < telekCost)
             {
                 telekUse = false;
                 
@@ -251,7 +254,7 @@ public class Input_Manager : MonoBehaviour {
                    // earthAuraR.SetActive(false);
                 }
 
-                resource_Manager.earthRune -= Time.deltaTime * 1.5f;
+                resource_Manager.airRune -= Time.deltaTime * 1.5f;
             }
             else
             {
@@ -259,7 +262,7 @@ public class Input_Manager : MonoBehaviour {
                 {
                     PickUp();
                     
-                    resource_Manager.earthRune -= Time.deltaTime * 1.5f;
+                    resource_Manager.airRune -= Time.deltaTime * 1.5f;
                     //earthAuraL.SetActive(true);
                    // earthAuraR.SetActive(true);
                 }
@@ -416,13 +419,14 @@ public class Input_Manager : MonoBehaviour {
     {
         
 
-        if (fireBallFlag == true && resource_Manager.fireRune >=fireballCost)
+        if (fireBallFlag == true && resource_Manager.fireRune >= fireballCost  && resource_Manager.earthRune >= fireballCost)
         {
             
             RaycastHit hit;
             if (Physics.Raycast(camera.transform.position, rayDir, out hit, spellRange))
             {
                 resource_Manager.fireRune -= fireballCost;
+                resource_Manager.earthRune -= fireballCost;
                 handAnim.Play("Fireball");
                 //Instantiate(volcano, hit.point + Vector3.up * 2.5f, Quaternion.identity);
                 initialfb = new Vector3(camera.transform.position.x, camera.transform.position.y + 7.0f, camera.transform.position.z);
@@ -483,7 +487,7 @@ public class Input_Manager : MonoBehaviour {
             Destroy(knock, 1f);
         }
 
-        if (telekFlag == true && resource_Manager.earthRune >= telekCost)
+        if (telekFlag == true && resource_Manager.airRune >= telekCost)
         {
             telekUse = true;
             handAnim.Play("Telek");
@@ -511,7 +515,7 @@ public class Input_Manager : MonoBehaviour {
         {
             //carried.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
             //float thrust = Mathf.Lerp(-1f, 1f, thrustfactor);
-            carried.GetComponent<Rigidbody>().AddForce(difference * 120f , ForceMode.Force);
+            carried.GetComponent<Rigidbody>().AddForce(difference * 220f , ForceMode.Force);
         }
         
 
@@ -539,14 +543,14 @@ public class Input_Manager : MonoBehaviour {
         carrying = false;
         carriedObject.GetComponent<pickupable>().TelekEffectOff();
         carriedObject.GetComponent<Rigidbody>().useGravity = true;
-        carriedObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
-        carriedObject.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
-        carriedObject.GetComponent<Rigidbody>().AddForce(Vector3.zero, ForceMode.Force);
+        //carriedObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        //carriedObject.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+        //carriedObject.GetComponent<Rigidbody>().AddForce(Vector3.zero, ForceMode.Force);
         carriedObject = null;
     }
     void CheckSpellAvailability()
     {
-        if(resource_Manager.fireRune >= fireballCost)
+        if(resource_Manager.fireRune >= fireballCost && resource_Manager.earthRune >= fireballCost)
         {
             fireBallImage.sprite = fireBallSprite;
             fireBallImage.color = Color.white;
@@ -556,7 +560,7 @@ public class Input_Manager : MonoBehaviour {
         {
             fireBallImage.sprite = deactFireBallSprite;
             fireBallImage.color = Color.gray;
-            wheelFireballBack.fillAmount = resource_Manager.fireRune / fireballCost;
+            wheelFireballBack.fillAmount = 0;
         }
         
         if (resource_Manager.fireRune >= weldCost)
@@ -569,7 +573,7 @@ public class Input_Manager : MonoBehaviour {
         {
             weldImage.sprite = deactWeldSprite;
             weldImage.color = Color.gray;
-            wheelWeldBack.fillAmount = resource_Manager.fireRune / weldCost;
+            wheelWeldBack.fillAmount = 0;
         }
 
         if (resource_Manager.waterRune >= freezeCost)
@@ -582,7 +586,7 @@ public class Input_Manager : MonoBehaviour {
         {
             freezeImage.sprite = deactFreezeSprite;
             freezeImage.color = Color.gray;
-            wheelFreezeBack.fillAmount = resource_Manager.waterRune / freezeCost;
+            wheelFreezeBack.fillAmount = 0;
         }
 
         if (resource_Manager.waterRune >= shieldCost)
@@ -595,7 +599,7 @@ public class Input_Manager : MonoBehaviour {
         {
             shieldImage.sprite = deactShieldSprite;
             shieldImage.color = Color.gray;
-            wheelShieldBack.fillAmount = resource_Manager.waterRune / shieldCost;
+            wheelShieldBack.fillAmount = 0;
         }
 
         if (resource_Manager.earthRune >= eqCost)
@@ -608,10 +612,10 @@ public class Input_Manager : MonoBehaviour {
         {
             eqImage.sprite = deactEQSprite;
             eqImage.color = Color.gray;
-            wheelEqBack.fillAmount = resource_Manager.earthRune / eqCost;
+            wheelEqBack.fillAmount = 0;
         }
 
-        if (resource_Manager.earthRune >= telekCost)
+        if (resource_Manager.airRune >= telekCost)
         {
             telekImage.sprite = telekSprite;
             telekImage.color = Color.white;
@@ -621,17 +625,17 @@ public class Input_Manager : MonoBehaviour {
         {
             telekImage.sprite = deactTelekSprite;
             telekImage.color = Color.gray;
-            wheelTelekBack.fillAmount = resource_Manager.earthRune / telekCost;
+            wheelTelekBack.fillAmount = 0;
         }
     }
 
     void CheckSpellLogo()
     {
-        if (resource_Manager.fireRune >= fireballCost && fireBallFlag == true)
+        if (resource_Manager.fireRune >= fireballCost && resource_Manager.earthRune >= fireballCost && fireBallFlag == true)
         {
             spellLogoImage.sprite = fireBallSprite;
             spellLogoImage.color = Color.Lerp(Color.white, Color.gray, Mathf.PingPong(Time.time, 1));
-            uiBck.sprite = uiBckRed;
+            uiBck.sprite = uiBckFire;
             uiBck.fillAmount = 1;
 
             weldTool.SetActive(false);
@@ -647,8 +651,8 @@ public class Input_Manager : MonoBehaviour {
         {
             spellLogoImage.sprite = deactFireBallSprite;
             spellLogoImage.color = Color.gray;
-            uiBck.sprite = uiBckRed;
-            uiBck.fillAmount = resource_Manager.fireRune / fireballCost;
+            uiBck.sprite = uiBckFire;
+            uiBck.fillAmount = 0;
 
             weldTool.SetActive(false);
             fireballTool.SetActive(true);
@@ -662,7 +666,7 @@ public class Input_Manager : MonoBehaviour {
         {
             spellLogoImage.sprite = weldSprite;
             spellLogoImage.color = Color.Lerp(Color.white, Color.gray, Mathf.PingPong(Time.time, 1));
-            uiBck.sprite = uiBckRed;
+            uiBck.sprite = uiBckFire;
             uiBck.fillAmount = 1;
 
             weldTool.SetActive(true);
@@ -676,8 +680,8 @@ public class Input_Manager : MonoBehaviour {
         {
             spellLogoImage.sprite = deactWeldSprite;
             spellLogoImage.color = Color.gray;
-            uiBck.sprite = uiBckRed;
-            uiBck.fillAmount = resource_Manager.fireRune / weldCost;
+            uiBck.sprite = uiBckFire;
+            uiBck.fillAmount = 0;
 
             weldTool.SetActive(true);
             fireballTool.SetActive(false);
@@ -691,7 +695,7 @@ public class Input_Manager : MonoBehaviour {
         {
             spellLogoImage.sprite = freezeSprite;
             spellLogoImage.color = Color.Lerp(Color.white, Color.gray, Mathf.PingPong(Time.time, 1));
-            uiBck.sprite = uiBckBlue;
+            uiBck.sprite = uiBckWater;
             uiBck.fillAmount = 1;
 
             weldTool.SetActive(false);
@@ -705,8 +709,8 @@ public class Input_Manager : MonoBehaviour {
         {
             spellLogoImage.sprite = deactFreezeSprite;
             spellLogoImage.color = Color.gray;
-            uiBck.sprite = uiBckBlue;
-            uiBck.fillAmount = resource_Manager.waterRune / freezeCost;
+            uiBck.sprite = uiBckWater;
+            uiBck.fillAmount = 0;
 
             weldTool.SetActive(false);
             fireballTool.SetActive(false);
@@ -719,7 +723,7 @@ public class Input_Manager : MonoBehaviour {
         {
             spellLogoImage.sprite = shieldSprite;
             spellLogoImage.color = Color.Lerp(Color.white, Color.gray, Mathf.PingPong(Time.time, 1));
-            uiBck.sprite = uiBckBlue;
+            uiBck.sprite = uiBckWater;
             uiBck.fillAmount = 1;
 
             weldTool.SetActive(false);
@@ -733,8 +737,8 @@ public class Input_Manager : MonoBehaviour {
         {
             spellLogoImage.sprite = deactShieldSprite;
             spellLogoImage.color = Color.gray;
-            uiBck.sprite = uiBckBlue;
-            uiBck.fillAmount = resource_Manager.waterRune / shieldCost;
+            uiBck.sprite = uiBckWater;
+            uiBck.fillAmount = 0;
 
             weldTool.SetActive(false);
             fireballTool.SetActive(false);
@@ -748,7 +752,7 @@ public class Input_Manager : MonoBehaviour {
         {
             spellLogoImage.sprite = eqSprite;
             spellLogoImage.color = Color.Lerp(Color.white, Color.gray, Mathf.PingPong(Time.time, 1));
-            uiBck.sprite = uiBckGreen;
+            uiBck.sprite = uiBckEarth;
             uiBck.fillAmount = 1;
 
             weldTool.SetActive(false);
@@ -762,8 +766,8 @@ public class Input_Manager : MonoBehaviour {
         {
             spellLogoImage.sprite = deactEQSprite;
             spellLogoImage.color = Color.gray;
-            uiBck.sprite = uiBckGreen;
-            uiBck.fillAmount = resource_Manager.earthRune / eqCost;
+            uiBck.sprite = uiBckEarth;
+            uiBck.fillAmount = 0;
 
             weldTool.SetActive(false);
             fireballTool.SetActive(false);
@@ -772,11 +776,12 @@ public class Input_Manager : MonoBehaviour {
             telekTool.SetActive(false);
             eqTool.SetActive(true);
         }
-        if (resource_Manager.earthRune >= telekCost && telekFlag == true)
+
+        if (resource_Manager.airRune >= telekCost && telekFlag == true)
         {
             spellLogoImage.sprite = telekSprite;
             spellLogoImage.color = Color.Lerp(Color.white, Color.gray, Mathf.PingPong(Time.time, 1));
-            uiBck.sprite = uiBckGreen;
+            uiBck.sprite = uiBckAir;
             uiBck.fillAmount = 1;
 
             weldTool.SetActive(false);
@@ -790,8 +795,8 @@ public class Input_Manager : MonoBehaviour {
         {
             spellLogoImage.sprite = deactTelekSprite;
             spellLogoImage.color = Color.gray;
-            uiBck.sprite = uiBckGreen;
-            uiBck.fillAmount = resource_Manager.earthRune / telekCost;
+            uiBck.sprite = uiBckAir;
+            uiBck.fillAmount = 0;
 
             weldTool.SetActive(false);
             fireballTool.SetActive(false);

@@ -35,6 +35,7 @@ TagManager:
   - key3
   - key4
   - Telek
+  - AirAura
   layers:
   - Default
   - TransparentFX

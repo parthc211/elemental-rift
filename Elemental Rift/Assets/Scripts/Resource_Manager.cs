@@ -11,23 +11,27 @@ public class Resource_Manager : MonoBehaviour {
     public float earthRune = 0.0f;
     public float fireRune = 0.0f;
     public float waterRune = 0.0f;
+    public float airRune = 0.0f;
 
     public float maxRunes = 100.0f;
 
-    private bool earthflag = true;
+    private bool earthflag = false;
     private bool fireflag = false;
     private bool waterflag = false;
+    private bool airflag = false;
 
     private float startTime;
     private float checkTimer;
 
-    public Image redBarImage;
-    public Image blueBarImage;
-    public Image greenBarImage;
+    public Image fireBarImage;
+    public Image waterBarImage;
+    public Image earthBarImage;
+    public Image airBarImage;
 
-    public Image redOutImage;
-    public Image blueOutImage;
-    public Image greenOutImage;
+    public Image fireOutImage;
+    public Image waterOutImage;
+    public Image earthOutImage;
+    public Image airOutImage;
 
     // Use this for initialization
     void Start()
@@ -42,14 +46,17 @@ public class Resource_Manager : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        float redBarRatio = fireRune / maxRunes;
-        redBarImage.fillAmount = redBarRatio;
+        float fireBarRatio = fireRune / maxRunes;
+        fireBarImage.fillAmount = fireBarRatio;
 
-        float blueBarRatio = waterRune / maxRunes;
-        blueBarImage.fillAmount = blueBarRatio;
+        float waterBarRatio = waterRune / maxRunes;
+        waterBarImage.fillAmount = waterBarRatio;
 
-        float greenBarRatio = earthRune / maxRunes;
-        greenBarImage.fillAmount = greenBarRatio;
+        float earthBarRatio = earthRune / maxRunes;
+        earthBarImage.fillAmount = earthBarRatio;
+
+        float airBarRatio = airRune / maxRunes;
+        airBarImage.fillAmount = airBarRatio;
 
         checkTimer += Time.deltaTime;
         //if (checkTimer > 0.2f)
@@ -82,6 +89,11 @@ public class Resource_Manager : MonoBehaviour {
         {
             SetEarthFlag();
         }
+
+        if (other.gameObject.tag == "AirAura")
+        {
+            SetAirFlag();
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -100,6 +112,11 @@ public class Resource_Manager : MonoBehaviour {
         {
             SetZeroFlag();
         }
+
+        if (other.gameObject.tag == "AirAura")
+        {
+            SetZeroFlag();
+        }
     }
 
     void SetEarthFlag()
@@ -107,6 +124,7 @@ public class Resource_Manager : MonoBehaviour {
         earthflag = true;
         fireflag = false;
         waterflag = false;
+        airflag = false;
     }
 
     void SetFireFlag()
@@ -114,6 +132,7 @@ public class Resource_Manager : MonoBehaviour {
         earthflag = false;
         fireflag = true;
         waterflag = false;
+        airflag = false;
     }
 
     void SetWaterFlag()
@@ -121,6 +140,15 @@ public class Resource_Manager : MonoBehaviour {
         earthflag = false;
         fireflag = false;
         waterflag = true;
+        airflag = false;
+    }
+
+    void SetAirFlag()
+    {
+        earthflag = false;
+        fireflag = false;
+        waterflag = false;
+        airflag = true;
     }
 
     public void SetZeroFlag()
@@ -128,11 +156,12 @@ public class Resource_Manager : MonoBehaviour {
         earthflag = false;
         fireflag = false;
         waterflag = false;
+        airflag = false;
     }
 
     void ManageRunes()
     {
-        if (earthflag == true && fireflag == false && waterflag == false)
+        if (earthflag == true && fireflag == false && waterflag == false && airflag == false)
         {
             earthRune += increasePerSecond;
            
@@ -140,13 +169,17 @@ public class Resource_Manager : MonoBehaviour {
            
             waterRune -= decreasePerSecond;
 
-            greenOutImage.color = Color.white;
-            blueOutImage.color = Color.clear;
-            redOutImage.color = Color.clear;
+            airRune -= decreasePerSecond;
 
-            greenBarImage.color = Color.Lerp(Color.white, Color.gray, Mathf.PingPong(Time.time, 1));
-            blueBarImage.color = Color.white;
-            redBarImage.color = Color.white;
+            earthOutImage.color = Color.white;
+            waterOutImage.color = Color.clear;
+            fireOutImage.color = Color.clear;
+            airOutImage.color = Color.clear;
+
+            earthBarImage.color = Color.Lerp(Color.white, Color.gray, Mathf.PingPong(Time.time, 1));
+            waterBarImage.color = Color.white;
+            fireBarImage.color = Color.white;
+            airBarImage.color = Color.white;
 
             RuneCheck();
 
@@ -154,7 +187,7 @@ public class Resource_Manager : MonoBehaviour {
 
         }
 
-        if (earthflag == false && fireflag == true && waterflag == false)
+        if (earthflag == false && fireflag == true && waterflag == false && airflag == false)
         {
 
             earthRune -= decreasePerSecond;
@@ -163,19 +196,23 @@ public class Resource_Manager : MonoBehaviour {
            
             waterRune -= decreasePerSecond;
 
-            greenOutImage.color = Color.clear;
-            blueOutImage.color = Color.clear;
-            redOutImage.color = Color.white;
+            airRune -= decreasePerSecond;
 
-            greenBarImage.color = Color.white;
-            blueBarImage.color = Color.white;
-            redBarImage.color = Color.Lerp(Color.white, Color.gray, Mathf.PingPong(Time.time, 1));
+            earthOutImage.color = Color.clear;
+            waterOutImage.color = Color.clear;
+            fireOutImage.color = Color.white;
+            airOutImage.color = Color.clear;
+
+            earthBarImage.color = Color.white;
+            waterBarImage.color = Color.white;
+            fireBarImage.color = Color.Lerp(Color.white, Color.gray, Mathf.PingPong(Time.time, 1));
+            airBarImage.color = Color.white;
 
             RuneCheck();
             return;
         }
 
-        if (earthflag == false && fireflag == false && waterflag == true)
+        if (earthflag == false && fireflag == false && waterflag == true && airflag == false)
         {
 
             earthRune -= decreasePerSecond;
@@ -184,36 +221,68 @@ public class Resource_Manager : MonoBehaviour {
             
             waterRune += increasePerSecond;
 
-            greenOutImage.color = Color.clear;
-            blueOutImage.color = Color.white;
-            redOutImage.color = Color.clear;
+            airRune -= decreasePerSecond;
 
-            greenBarImage.color = Color.white;
-            blueBarImage.color = Color.Lerp(Color.white, Color.gray, Mathf.PingPong(Time.time, 1));
-            redBarImage.color = Color.white;
+            earthOutImage.color = Color.clear;
+            waterOutImage.color = Color.white;
+            fireOutImage.color = Color.clear;
+            airOutImage.color = Color.clear;
+
+            earthBarImage.color = Color.white;
+            waterBarImage.color = Color.Lerp(Color.white, Color.gray, Mathf.PingPong(Time.time, 1));
+            fireBarImage.color = Color.white;
+            airBarImage.color = Color.white;
 
             RuneCheck();
 
             return;
         }
 
-        if (earthflag == false && fireflag == false && waterflag == false)
+        if (earthflag == false && fireflag == false && waterflag == false && airflag == true)
         {
             earthRune -= decreasePerSecond;
 
-
             fireRune -= decreasePerSecond;
-
 
             waterRune -= decreasePerSecond;
 
-            greenOutImage.color = Color.clear;
-            blueOutImage.color = Color.clear;
-            redOutImage.color = Color.clear;
+            airRune += increasePerSecond;
 
-            greenBarImage.color = Color.white;
-            blueBarImage.color = Color.white;
-            redBarImage.color = Color.white;
+            earthOutImage.color = Color.clear;
+            waterOutImage.color = Color.clear;
+            fireOutImage.color = Color.clear;
+            airOutImage.color = Color.white;
+
+            earthBarImage.color = Color.white;
+            waterBarImage.color = Color.white;
+            fireBarImage.color = Color.white;
+            airBarImage.color = Color.Lerp(Color.white, Color.gray, Mathf.PingPong(Time.time, 1));
+
+            RuneCheck();
+
+            return;
+
+        }
+
+        if (earthflag == false && fireflag == false && waterflag == false && airflag == false)
+        {
+            earthRune -= decreasePerSecond;
+
+            fireRune -= decreasePerSecond;
+
+            waterRune -= decreasePerSecond;
+
+            airRune -= decreasePerSecond;
+
+            earthOutImage.color = Color.clear;
+            waterOutImage.color = Color.clear;
+            fireOutImage.color = Color.clear;
+            airOutImage.color = Color.clear;
+
+            earthBarImage.color = Color.white;
+            waterBarImage.color = Color.white;
+            fireBarImage.color = Color.white;
+            airBarImage.color = Color.white;
 
             RuneCheck();
 
@@ -234,6 +303,9 @@ public class Resource_Manager : MonoBehaviour {
         if (waterRune >= maxRunes)
             waterRune = maxRunes;
 
+        if (airRune >= maxRunes)
+            airRune = maxRunes;
+
         if (earthRune <= 0)
             earthRune = 0;
 
@@ -242,6 +314,9 @@ public class Resource_Manager : MonoBehaviour {
 
         if (waterRune <= 0)
             waterRune = 0;
+
+        if (airRune <= 0)
+            airRune = 0;
     }
 
     

@@ -34,7 +34,14 @@ public class FlameTorch : MonoBehaviour {
             flame.SetActive(false);
             isActive = false;
         }
-            
+
+        if (other.gameObject.tag == "weld" && isActive == false)
+        {
+
+            flamelight.SetActive(true);
+            flame.SetActive(true);
+            isActive = true;
+        }
 
     }
 }
