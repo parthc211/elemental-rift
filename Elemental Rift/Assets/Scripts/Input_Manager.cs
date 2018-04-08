@@ -467,6 +467,12 @@ public class Input_Manager : MonoBehaviour {
 
             resource_Manager.earthRune -= eqCost;
             handAnim.Play("Shockwave");
+            Physics.Raycast(camera.transform.position, rayDir, out rayInfo, spellRange);
+
+            if (rayInfo.collider.gameObject.tag == "EarthSpell")
+            {
+                rayInfo.collider.gameObject.GetComponent<EarthSpell>().switchGO();
+            }
             //GameObject knock = Instantiate(knockBackEffect, hit.point + Vector3.up * 1.0f, transform.rotation);
             //Destroy(knock, 2f);
 
@@ -475,16 +481,16 @@ public class Input_Manager : MonoBehaviour {
             //colliderObj = (GameObject)Instantiate(blastCollider, transform.position, transform.rotation);
             //Destroy(knock, 5f);
 
-            knockBack = true;
+            //knockBack = true;
 
-            GameObject knock = Instantiate(knockBackEffect);
-            SphereCollider knockSphereCollider = knock.GetComponentInChildren<SphereCollider>();
+            //GameObject knock = Instantiate(knockBackEffect);
+            //SphereCollider knockSphereCollider = knock.GetComponentInChildren<SphereCollider>();
 
-            knock.transform.position = transform.position;
+            //knock.transform.position = transform.position;
 
-            knockSphereCollider.enabled = true;
-            knockSphereCollider.radius += colliderIncrease * Time.deltaTime;
-            Destroy(knock, 1f);
+            //knockSphereCollider.enabled = true;
+            //knockSphereCollider.radius += colliderIncrease * Time.deltaTime;
+            //Destroy(knock, 1f);
         }
 
         if (telekFlag == true && resource_Manager.airRune >= telekCost)

@@ -36,6 +36,7 @@ TagManager:
   - key4
   - Telek
   - AirAura
+  - EarthSpell
   layers:
   - Default
   - TransparentFX
