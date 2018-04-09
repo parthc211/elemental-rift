@@ -43,11 +43,7 @@ public class EnemyBullet : MonoBehaviour {
     private void OnTriggerEnter(Collider other)
     {
 
-        //If enemy bullet collides with the player shield then destroy bullet
-        if(other.gameObject.tag == "IceShield")
-        {
-            Destroy(gameObject);
-        }
+        
 
         if(other.gameObject.tag == "Player")
         {
@@ -64,6 +60,12 @@ public class EnemyBullet : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
+        //If enemy bullet collides with the player shield then destroy bullet
+        if (collision.gameObject.tag == "IceShield")
+        {
+            Destroy(gameObject);
+            return;
+        }
         if (collision.gameObject.tag == "RockEnemy")
         {
             return;
