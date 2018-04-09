@@ -33,6 +33,7 @@ public class Resource_Manager : MonoBehaviour {
     public Image earthOutImage;
     public Image airOutImage;
 
+    public bool isTutorial = false;
     // Use this for initialization
     void Start()
     {
@@ -66,6 +67,10 @@ public class Resource_Manager : MonoBehaviour {
         //}
         if(Time.timeScale > 0)
         {
+            if (isTutorial)
+            {
+                earthRune = fireRune = waterRune = airRune = maxRunes;
+            }
             ManageRunes(); 
         }
 

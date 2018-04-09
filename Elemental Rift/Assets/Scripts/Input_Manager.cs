@@ -138,6 +138,7 @@ public class Input_Manager : MonoBehaviour {
     bool shieldAnim = false;
     bool telekAnim = false;
 
+    
     [HideInInspector]
     public Vector3 initialfb;
     [HideInInspector]
