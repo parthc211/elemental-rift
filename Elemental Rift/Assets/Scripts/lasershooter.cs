@@ -21,7 +21,7 @@ public class lasershooter : MonoBehaviour {
     void Update()
     {
         time += Time.deltaTime;
-        if (time >= 0.25f)
+        if (time >= 0.20f)
         {
             time = 0.0f;
             GameObject laserballProj = (GameObject)Instantiate(laserball);

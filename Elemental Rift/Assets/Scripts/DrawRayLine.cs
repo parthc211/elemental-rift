@@ -8,34 +8,62 @@ public class DrawRayLine : MonoBehaviour
     public GameObject target;
 
     Vector3 dir;
+
     RaycastHit rayInfo;
     RaycastHit reflectInfo;
+
+    Ray rayOG;
+    Ray rayRef;
 
     Vector3 incomingVec;
     Vector3 reflectVec;
 
+    LineRenderer lineRender;
+    Material mat;
     // Use this for initialization
     void Start()
     {
-
+        lineRender = GetComponent<LineRenderer>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         dir = target.transform.position - transform.position;
-        Physics.Raycast(transform.position, dir, out rayInfo);
+        rayOG = new Ray(transform.position, dir);
+        Physics.Raycast(rayOG, out rayInfo, 100);
+        lineRender.material.mainTextureOffset = new Vector2(0, Time.time * 3);
         if(rayInfo.collider.tag == "IceShield")
         {
             incomingVec = rayInfo.point - transform.position;
             reflectVec = Vector3.Reflect(incomingVec, rayInfo.normal);
             //reflectVec *= 5;
-            Physics.Raycast(rayInfo.point, reflectVec, out reflectInfo);
-            Debug.DrawRay(rayInfo.point, reflectVec, Color.blue);
+            rayRef = new Ray(rayInfo.point, reflectVec);
+            if(Physics.Raycast(rayRef, out reflectInfo, 50))
+            {
+                //Debug.DrawRay(rayInfo.point, reflectVec, Color.blue);
+                lineRender.SetPosition(0, rayOG.origin);
+                lineRender.SetPosition(1, rayInfo.point);
+                lineRender.SetPosition(2, reflectInfo.point);
+
+            }
+            else
+            {
+                lineRender.SetPosition(0, rayOG.origin);
+                lineRender.SetPosition(1, rayInfo.point);
+                lineRender.SetPosition(2, rayRef.GetPoint(50));
+            }
         }
+        else
+        {
+            lineRender.SetPosition(0, rayOG.origin);
+            lineRender.SetPosition(1, rayInfo.point);
+            lineRender.SetPosition(2, rayInfo.point);
+        }
+
         
-        
-        Debug.DrawRay(transform.position, rayInfo.point - transform.position, Color.red);
+        //Debug.DrawRay(transform.position, rayOG.GetPoint(5) - transform.position, Color.red);
         //Debug.DrawRay(rayInfo.point, reflectVec, Color.blue);
     }
 }
