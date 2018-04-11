@@ -31,8 +31,8 @@ public class EarthSpell : MonoBehaviour {
             //dm.destroy();
             
             Instantiate(built, gameObject.transform.position, Quaternion.identity);
-            isRubble = false;
-            telekable = true;
+            //isRubble = false;
+            //telekable = true;
             Destroy(gameObject);
         }
         else
@@ -40,8 +40,8 @@ public class EarthSpell : MonoBehaviour {
         {
 
             Instantiate(rubble, gameObject.transform.position, Quaternion.identity);
-            isRubble = true;
-            telekable = false;
+            //isRubble = true;
+            //telekable = false;
             Destroy(gameObject);
 
         }

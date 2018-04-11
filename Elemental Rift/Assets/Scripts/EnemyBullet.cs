@@ -10,10 +10,13 @@ public class EnemyBullet : MonoBehaviour {
     private GameObject Player;
     public float damageAmount = 25f;
     bool getDir = true;
+
+    Resource_Manager rscMgr;
+
     private void Awake()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
-
+        rscMgr = Player.GetComponent<Resource_Manager>();
         //_direction = Player.transform.position - gameObject.transform.position;
     }
 
@@ -48,10 +51,28 @@ public class EnemyBullet : MonoBehaviour {
         if(other.gameObject.tag == "Player")
         {
             other.GetComponent<Player_health>().takedmg(damageAmount);
+            Debug.Log(rscMgr.waterRune);
             Destroy(gameObject);
         }
 
-        if(other.gameObject.tag == "RockEnemy" || other.gameObject.tag == "WaterAura" || other.gameObject.tag == "FireAura" || other.gameObject.tag == "EarthAura")
+        //If enemy bullet collides with the player shield then destroy bullet
+        if (other.gameObject.tag == "IceShield")
+        {
+            
+            if (rscMgr.waterRune >= (damageAmount / 2) && rscMgr.airRune >= (damageAmount / 2))
+            {
+
+                rscMgr.waterRune -= (damageAmount / 2);
+                rscMgr.airRune -= (damageAmount / 2);
+
+                Destroy(gameObject);
+
+            }
+
+            return;
+        }
+
+        if (other.gameObject.tag == "RockEnemy" || other.gameObject.tag == "WaterAura" || other.gameObject.tag == "FireAura" || other.gameObject.tag == "EarthAura")
         {
             return;
         }
@@ -60,12 +81,7 @@ public class EnemyBullet : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        //If enemy bullet collides with the player shield then destroy bullet
-        if (collision.gameObject.tag == "IceShield")
-        {
-            Destroy(gameObject);
-            return;
-        }
+        
         if (collision.gameObject.tag == "RockEnemy")
         {
             return;

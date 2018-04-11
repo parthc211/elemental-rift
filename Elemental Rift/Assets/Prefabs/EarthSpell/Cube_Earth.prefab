@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114404553480975992}
   - component: {fileID: 114138873245643194}
   - component: {fileID: 114393917773663434}
+  - component: {fileID: 114767285272200952}
   m_Layer: 0
   m_Name: Cube_Earth
   m_TagString: EarthSpell
@@ -249,6 +250,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   telekEffect: {fileID: 1298155550776158}
+--- !u!114 &114767285272200952
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1281476765347466}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a22746fca005bb44a411d9d58ca650b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rubble: {fileID: 1374310546314700, guid: 6f245a398f9624e4f8fcf60294a7ad6c, type: 2}
+  damage: 0
 --- !u!198 &198094337365823956
 ParticleSystem:
   m_ObjectHideFlags: 1

@@ -9,47 +9,47 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1376891904783324}
+  m_RootGameObject: {fileID: 1339455707025478}
   m_IsPrefabParent: 1
---- !u!1 &1376891904783324
+--- !u!1 &1339455707025478
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4819272493136964}
-  - component: {fileID: 33955667485549420}
-  - component: {fileID: 135745706292578156}
-  - component: {fileID: 23073411438817476}
-  - component: {fileID: 114704910536433606}
+  - component: {fileID: 4286041103169920}
+  - component: {fileID: 33384422289094094}
+  - component: {fileID: 23827773604451404}
+  - component: {fileID: 114358814053565768}
+  - component: {fileID: 64718389602155580}
   m_Layer: 0
-  m_Name: laserball
-  m_TagString: Untagged
+  m_Name: rock10_LP
+  m_TagString: EarthSpell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4819272493136964
+--- !u!4 &4286041103169920
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1376891904783324}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 114.76, y: 171.92, z: 554}
+  m_GameObject: {fileID: 1339455707025478}
+  m_LocalRotation: {x: -0.057136763, y: -0, z: -0, w: 0.99836636}
+  m_LocalPosition: {x: 685.29047, y: 145.88, z: 195.0738}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23073411438817476
+  m_LocalEulerAnglesHint: {x: -6.551, y: 0, z: 0}
+--- !u!23 &23827773604451404
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1376891904783324}
-  m_Enabled: 0
+  m_GameObject: {fileID: 1339455707025478}
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -57,7 +57,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9b2661abd597a0741896e41552a9587a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -65,7 +65,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
+  m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 0
@@ -77,33 +77,39 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33955667485549420
+--- !u!33 &33384422289094094
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1376891904783324}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &114704910536433606
+  m_GameObject: {fileID: 1339455707025478}
+  m_Mesh: {fileID: 4300000, guid: 08dc3e8bd7342324ca94ad409a6c1e45, type: 3}
+--- !u!64 &64718389602155580
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1339455707025478}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 08dc3e8bd7342324ca94ad409a6c1e45, type: 3}
+--- !u!114 &114358814053565768
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1376891904783324}
+  m_GameObject: {fileID: 1339455707025478}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07a731472f267c6429cac8594ca614bd, type: 3}
+  m_Script: {fileID: 11500000, guid: f8d7ba1e95af69e4fb2990b70c30509c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!135 &135745706292578156
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1376891904783324}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  rubble: {fileID: 1374310546314700, guid: 6f245a398f9624e4f8fcf60294a7ad6c, type: 2}
+  built: {fileID: 1281476765347466, guid: 7ba46a77682220042b44dd4ca51bfa5d, type: 2}
+  isRubble: 0
+  telekable: 1

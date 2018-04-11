@@ -37,6 +37,7 @@ TagManager:
   - Telek
   - AirAura
   - EarthSpell
+  - LaserTarget
   layers:
   - Default
   - TransparentFX

@@ -32,7 +32,7 @@ public class DrawRayLine : MonoBehaviour
     {
         dir = target.transform.position - transform.position;
         rayOG = new Ray(transform.position, dir);
-        Physics.Raycast(rayOG, out rayInfo, 100);
+        Physics.Raycast(rayOG, out rayInfo);
         lineRender.material.mainTextureOffset = new Vector2(0, Time.time * 3);
         if(rayInfo.collider.tag == "IceShield")
         {
@@ -40,12 +40,17 @@ public class DrawRayLine : MonoBehaviour
             reflectVec = Vector3.Reflect(incomingVec, rayInfo.normal);
             //reflectVec *= 5;
             rayRef = new Ray(rayInfo.point, reflectVec);
-            if(Physics.Raycast(rayRef, out reflectInfo, 50))
+            if(Physics.Raycast(rayRef, out reflectInfo))
             {
                 //Debug.DrawRay(rayInfo.point, reflectVec, Color.blue);
                 lineRender.SetPosition(0, rayOG.origin);
                 lineRender.SetPosition(1, rayInfo.point);
                 lineRender.SetPosition(2, reflectInfo.point);
+
+                if(reflectInfo.collider.tag == "LaserTarget" && reflectInfo.collider.gameObject.GetComponent<LaserTarget>().isActive == false)
+                {
+                    reflectInfo.collider.gameObject.GetComponent<LaserTarget>().isActive = true;
+                }
 
             }
             else
