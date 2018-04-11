@@ -5,7 +5,7 @@ using UnityEngine;
 public class laserball : MonoBehaviour
 {
 
-    private float bulletSpeed = 10f;
+    private float bulletSpeed = 45f;
     private Vector3 _direction;
 
     // Use this for initialization
@@ -18,7 +18,7 @@ public class laserball : MonoBehaviour
     void Update()
     {
         transform.Translate(_direction * bulletSpeed * Time.deltaTime);
-        Destroy(gameObject, 4.0f);
+        Destroy(gameObject, 1.0f);
     }
 
     public void SetDirection(Vector3 dir)

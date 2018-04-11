@@ -187,7 +187,7 @@ public class RockEnemyAI : MonoBehaviour
     //Change the name of the function to something like setTimer
     public void SetWalkTimer()
     {
-		Debug.Log ("animation Event");
+		//Debug.Log ("animation Event");
         resetWalkTimer = walkTimer;
         resetAttackTimer = attackTimer;
     }

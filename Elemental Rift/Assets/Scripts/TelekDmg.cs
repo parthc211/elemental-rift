@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class TelekDmg : MonoBehaviour {
 
-    
-	// Use this for initialization
-	void Start () {
+    public GameObject rubble;
+    public float damage = 0;
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -19,8 +20,14 @@ public class TelekDmg : MonoBehaviour {
     {
         if (collision.gameObject.tag == "RockEnemy")
         {
-            collision.gameObject.GetComponent<EnemyHealth>().TakeDamage(10);
-            Destroy(gameObject);
+            if (damage != 0)
+            {
+
+
+                collision.gameObject.GetComponent<EnemyHealth>().TakeDamage(damage);
+                Instantiate(rubble, gameObject.transform.position, Quaternion.identity);
+                Destroy(gameObject);
+            }
         }
     }
 }

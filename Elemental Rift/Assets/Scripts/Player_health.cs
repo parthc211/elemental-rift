@@ -144,6 +144,7 @@ public class Player_health : MonoBehaviour {
             resource_manager.fireRune = 0;
             resource_manager.waterRune = 0;
             resource_manager.earthRune = 0;
+            resource_manager.airRune = 0;
             health = 100.0f;
         }
     }

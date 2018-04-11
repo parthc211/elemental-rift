@@ -294,7 +294,7 @@ public class Input_Manager : MonoBehaviour {
         if (shieldFlag == true)
         {
             
-            if (Input.GetMouseButtonUp(0) || resource_Manager.waterRune < shieldCost)
+            if (Input.GetMouseButtonUp(0) || resource_Manager.waterRune < shieldCost || resource_Manager.airRune < shieldCost)
             {
                 shieldUse = false;
                 if (shieldAnim == true)
@@ -310,7 +310,7 @@ public class Input_Manager : MonoBehaviour {
             {
                 
                 IceShieldPrefab.SetActive(true);
-                resource_Manager.waterRune -= Time.deltaTime * 1.5f;
+                //resource_Manager.waterRune -= Time.deltaTime * 1.5f;
                 //waterAuraL.SetActive(true);
                 //waterAuraR.SetActive(true);
 
@@ -456,7 +456,7 @@ public class Input_Manager : MonoBehaviour {
 
         }
 
-        if (shieldFlag == true && resource_Manager.waterRune >= shieldCost)
+        if (shieldFlag == true && resource_Manager.waterRune >= shieldCost && resource_Manager.airRune >= shieldCost)
         {
             shieldUse = true;
             handAnim.Play("Shield");
@@ -468,11 +468,12 @@ public class Input_Manager : MonoBehaviour {
 
             resource_Manager.earthRune -= eqCost;
             handAnim.Play("Shockwave");
-            Physics.Raycast(camera.transform.position, rayDir, out rayInfo, spellRange);
-
-            if (rayInfo.collider.gameObject.tag == "EarthSpell")
+            if (Physics.Raycast(camera.transform.position, rayDir, out rayInfo, spellRange))
             {
-                rayInfo.collider.gameObject.GetComponent<EarthSpell>().switchGO();
+                if (rayInfo.collider.gameObject.tag == "EarthSpell")
+                {
+                    rayInfo.collider.gameObject.GetComponent<EarthSpell>().switchGO();
+                }
             }
             //GameObject knock = Instantiate(knockBackEffect, hit.point + Vector3.up * 1.0f, transform.rotation);
             //Destroy(knock, 2f);
@@ -539,6 +540,7 @@ public class Input_Manager : MonoBehaviour {
                 carrying = true;
                 carriedObject = hit.collider.gameObject;
                 carriedObject.GetComponent<Rigidbody>().useGravity = false;
+                carriedObject.GetComponent<TelekDmg>().damage = 15f;
                 carriedObject.GetComponent<pickupable>().TelekEffectOn();
                 
             }
@@ -550,6 +552,7 @@ public class Input_Manager : MonoBehaviour {
         carrying = false;
         carriedObject.GetComponent<pickupable>().TelekEffectOff();
         carriedObject.GetComponent<Rigidbody>().useGravity = true;
+        
         //carriedObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
         //carriedObject.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
         //carriedObject.GetComponent<Rigidbody>().AddForce(Vector3.zero, ForceMode.Force);
@@ -596,7 +599,7 @@ public class Input_Manager : MonoBehaviour {
             wheelFreezeBack.fillAmount = 0;
         }
 
-        if (resource_Manager.waterRune >= shieldCost)
+        if (resource_Manager.waterRune >= shieldCost && resource_Manager.airRune >= shieldCost)
         {
             shieldImage.sprite = shieldSprite;
             shieldImage.color = Color.white;
@@ -726,7 +729,7 @@ public class Input_Manager : MonoBehaviour {
             telekTool.SetActive(false);
             eqTool.SetActive(false);
         }
-        if (resource_Manager.waterRune >= shieldCost && shieldFlag == true)
+        if (resource_Manager.waterRune >= shieldCost && resource_Manager.airRune >= shieldCost && shieldFlag == true)
         {
             spellLogoImage.sprite = shieldSprite;
             spellLogoImage.color = Color.Lerp(Color.white, Color.gray, Mathf.PingPong(Time.time, 1));
@@ -826,7 +829,7 @@ public class Input_Manager : MonoBehaviour {
         telekFlag = false;
 
         
-        HandLeft.GetComponent<SkinnedMeshRenderer>().material = fireHandL[0];
+        HandLeft.GetComponent<SkinnedMeshRenderer>().material = earthHandL[0];
         HandRight.GetComponent<SkinnedMeshRenderer>().material = fireHandR[0];
 
         
