@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class TutorialMgr : MonoBehaviour {
 
     public GameObject spell;
-
+    public GameObject spell2;
     public GameObject textBox;
 
 	// Use this for initialization
@@ -31,6 +31,7 @@ public class TutorialMgr : MonoBehaviour {
         if(other.tag == "Player")
         {
             spell.SetActive(true);
+            spell2.SetActive(true);
             textBox.SetActive(true);
             Time.timeScale = 0.0f;
         }

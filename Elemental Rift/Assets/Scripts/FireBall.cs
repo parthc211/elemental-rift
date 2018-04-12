@@ -23,7 +23,7 @@ public class FireBall : MonoBehaviour {
         //initialPos = im.initialfb;
         initialPos = gameObject.transform.position;
         finalPos = im.finalfb;
-        speed = 15.0f;
+        speed = 20.0f;
         time = 0.0f;
         timeToReachTargetPosition = Vector3.Distance(initialPos, finalPos) / speed;
     }

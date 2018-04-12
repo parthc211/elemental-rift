@@ -29,8 +29,9 @@ public class EarthSpell : MonoBehaviour {
 
             //dm = gameObject.GetComponentInChildren<DestoyMe>();
             //dm.destroy();
-            
-            Instantiate(built, gameObject.transform.position, Quaternion.identity);
+            Vector3 pos = gameObject.transform.position;
+            pos.y += 1.5f;
+            Instantiate(built, pos, Quaternion.identity);
             //isRubble = false;
             //telekable = true;
             Destroy(gameObject);
@@ -38,8 +39,9 @@ public class EarthSpell : MonoBehaviour {
         else
         if (isRubble == false)
         {
-
-            Instantiate(rubble, gameObject.transform.position, Quaternion.identity);
+            Vector3 pos = gameObject.transform.position;
+            pos.y += 1.5f;
+            Instantiate(rubble, pos, Quaternion.identity);
             //isRubble = true;
             //telekable = false;
             Destroy(gameObject);

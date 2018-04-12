@@ -7,7 +7,7 @@ public class FlameTorch : MonoBehaviour {
     public GameObject flamelight;
     public GameObject flame;
 
-    bool isActive;
+    public bool isActive;
 	// Use this for initialization
 	void Start () {
 		if(flame.activeInHierarchy && flamelight.activeInHierarchy)

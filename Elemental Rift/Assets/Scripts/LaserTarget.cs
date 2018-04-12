@@ -13,9 +13,21 @@ public class LaserTarget : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (isActive)
-        {
-            Debug.Log("active");
-        }
+        
 	}
+
+    public void OnRayEnter()
+    {
+        Debug.Log("Enter");
+    }
+
+    public void OnRayStay()
+    {
+        Debug.Log("Stay");
+    }
+
+    public void OnRayExit()
+    {
+        Debug.Log("Exit");
+    }
 }

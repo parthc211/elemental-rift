@@ -5,8 +5,7 @@ using UnityEngine;
 public class Lock_4_Puzzle : MonoBehaviour {
 
     public GameObject lock1;
-    public GameObject lock2;
-    public GameObject lock3;
+   
     public GameObject lock4;
 
     private bool canMove = false;
@@ -19,8 +18,7 @@ public class Lock_4_Puzzle : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (lock1.GetComponent<LocknKeyPuzzle>().isActive == true && lock2.GetComponent<LocknKeyPuzzle>().isActive == true 
-                && lock3.GetComponent<LocknKeyPuzzle>().isActive == true && lock4.GetComponent<LocknKeyPuzzle>().isActive == true)
+        if (lock1.GetComponent<LocknKeyPuzzle>().isActive == true && lock4.GetComponent<LocknKeyPuzzle>().isActive == true)
         {
             canMove = true;
             highlight.SetActive(true);

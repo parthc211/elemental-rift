@@ -540,7 +540,10 @@ public class Input_Manager : MonoBehaviour {
                 carrying = true;
                 carriedObject = hit.collider.gameObject;
                 carriedObject.GetComponent<Rigidbody>().useGravity = false;
-                carriedObject.GetComponent<TelekDmg>().damage = 15f;
+                if(carriedObject.GetComponent<TelekDmg>())
+                {
+                    carriedObject.GetComponent<TelekDmg>().damage = 15f; 
+                }
                 carriedObject.GetComponent<pickupable>().TelekEffectOn();
                 
             }

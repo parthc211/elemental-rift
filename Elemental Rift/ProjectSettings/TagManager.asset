@@ -38,6 +38,7 @@ TagManager:
   - AirAura
   - EarthSpell
   - LaserTarget
+  - Crystal
   layers:
   - Default
   - TransparentFX

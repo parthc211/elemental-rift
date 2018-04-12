@@ -5,56 +5,58 @@ using UnityEngine;
 public class Earth_Puzzle2 : MonoBehaviour
 {
 
+    public GameObject leftPane;
+    public GameObject rightPane;
+    public GameObject lightGlow;
+    public GameObject mover;
 
-    public bool isActive = false;
-    float Current_PositionX;
-    float Current_PositionY;
-    float Current_PositionZ;
+    bool left = false;
+    bool right = false;
 
-    float Destination_X;
-    float Destination_Y;
-    float Destination_Z;
-
+    bool isActive = false;
     void Start()
     {
-
-        Current_PositionX = transform.position.x;
-        Current_PositionY = transform.position.y;
-        Current_PositionZ = transform.position.z;
-
-
-        Destination_X = 710.0f;
 
     }
 
 
     void Update()
     {
+        if(left && right)
+        {
+            isActive = true;
+        }
 
         if (isActive)
         {
-            //Debug.Log(Destination_X);
-            if (Current_PositionX < Destination_X)
-            {
-                transform.position += (-Vector3.left) * 5.0f * Time.deltaTime;
-            }
-            else
-            {
-                isActive = false;
-            }
-
-
-
-
-
-            Current_PositionX = transform.position.x;
-            Current_PositionY = transform.position.y;
-            Current_PositionZ = transform.position.z;
+            
+            lightGlow.SetActive(true);
+            mover.GetComponent<QuickMover>().isMoving = true;
+            leftPane.SetActive(true);
+            rightPane.SetActive(true);
         }
 
     }
-    private void OnMouseDown()
+
+    public void OnRayEnter1()
     {
-        isActive = true;
+        leftPane.SetActive(true);
+        left = true;
+    }
+    public void OnRayExit1()
+    {
+        leftPane.SetActive(false);
+        left = false;
+    }
+
+    public void OnRayEnter2()
+    {
+        rightPane.SetActive(true);
+        right = true;
+    }
+    public void OnRayExit2()
+    {
+        rightPane.SetActive(false);
+        right = false;
     }
 }

@@ -28,6 +28,11 @@ public class FireDmg : MonoBehaviour {
             {
                 col.GetComponent<EnemyHealth>().TakeDamage(30f);
             }
+
+            if (col.CompareTag("Crystal"))
+            {
+                Debug.Log("Broke");
+            }
             //if(col.CompareTag("FireButton"))
             //{
             //    col.gameObject.SetActive(false);

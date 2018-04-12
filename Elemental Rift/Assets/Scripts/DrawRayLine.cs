@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class DrawRayLine : MonoBehaviour
 {
+    public string LaserTag;
+
+    public string EnterTag;
+    public string ExitTag;
 
     public GameObject target;
-
+    private GameObject hitObject;
+    bool hitting = false;
     Vector3 dir;
 
     RaycastHit rayInfo;
@@ -47,17 +52,52 @@ public class DrawRayLine : MonoBehaviour
                 lineRender.SetPosition(1, rayInfo.point);
                 lineRender.SetPosition(2, reflectInfo.point);
 
-                if(reflectInfo.collider.tag == "LaserTarget" && reflectInfo.collider.gameObject.GetComponent<LaserTarget>().isActive == false)
+                if (reflectInfo.transform.tag == LaserTag)
                 {
-                    reflectInfo.collider.gameObject.GetComponent<LaserTarget>().isActive = true;
+                    GameObject go = reflectInfo.transform.gameObject;
+
+                    if(hitObject == null)
+                    {
+                        go.SendMessage(EnterTag);
+                    }
+                    else if(hitObject.GetInstanceID() == go.GetInstanceID())
+                    {
+                        //hitObject.SendMessage("OnRayStay");
+                    }
+                    else
+                    {
+                        hitObject.SendMessage(ExitTag);
+                        go.SendMessage(EnterTag);
+                    }
+
+                    hitting = true;
+                    hitObject = go;
+                    //lineRender.SetPosition(0, rayOG.origin);
+                    //lineRender.SetPosition(1, rayInfo.point);
+                    //lineRender.SetPosition(2, reflectInfo.point);
+                }
+                else if (hitting)
+                {
+                    //hitObject.SendMessage(ExitTag);
+                    hitting = false;
+                    hitObject = null;
                 }
 
             }
             else
             {
+                
                 lineRender.SetPosition(0, rayOG.origin);
                 lineRender.SetPosition(1, rayInfo.point);
                 lineRender.SetPosition(2, rayRef.GetPoint(50));
+                if(hitting)
+                {
+                    hitObject.SendMessage(ExitTag);
+                    hitting = false;
+                    hitObject = null; 
+                }
+                
+                
             }
         }
         else
@@ -65,6 +105,12 @@ public class DrawRayLine : MonoBehaviour
             lineRender.SetPosition(0, rayOG.origin);
             lineRender.SetPosition(1, rayInfo.point);
             lineRender.SetPosition(2, rayInfo.point);
+            //if (hitting)
+            //{
+            //    hitObject.SendMessage(ExitTag);
+            //    hitting = false;
+            //    hitObject = null;
+            //}
         }
 
         

@@ -26,7 +26,8 @@ public class Player_health : MonoBehaviour {
     private Vector3 lastCheckPointPos;
     private Quaternion lastCheckPointRot;
     private Resource_Manager resource_manager;
-  
+
+    public bool isTutorial = false;
     
 	// Use this for initialization
 	void Start () {
@@ -37,6 +38,11 @@ public class Player_health : MonoBehaviour {
         resource_manager = gameObject.GetComponent<Resource_Manager>();
         lastCheckPointPos = transform.position;
         lastCheckPointRot = transform.rotation;
+
+        if (isTutorial)
+        {
+            health = 100.0f;
+        }
         //lastCheckpoint = gameObject.transform;
         //Debug.Log(lastCheckpoint.position);
        // Debug.Log(lastCheckpoint.rotation);

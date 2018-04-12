@@ -7,11 +7,15 @@ public class laserball : MonoBehaviour
 
     private float bulletSpeed = 45f;
     private Vector3 _direction;
+    private GameObject Player;
+    public float damageAmount = 12f;
+    Resource_Manager rscMgr;
 
     // Use this for initialization
     void Start()
     {
-
+        Player = GameObject.FindGameObjectWithTag("Player");
+        rscMgr = Player.GetComponent<Resource_Manager>();
     }
 
     // Update is called once per frame
@@ -32,12 +36,21 @@ public class laserball : MonoBehaviour
         //If enemy bullet collides with the player shield then destroy bullet
         if (other.gameObject.tag == "IceShield")
         {
+            if (rscMgr.waterRune >= (damageAmount / 2) && rscMgr.airRune >= (damageAmount / 2))
+            {
+
+                rscMgr.waterRune -= (damageAmount / 2);
+                rscMgr.airRune -= (damageAmount / 2);
+
+                Destroy(gameObject);
+
+            }
             Destroy(gameObject);
         }
 
         if (other.gameObject.tag == "Player")
         {
-            other.GetComponent<Player_health>().takedmg(12);
+            other.GetComponent<Player_health>().takedmg(damageAmount);
             Destroy(gameObject);
         }
     }
