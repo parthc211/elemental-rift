@@ -32,6 +32,7 @@ public class FireDmg : MonoBehaviour {
             if (col.CompareTag("Crystal"))
             {
                 Debug.Log("Broke");
+                col.gameObject.GetComponent<tutEndScreen>().StartEndScreen();
             }
             //if(col.CompareTag("FireButton"))
             //{

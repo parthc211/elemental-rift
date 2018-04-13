@@ -111,5 +111,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rubble: {fileID: 1374310546314700, guid: 6f245a398f9624e4f8fcf60294a7ad6c, type: 2}
   built: {fileID: 1281476765347466, guid: 7ba46a77682220042b44dd4ca51bfa5d, type: 2}
+  effect: {fileID: 1355464331237482, guid: 9c89208597bb48a4a84bdb081122080f, type: 2}
   isRubble: 0
   telekable: 1

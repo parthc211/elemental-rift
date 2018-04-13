@@ -9,5 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Final_GDCScreen.unity
     guid: 31c234487824b4a4385cae7304ccaa93
   - enabled: 1
+    path: Assets/Scenes/Level_Arena.unity
+    guid: 1129133cb75ff9243bc0383e94f4b5d1
+  - enabled: 1
     path: Assets/Scenes/Prototype_Earth_Level.unity
-    guid: d464326f0ffeb224eb5030d1b6d29708
+    guid: d18522d92b9b54e48b75fb4a203c36a6

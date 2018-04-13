@@ -3534,6 +3534,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rubble: {fileID: 1374310546314700}
   built: {fileID: 1793374767534598, guid: 5a56bcdd98aa520499caa2716fcb30f4, type: 2}
+  effect: {fileID: 1355464331237482, guid: 9c89208597bb48a4a84bdb081122080f, type: 2}
   isRubble: 1
   telekable: 0
 --- !u!135 &135016480257233942

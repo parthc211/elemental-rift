@@ -873,7 +873,7 @@ public class Input_Manager : MonoBehaviour {
         eqFlag = false;
         telekFlag = false;
 
-        HandLeft.GetComponent<SkinnedMeshRenderer>().material = waterHandL[0];
+        HandLeft.GetComponent<SkinnedMeshRenderer>().material = airHandL[0];
         HandRight.GetComponent<SkinnedMeshRenderer>().material = waterHandR[0];
     }
 
@@ -899,8 +899,8 @@ public class Input_Manager : MonoBehaviour {
         eqFlag = false;
         telekFlag = true;
 
-        HandLeft.GetComponent<SkinnedMeshRenderer>().material = earthHandL[0];
-        HandRight.GetComponent<SkinnedMeshRenderer>().material = earthHandR[0];
+        HandLeft.GetComponent<SkinnedMeshRenderer>().material = airHandL[0];
+        HandRight.GetComponent<SkinnedMeshRenderer>().material = airHandR[0];
     }
 
 

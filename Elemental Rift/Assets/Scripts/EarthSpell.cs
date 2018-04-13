@@ -6,7 +6,7 @@ public class EarthSpell : MonoBehaviour {
 
     public GameObject rubble;
     public GameObject built;
-
+    public GameObject effect;
     public bool isRubble = false;
     public bool telekable = false;
 
@@ -31,6 +31,7 @@ public class EarthSpell : MonoBehaviour {
             //dm.destroy();
             Vector3 pos = gameObject.transform.position;
             pos.y += 1.5f;
+            Instantiate(effect, gameObject.transform.position, Quaternion.Euler(90, 0, 0));
             Instantiate(built, pos, Quaternion.identity);
             //isRubble = false;
             //telekable = true;
@@ -41,6 +42,7 @@ public class EarthSpell : MonoBehaviour {
         {
             Vector3 pos = gameObject.transform.position;
             pos.y += 1.5f;
+            Instantiate(effect, gameObject.transform.position, Quaternion.Euler(90, 0, 0));
             Instantiate(rubble, pos, Quaternion.identity);
             //isRubble = true;
             //telekable = false;

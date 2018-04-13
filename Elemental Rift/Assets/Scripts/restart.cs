@@ -18,6 +18,6 @@ public class restart : MonoBehaviour {
 
     public void RestartLevel()
     {
-        SceneManager.LoadScene("Prototype_Earth_Level");
+        SceneManager.LoadScene("Level_Arena");
     }
 }

@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1061703861597184}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 687.56, y: 145.65, z: 205.62}
+  m_LocalPosition: {x: 699.91, y: 145.18, z: 221.95}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children: []
   m_Father: {fileID: 0}
@@ -111,5 +111,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rubble: {fileID: 1374310546314700, guid: 6f245a398f9624e4f8fcf60294a7ad6c, type: 2}
   built: {fileID: 1281476765347466, guid: 7ba46a77682220042b44dd4ca51bfa5d, type: 2}
+  effect: {fileID: 1355464331237482, guid: 9c89208597bb48a4a84bdb081122080f, type: 2}
   isRubble: 0
   telekable: 1
