@@ -8282,7 +8282,7 @@ Prefab:
     - target: {fileID: 120692295680663182, guid: 1c633ebf24d8ecf47a285833d2eb9303,
         type: 2}
       propertyPath: m_Positions.Array.data[1].y
-      value: 174.47
+      value: 174.87
       objectReference: {fileID: 0}
     - target: {fileID: 120692295680663182, guid: 1c633ebf24d8ecf47a285833d2eb9303,
         type: 2}
@@ -30000,6 +30000,10 @@ Prefab:
       propertyPath: mover
       value: 
       objectReference: {fileID: 1932855310}
+    - target: {fileID: 1584259722312634, guid: fc6277f9470ea904d99cef62cd5464a7, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fc6277f9470ea904d99cef62cd5464a7, type: 2}
   m_IsPrefabParent: 0
@@ -51057,7 +51061,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: 1f429e75001e05a4faae4f728de6cfca, type: 2}
     - target: {fileID: 100002, guid: 7f001abafa8dbe34a8eb73ca0ef77121, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7f001abafa8dbe34a8eb73ca0ef77121, type: 3}
