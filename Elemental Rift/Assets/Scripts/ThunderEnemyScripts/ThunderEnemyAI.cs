@@ -51,7 +51,14 @@ public class ThunderEnemyAI : MonoBehaviour
 	}
     private void LookPlayer()
     {
-        transform.LookAt(target);
+        //transform.LookAt(target);
+        Vector3 relativePos = target.position - transform.position;
+        Quaternion rotation = Quaternion.LookRotation(relativePos);
+
+        //rotation.x = 0;
+        //rotation.z = 0;
+
+        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, rotationSpeed * Time.deltaTime);
     }
 
     private void FollowPlayer()
