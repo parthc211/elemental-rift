@@ -21,7 +21,7 @@ public class ThunderLightAttack : MonoBehaviour {
     {
         _direction = Player.transform.position - gameObject.transform.position;
         transform.Translate(_direction * lightAttackSpeed * Time.deltaTime);
-        Destroy(gameObject, 5f);
+        Destroy(gameObject, 1f);
     }
 
     public void SetAttackDirection(Vector3 dir)
