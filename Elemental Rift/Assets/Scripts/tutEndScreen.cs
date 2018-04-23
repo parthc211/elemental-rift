@@ -28,6 +28,7 @@ public class tutEndScreen : MonoBehaviour {
             if(timer >= 2 && timer < 6)
             {
                 screen1.SetActive(true);
+                gameObject.GetComponent<AudioSource>().Play();
             } 
             if (timer >= 6 && timer < 10)
             {

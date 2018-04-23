@@ -26,6 +26,7 @@ public class EarthSpell : MonoBehaviour {
     {
         if(isRubble == true)
         {
+            StaticVariablesWaterPuzzle.stoneRubbled = true;
 
             //dm = gameObject.GetComponentInChildren<DestoyMe>();
             //dm.destroy();
