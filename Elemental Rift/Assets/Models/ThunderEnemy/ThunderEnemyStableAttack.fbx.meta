@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 1e6d5a15e7d397e4f9ab9e3cd25298fa
-timeCreated: 1524157503
+guid: df92fc94d30db6946aaa244cc174b3c4
+timeCreated: 1524587093
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -65,13 +65,13 @@ ModelImporter:
     100114: Spine_4
     100116: Spine_Main
     100118: Spine_Main1
-    100120: Thigh_Left
-    100122: Thigh_Right
-    100124: Thumb_1_Left
-    100126: Thumb_1_Right
-    100128: Thumb_2_Left
-    100130: Thumb_2_Right
-    100132: //RootNode
+    100120: //RootNode
+    100122: Thigh_Left
+    100124: Thigh_Right
+    100126: Thumb_1_Left
+    100128: Thumb_1_Right
+    100130: Thumb_2_Left
+    100132: Thumb_2_Right
     100134: Tiny_1_Left
     100136: Tiny_1_Right
     100138: Tiny_2_Left
@@ -148,13 +148,13 @@ ModelImporter:
     400114: Spine_4
     400116: Spine_Main
     400118: Spine_Main1
-    400120: Thigh_Left
-    400122: Thigh_Right
-    400124: Thumb_1_Left
-    400126: Thumb_1_Right
-    400128: Thumb_2_Left
-    400130: Thumb_2_Right
-    400132: //RootNode
+    400120: //RootNode
+    400122: Thigh_Left
+    400124: Thigh_Right
+    400126: Thumb_1_Left
+    400128: Thumb_1_Right
+    400130: Thumb_2_Left
+    400132: Thumb_2_Right
     400134: Tiny_1_Left
     400136: Tiny_1_Right
     400138: Tiny_2_Left
@@ -215,7 +215,7 @@ ModelImporter:
     clipAnimations:
     - serializedVersion: 16
       name: ThunderEnemyStableAttack
-      takeName: Thunder_2.6 (Walk_Fly_Attack_Stable)
+      takeName: Thunder_2.8 (Walk_Fly_Attack_Stable_Updated)
       firstFrame: 1
       lastFrame: 30
       wrapMode: 0
@@ -224,7 +224,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0

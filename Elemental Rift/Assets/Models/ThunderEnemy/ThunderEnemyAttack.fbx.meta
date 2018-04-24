@@ -1,77 +1,77 @@
 fileFormatVersion: 2
-guid: 4d6fc610bf9033e48a8f839438cee62c
-timeCreated: 1524157505
+guid: b5d42b10ac8c0c742903ed822f469ca3
+timeCreated: 1524587086
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: Ankle_Left
     100002: Ankle_Right
-    100004: back
-    100006: Badge
-    100008: Body
-    100010: Collar_Bone_Left
-    100012: Collar_Bone_Right
-    100014: CTRL_Ankle_Left
-    100016: CTRL_Ankle_Right
-    100018: CTRL_Chest
-    100020: CTRL_Collar_Left
-    100022: CTRL_Collar_Right
-    100024: CTRL_Elbow_Left
-    100026: CTRL_Elbow_Right
-    100028: CTRL_Global
-    100030: CTRL_Knee_Left
-    100032: CTRL_Knee_Right
-    100034: CTRL_Neck
-    100036: CTRL_Pelvis
-    100038: CTRL_Thigh_Left
-    100040: CTRL_Thigh_Right
-    100042: CTRL_Wing_1_Left
-    100044: CTRL_Wing_1_Right
-    100046: CTRL_Wing_2_Left
-    100048: CTRL_Wing_2_Right
-    100050: CTRL_Wrist_Left
-    100052: CTRL_Wrist_Right
-    100054: Elbow_Left
-    100056: Elbow_Right
-    100058: Foot_Left
-    100060: Foot_Right
-    100062: Head
-    100064: Jaw_Base
-    100066: Knee_Left
-    100068: Knee_Right
-    100070: left
-    100072: Leg_Left
-    100074: Leg_Right
-    100076: Middle_1_Left
-    100078: Middle_1_Right
-    100080: Middle_2_Left
-    100082: Middle_2_Right
-    100084: Neck
-    100086: Pelvis
-    100088: Point_1_Left
-    100090: Point_1_Right
-    100092: Point_2_Left
-    100094: Point_2_Right
-    100096: Ring_1_Left
-    100098: Ring_1_Right
-    100100: Ring_2_Left
-    100102: Ring_2_Right
-    100104: Shoulder_Left
-    100106: Shoulder_Right
-    100108: Spine_1
-    100110: Spine_2
-    100112: Spine_3
-    100114: Spine_4
-    100116: Spine_Main
-    100118: Spine_Main1
-    100120: Thigh_Left
-    100122: Thigh_Right
-    100124: Thumb_1_Left
-    100126: Thumb_1_Right
-    100128: Thumb_2_Left
-    100130: Thumb_2_Right
-    100132: //RootNode
+    100004: //RootNode
+    100006: back
+    100008: Badge
+    100010: Body
+    100012: Collar_Bone_Left
+    100014: Collar_Bone_Right
+    100016: CTRL_Ankle_Left
+    100018: CTRL_Ankle_Right
+    100020: CTRL_Chest
+    100022: CTRL_Collar_Left
+    100024: CTRL_Collar_Right
+    100026: CTRL_Elbow_Left
+    100028: CTRL_Elbow_Right
+    100030: CTRL_Global
+    100032: CTRL_Knee_Left
+    100034: CTRL_Knee_Right
+    100036: CTRL_Neck
+    100038: CTRL_Pelvis
+    100040: CTRL_Thigh_Left
+    100042: CTRL_Thigh_Right
+    100044: CTRL_Wing_1_Left
+    100046: CTRL_Wing_1_Right
+    100048: CTRL_Wing_2_Left
+    100050: CTRL_Wing_2_Right
+    100052: CTRL_Wrist_Left
+    100054: CTRL_Wrist_Right
+    100056: Elbow_Left
+    100058: Elbow_Right
+    100060: Foot_Left
+    100062: Foot_Right
+    100064: Head
+    100066: Jaw_Base
+    100068: Knee_Left
+    100070: Knee_Right
+    100072: left
+    100074: Leg_Left
+    100076: Leg_Right
+    100078: Middle_1_Left
+    100080: Middle_1_Right
+    100082: Middle_2_Left
+    100084: Middle_2_Right
+    100086: Neck
+    100088: Pelvis
+    100090: Point_1_Left
+    100092: Point_1_Right
+    100094: Point_2_Left
+    100096: Point_2_Right
+    100098: Ring_1_Left
+    100100: Ring_1_Right
+    100102: Ring_2_Left
+    100104: Ring_2_Right
+    100106: Shoulder_Left
+    100108: Shoulder_Right
+    100110: Spine_1
+    100112: Spine_2
+    100114: Spine_3
+    100116: Spine_4
+    100118: Spine_Main
+    100120: Spine_Main1
+    100122: Thigh_Left
+    100124: Thigh_Right
+    100126: Thumb_1_Left
+    100128: Thumb_1_Right
+    100130: Thumb_2_Left
+    100132: Thumb_2_Right
     100134: Tiny_1_Left
     100136: Tiny_1_Right
     100138: Tiny_2_Left
@@ -90,71 +90,71 @@ ModelImporter:
     100164: Wrist_Right
     400000: Ankle_Left
     400002: Ankle_Right
-    400004: back
-    400006: Badge
-    400008: Body
-    400010: Collar_Bone_Left
-    400012: Collar_Bone_Right
-    400014: CTRL_Ankle_Left
-    400016: CTRL_Ankle_Right
-    400018: CTRL_Chest
-    400020: CTRL_Collar_Left
-    400022: CTRL_Collar_Right
-    400024: CTRL_Elbow_Left
-    400026: CTRL_Elbow_Right
-    400028: CTRL_Global
-    400030: CTRL_Knee_Left
-    400032: CTRL_Knee_Right
-    400034: CTRL_Neck
-    400036: CTRL_Pelvis
-    400038: CTRL_Thigh_Left
-    400040: CTRL_Thigh_Right
-    400042: CTRL_Wing_1_Left
-    400044: CTRL_Wing_1_Right
-    400046: CTRL_Wing_2_Left
-    400048: CTRL_Wing_2_Right
-    400050: CTRL_Wrist_Left
-    400052: CTRL_Wrist_Right
-    400054: Elbow_Left
-    400056: Elbow_Right
-    400058: Foot_Left
-    400060: Foot_Right
-    400062: Head
-    400064: Jaw_Base
-    400066: Knee_Left
-    400068: Knee_Right
-    400070: left
-    400072: Leg_Left
-    400074: Leg_Right
-    400076: Middle_1_Left
-    400078: Middle_1_Right
-    400080: Middle_2_Left
-    400082: Middle_2_Right
-    400084: Neck
-    400086: Pelvis
-    400088: Point_1_Left
-    400090: Point_1_Right
-    400092: Point_2_Left
-    400094: Point_2_Right
-    400096: Ring_1_Left
-    400098: Ring_1_Right
-    400100: Ring_2_Left
-    400102: Ring_2_Right
-    400104: Shoulder_Left
-    400106: Shoulder_Right
-    400108: Spine_1
-    400110: Spine_2
-    400112: Spine_3
-    400114: Spine_4
-    400116: Spine_Main
-    400118: Spine_Main1
-    400120: Thigh_Left
-    400122: Thigh_Right
-    400124: Thumb_1_Left
-    400126: Thumb_1_Right
-    400128: Thumb_2_Left
-    400130: Thumb_2_Right
-    400132: //RootNode
+    400004: //RootNode
+    400006: back
+    400008: Badge
+    400010: Body
+    400012: Collar_Bone_Left
+    400014: Collar_Bone_Right
+    400016: CTRL_Ankle_Left
+    400018: CTRL_Ankle_Right
+    400020: CTRL_Chest
+    400022: CTRL_Collar_Left
+    400024: CTRL_Collar_Right
+    400026: CTRL_Elbow_Left
+    400028: CTRL_Elbow_Right
+    400030: CTRL_Global
+    400032: CTRL_Knee_Left
+    400034: CTRL_Knee_Right
+    400036: CTRL_Neck
+    400038: CTRL_Pelvis
+    400040: CTRL_Thigh_Left
+    400042: CTRL_Thigh_Right
+    400044: CTRL_Wing_1_Left
+    400046: CTRL_Wing_1_Right
+    400048: CTRL_Wing_2_Left
+    400050: CTRL_Wing_2_Right
+    400052: CTRL_Wrist_Left
+    400054: CTRL_Wrist_Right
+    400056: Elbow_Left
+    400058: Elbow_Right
+    400060: Foot_Left
+    400062: Foot_Right
+    400064: Head
+    400066: Jaw_Base
+    400068: Knee_Left
+    400070: Knee_Right
+    400072: left
+    400074: Leg_Left
+    400076: Leg_Right
+    400078: Middle_1_Left
+    400080: Middle_1_Right
+    400082: Middle_2_Left
+    400084: Middle_2_Right
+    400086: Neck
+    400088: Pelvis
+    400090: Point_1_Left
+    400092: Point_1_Right
+    400094: Point_2_Left
+    400096: Point_2_Right
+    400098: Ring_1_Left
+    400100: Ring_1_Right
+    400102: Ring_2_Left
+    400104: Ring_2_Right
+    400106: Shoulder_Left
+    400108: Shoulder_Right
+    400110: Spine_1
+    400112: Spine_2
+    400114: Spine_3
+    400116: Spine_4
+    400118: Spine_Main
+    400120: Spine_Main1
+    400122: Thigh_Left
+    400124: Thigh_Right
+    400126: Thumb_1_Left
+    400128: Thumb_1_Right
+    400130: Thumb_2_Left
+    400132: Thumb_2_Right
     400134: Tiny_1_Left
     400136: Tiny_1_Right
     400138: Tiny_2_Left
@@ -215,7 +215,7 @@ ModelImporter:
     clipAnimations:
     - serializedVersion: 16
       name: ThunderEnemyWalkFlyAttack
-      takeName: Thunder_2.5 (Walk_Fly_Attack_New_New)
+      takeName: Thunder_2.7 (Walk_Fly_Attack_New_New_Updated)
       firstFrame: 1
       lastFrame: 60
       wrapMode: 0
@@ -237,7 +237,7 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.6309341
+      - time: 0.6691972
         functionName: SetIsAttackingAnimation
         data: 
         objectReferenceParameter: {instanceID: 0}

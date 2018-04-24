@@ -9,6 +9,8 @@ public class ThunderEnemyAI : MonoBehaviour
     public float minRange = 5.0f;
     public float maxRange = 10.0f;
 
+    private float damageAmount = 10.0f;
+
     public Transform target;
     private GameObject Player;
     public GameObject ThunderAttackPrefab;
@@ -53,10 +55,7 @@ public class ThunderEnemyAI : MonoBehaviour
     {
         //transform.LookAt(target);
         Vector3 relativePos = target.position - transform.position;
-        Quaternion rotation = Quaternion.LookRotation(relativePos);
-
-        //rotation.x = 0;
-        //rotation.z = 0;
+        Quaternion rotation = Quaternion.LookRotation(relativePos);    
 
         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, rotationSpeed * Time.deltaTime);
     }
@@ -72,7 +71,7 @@ public class ThunderEnemyAI : MonoBehaviour
         thunderAnimator.SetBool("isIdle", false);
         GameObject attack = (GameObject)Instantiate(ThunderAttackPrefab);
         attack.transform.position = ThunderAttackSpawnPoint.position;
-        attack.transform.rotation = this.transform.rotation;
+        attack.transform.GetChild(0).transform.rotation = this.transform.rotation;
         Vector3 direction = Player.transform.position - this.transform.position;
         attack.GetComponent<ThunderLightAttack>().SetAttackDirection(direction);
         
@@ -84,4 +83,15 @@ public class ThunderEnemyAI : MonoBehaviour
         thunderAnimator.SetBool("isAttacking", true);
 
     }
+
+    //Damage detection
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            other.GetComponent<Player_health>().takedmg(damageAmount);
+        }
+    }
+
+
 }
