@@ -29,6 +29,11 @@ public class FireDmg : MonoBehaviour {
                 col.GetComponent<EnemyHealth>().TakeDamage(30f);
             }
 
+            if(col.CompareTag("ThunderEnemy"))
+            {
+                col.GetComponent<ThunderEnemyHealth>().TakeDamage(30f);
+            }
+
             if (col.CompareTag("Crystal"))
             {
                 Debug.Log("Broke");

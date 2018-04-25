@@ -11,6 +11,8 @@ public class ThunderEnemyAI : MonoBehaviour
 
     private float damageAmount = 10.0f;
 
+    private bool isAttacking = false;
+
     public Transform target;
     private GameObject Player;
     public GameObject ThunderAttackPrefab;
@@ -41,6 +43,12 @@ public class ThunderEnemyAI : MonoBehaviour
         {
             LookPlayer();
             ThunderAttack();
+            if(isAttacking)
+            {
+                DamagePlayer();
+            }
+            
+            
         }
         //Follow and Attack the player if between min and max range
         else if(distanceBetweenPlayer > minRange && distanceBetweenPlayer <= maxRange)
@@ -48,6 +56,10 @@ public class ThunderEnemyAI : MonoBehaviour
             LookPlayer();
             FollowPlayer();
             ThunderAttack();
+            if (isAttacking)
+            {
+                DamagePlayer();
+            }
         }
 
 	}
@@ -69,29 +81,34 @@ public class ThunderEnemyAI : MonoBehaviour
     {
         thunderAnimator.SetBool("willAttack", true);
         thunderAnimator.SetBool("isIdle", false);
-        GameObject attack = (GameObject)Instantiate(ThunderAttackPrefab);
-        attack.transform.position = ThunderAttackSpawnPoint.position;
-        attack.transform.GetChild(0).transform.rotation = this.transform.rotation;
-        Vector3 direction = Player.transform.position - this.transform.position;
-        attack.GetComponent<ThunderLightAttack>().SetAttackDirection(direction);
+        if(isAttacking)
+        {
+            GameObject attack = (GameObject)Instantiate(ThunderAttackPrefab);
+            attack.transform.position = ThunderAttackSpawnPoint.position;
+            attack.transform.GetChild(0).transform.rotation = this.transform.rotation;
+            Vector3 direction = Player.transform.position - this.transform.position;
+            attack.GetComponent<ThunderLightAttack>().SetAttackDirection(direction);
+        }
         
+
+
     }
+
+    
 
     public void SetIsAttackingAnimation()
     {
+        isAttacking = true;
         thunderAnimator.SetBool("willAttack", false);
         thunderAnimator.SetBool("isAttacking", true);
+        
 
     }
 
     //Damage detection
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            other.GetComponent<Player_health>().takedmg(damageAmount);
-        }
+    private void DamagePlayer()
+    {        
+         Player.GetComponent<Player_health>().takedmg(damageAmount * Time.deltaTime);
     }
-
 
 }
