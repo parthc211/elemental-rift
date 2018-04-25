@@ -19,11 +19,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 597fbd14e67af3c428fd76e97fb1bae4, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8968022a2ea6cd342a1c8b771ef99f97, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ColorControl:
-        m_Texture: {fileID: 2800000, guid: a63dde1a7640d9944b5894c619ea2ccd, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2e93fd79c9c54834cb297c1701bd7a05, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -74,10 +74,10 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
-    - _WaveScale: 0.07
+    - _WaveScale: 0.02
     - _ZWrite: 1
     m_Colors:
     - WaveSpeed: {r: 19, g: 9, b: -16, a: -7}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _horizonColor: {r: 0.23137255, g: 0.73333335, b: 0.83137256, a: 0.5019608}
+    - _horizonColor: {r: 0, g: 0.83448267, b: 1, a: 0}
