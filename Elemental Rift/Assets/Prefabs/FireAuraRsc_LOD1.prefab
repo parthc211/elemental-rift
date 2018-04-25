@@ -642,8 +642,9 @@ GameObject:
   - component: {fileID: 4685439945998956}
   - component: {fileID: 95850562822195882}
   - component: {fileID: 135716897768992496}
+  - component: {fileID: 205215475046294330}
   m_Layer: 2
-  m_Name: FireAuraRsc
+  m_Name: FireAuraRsc_LOD1
   m_TagString: FireAura
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2015,7 +2016,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1506830686083418}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 403.23, y: -22.848618, z: -395.86}
+  m_LocalPosition: {x: 705.242, y: 147.09, z: 171.54033}
   m_LocalScale: {x: 200, y: 200, z: 200}
   m_Children:
   - {fileID: 4628521436301922}
@@ -5078,3 +5079,22 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.04
   m_Center: {x: 0, y: 0.02, z: 0}
+--- !u!205 &205215475046294330
+LODGroup:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1506830686083418}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0.010093307, z: 0}
+  m_Size: 0.020186618
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LODs:
+  - screenRelativeHeight: 0.7967083
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.1731716
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1
