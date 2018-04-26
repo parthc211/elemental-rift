@@ -89,7 +89,6 @@ public class AttackSystem : MonoBehaviour {
 
     void Freeze()
     {
-
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit))
         {

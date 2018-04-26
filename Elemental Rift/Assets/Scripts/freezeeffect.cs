@@ -9,7 +9,7 @@ public class freezeeffect : MonoBehaviour {
     private GameObject parentObj;
 	// Use this for initialization
 	void Start () {
-		
+
 	}
 	
 	// Update is called once per frame
