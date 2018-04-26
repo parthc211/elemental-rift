@@ -12,6 +12,16 @@ public class ThunderEnemyHealth : MonoBehaviour {
 
     private GameObject player;
 
+    public Transform thunderDeadVFXSpawnPoint;
+    public GameObject ThunderDeadVFXPrefab;
+
+    public SkinnedMeshRenderer bodySkinMesh;
+    public SkinnedMeshRenderer wingsSkinMesh;
+    public SkinnedMeshRenderer badgeSkinMesh;
+    public Material[] bodyDamageMaterials;
+    public Material[] wingsDamageMaterials;
+    public Material badgeDamageMaterial;
+
 	void Start ()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -31,7 +41,45 @@ public class ThunderEnemyHealth : MonoBehaviour {
     public void TakeDamage(float damageAmount)
     {
         thunderHealth -= damageAmount;
+
+        //Check for death condition
+        CheckThunderDead();
     }
 
     //TODO: enemy death
+    void CheckThunderDead()
+    {
+        if(thunderHealth <= 0)
+        {
+            //Change the material
+            ChangeMaterialOnDead();
+
+            //Instantiate the lighthning VFX
+            //GameObject light = (GameObject)Instantiate(ThunderDeadVFXPrefab);
+            //light.transform.position = thunderDeadVFXSpawnPoint.position;
+            //Destroy(light, 5f);
+
+
+            //Disable the Thunder Enemy AI amd the thunder mesh renderer script
+
+            //Instantiate the smoke VFX
+
+            //After some time drop the crystal
+
+            //Destroy the Enemy
+
+        }
+    }
+
+    void ChangeMaterialOnDead()
+    {
+        //Change the body materials
+        bodySkinMesh.materials = bodyDamageMaterials;
+
+        //Change the wings materials
+        wingsSkinMesh.materials = wingsDamageMaterials;
+
+        //Change the badge Material
+        badgeSkinMesh.material = badgeDamageMaterial;
+    }
 }
