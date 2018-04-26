@@ -16,6 +16,11 @@ public class DisablePyramid : MonoBehaviour {
     public GameObject Obj8;
     public GameObject Obj9;
     public GameObject Obj10;
+    public GameObject Obj11;
+    public GameObject Obj12;
+    public GameObject Obj13;
+    public GameObject Obj14;
+    public GameObject Obj15;
 
     // Use this for initialization
     void Start () {
@@ -33,6 +38,12 @@ public class DisablePyramid : MonoBehaviour {
         if(col.gameObject.tag=="Player")
         {
             Pyramid.SetActive(false);
+            Obj11.SetActive(false);
+            Obj12.SetActive(false);
+            Obj13.SetActive(false);
+            Obj14.SetActive(false);
+            Obj15.SetActive(false);
+
             Obj1.SetActive(true);
             Obj2.SetActive(true);
             Obj3.SetActive(true);

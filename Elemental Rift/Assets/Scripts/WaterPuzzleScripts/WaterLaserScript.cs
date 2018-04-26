@@ -43,6 +43,7 @@ public class WaterLaserScript : MonoBehaviour {
     
     void Start () {
 
+        
         laser.SetActive(false);
         leftPane.SetActive(false);
         rightPane.SetActive(false);
