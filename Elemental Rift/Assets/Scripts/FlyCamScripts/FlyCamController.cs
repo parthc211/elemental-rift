@@ -7,11 +7,13 @@ public class FlyCamController : MonoBehaviour {
 
     public GameObject FlyCam;
     public GameObject Player;
+    public GameObject Canvas;
 
 
 	void Start () {
-		
-	}
+
+
+    }
 
     void Update() {
 
@@ -23,6 +25,7 @@ public class FlyCamController : MonoBehaviour {
             //Debug.Log("Flycam Reached");
             Player.SetActive(true);
             FlyCam.SetActive(false);
+            Canvas.SetActive(true);
         }
     
 		
