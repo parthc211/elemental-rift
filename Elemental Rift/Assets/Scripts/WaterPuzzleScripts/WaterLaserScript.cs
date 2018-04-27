@@ -67,6 +67,7 @@ public class WaterLaserScript : MonoBehaviour {
             WaterBase.GetComponent<QuickDoor>().openDoor = true;
             ThePillar.GetComponent<QuickDoor>().openDoor = true;
             TheWater.GetComponent<QuickDoor>().openDoor = true;
+            WaterBase.GetComponent<QuickDoor>().openDoor = true;
             Flag_ExecutedOnce = true;
             Flag_ExecuteAfterSomeSeconds = true;
             tempTimer = timer;

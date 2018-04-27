@@ -28,8 +28,10 @@ public class TreeEnemyAI : MonoBehaviour {
     {
         target = GameObject.FindGameObjectWithTag("Player").transform;
         treeAnim = GetComponent<Animator>();
-        treeAnim.SetBool("isIdle", true);
-	}
+        AnimatorStateInfo treeStateInfo = treeAnim.GetCurrentAnimatorStateInfo(0);
+        treeAnim.Play(treeStateInfo.fullPathHash, -1, Random.Range(0f, 1f));
+        
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -39,7 +41,7 @@ public class TreeEnemyAI : MonoBehaviour {
 
         //Distance between Tree Enemy and Player
         distanceBewteenPlayer = Vector3.Distance(target.position, this.transform.position);
-
+        
         if(distanceBewteenPlayer <= minRange)
         {
             LookPlayer();
@@ -49,6 +51,7 @@ public class TreeEnemyAI : MonoBehaviour {
         else
         {
             treeAnim.SetBool("isIdle", true);
+            treeAnim.SetBool("isAttacking", false);
             if(poisonGasObject != null)
             {
                 Destroy(poisonGasObject);
