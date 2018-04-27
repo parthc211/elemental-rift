@@ -40,6 +40,8 @@ TagManager:
   - LaserTarget
   - Crystal
   - ThunderEnemy
+  - TreeEnemy
+  - Note
   layers:
   - Default
   - TransparentFX
