@@ -9,6 +9,8 @@ public class DrawRayLine : MonoBehaviour
     public string EnterTag;
     public string ExitTag;
 
+    public float laserDamage = 10.0f;
+
     public GameObject target;
     private GameObject hitObject;
     bool hitting = false;
@@ -76,6 +78,11 @@ public class DrawRayLine : MonoBehaviour
                     //lineRender.SetPosition(1, rayInfo.point);
                     //lineRender.SetPosition(2, reflectInfo.point);
                 }
+                else if (reflectInfo.transform.tag == "ThunderEnemy")
+                {
+                    reflectInfo.collider.GetComponent<ThunderEnemyHealth>().TakeDamage(laserDamage * Time.deltaTime);
+                }
+
                 else if (hitting)
                 {
                     //hitObject.SendMessage(ExitTag);
@@ -113,6 +120,11 @@ public class DrawRayLine : MonoBehaviour
             //}
         }
 
+        //if(rayInfo.collider.tag == "ThunderEnemy")
+        //{
+        //    Debug.Log("Hit thunder enemy");
+        //    //rayInfo.collider.GetComponent<ThunderEnemyHealth>().TakeDamage(laserDamage * Time.deltaTime);
+        //}
         
         //Debug.DrawRay(transform.position, rayOG.GetPoint(5) - transform.position, Color.red);
         //Debug.DrawRay(rayInfo.point, reflectVec, Color.blue);

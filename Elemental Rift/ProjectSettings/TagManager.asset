@@ -39,7 +39,7 @@ TagManager:
   - EarthSpell
   - LaserTarget
   - Crystal
-  - TreeEnemy
+  - ThunderEnemy
   layers:
   - Default
   - TransparentFX

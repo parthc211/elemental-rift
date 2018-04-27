@@ -8,12 +8,14 @@ public class TreeFreeze : MonoBehaviour {
     private bool treeFreeze = false;
     private float freezeTimer = 5f;
 
+    private Animator treeAnim;
+
    // public Transform freezeSpawnPosition;
     //public GameObject FreezeSpellPrefab;
 
 	void Start ()
     {
-		
+        treeAnim = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -27,6 +29,7 @@ public class TreeFreeze : MonoBehaviour {
                 treeFreeze = false;
                 freezeTimer = 5f;
                 GetComponent<TreeEnemyAI>().enabled = true;
+                treeAnim.enabled = true;
 
             }
         }
@@ -40,6 +43,7 @@ public class TreeFreeze : MonoBehaviour {
         {
             treeFreeze = true;
             GetComponent<TreeEnemyAI>().enabled = false;
+            treeAnim.enabled = false;
         }
     }
 }
