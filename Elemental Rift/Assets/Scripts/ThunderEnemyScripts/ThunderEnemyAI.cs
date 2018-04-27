@@ -58,8 +58,21 @@ public class ThunderEnemyAI : MonoBehaviour
             ThunderAttack();
             if (isAttacking)
             {
+                //GameObject attack = (GameObject)Instantiate(ThunderAttackPrefab);
+                //attack.transform.position = ThunderAttackSpawnPoint.position;
+                //attack.transform.GetChild(0).transform.rotation = this.transform.rotation;
+                //Vector3 direction = Player.transform.position - this.transform.position;
+                //attack.GetComponent<ThunderLightAttack>().SetAttackDirection(direction);
                 DamagePlayer();
             }
+        }
+
+        else
+        {
+            isAttacking = false;
+            thunderAnimator.SetBool("willAttack", false);
+            thunderAnimator.SetBool("isIdle", true);
+            thunderAnimator.SetBool("isAttacking", false);
         }
 
 	}
@@ -79,10 +92,18 @@ public class ThunderEnemyAI : MonoBehaviour
 
     private void ThunderAttack()
     {
-        thunderAnimator.SetBool("willAttack", true);
-        thunderAnimator.SetBool("isIdle", false);
-        if(isAttacking)
+        if(!isAttacking)
         {
+            thunderAnimator.SetBool("willAttack", true);
+            thunderAnimator.SetBool("isAttacking", false);
+            thunderAnimator.SetBool("isIdle", false);
+        }
+        else
+        {
+            thunderAnimator.SetBool("willAttack", false);
+            thunderAnimator.SetBool("isAttacking", true);
+            thunderAnimator.SetBool("isIdle", false);
+
             GameObject attack = (GameObject)Instantiate(ThunderAttackPrefab);
             attack.transform.position = ThunderAttackSpawnPoint.position;
             attack.transform.GetChild(0).transform.rotation = this.transform.rotation;
@@ -100,6 +121,7 @@ public class ThunderEnemyAI : MonoBehaviour
     {
         isAttacking = true;
         thunderAnimator.SetBool("willAttack", false);
+        thunderAnimator.SetBool("isIdle", false);
         thunderAnimator.SetBool("isAttacking", true);
         
 

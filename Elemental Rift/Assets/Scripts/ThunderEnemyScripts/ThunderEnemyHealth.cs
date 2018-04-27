@@ -28,12 +28,16 @@ public class ThunderEnemyHealth : MonoBehaviour {
     public Material[] wingsDamageMaterials;
     public Material badgeDamageMaterial;
 
+    private bool crystalSpawned;
+
 	void Start ()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         healthBar.maxValue = thunderHealth;
         //allChildren = GetComponentsInChildren<Transform>();
-	}
+        crystalSpawned = false;
+
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -56,7 +60,7 @@ public class ThunderEnemyHealth : MonoBehaviour {
     //TODO: enemy death
     IEnumerator CheckThunderDead()
     {
-        if(thunderHealth <= 0)
+        if (thunderHealth <= 0)
         {
             //Disable the Enemy Ai script
             GetComponent<ThunderEnemyAI>().enabled = false;
@@ -72,23 +76,28 @@ public class ThunderEnemyHealth : MonoBehaviour {
             //Change the material
             ChangeMaterialOnDead();
 
-            
+
 
             //Instantiate the smoke VFX
             GameObject smoke = (GameObject)Instantiate(ThunderAfterDeadVFXPrefab);
-            Vector3 spawnPosition = new Vector3(transform.position.x, transform.position.y + 3.0f, transform.position.z);
+            Vector3 spawnPosition = new Vector3(transform.position.x, transform.position.y + 1.0f, transform.position.z);
             smoke.transform.position = spawnPosition;
             Destroy(smoke, 5f);
 
             //Disable the thunder mesh    
-            for (int i = 0; i<transform.childCount; ++i)
+            for (int i = 0; i < transform.childCount; ++i)
             {
                 transform.GetChild(i).gameObject.SetActive(false);
             }
 
-            //After some time drop the crystal
-            GameObject crystal = (GameObject)Instantiate(CrystralPrefab);
-            crystal.transform.position = spawnPosition;
+            if (!crystalSpawned)
+            {
+                //After some time drop the crystal
+                GameObject crystal = (GameObject)Instantiate(CrystralPrefab);
+                crystal.transform.position = spawnPosition;
+                crystalSpawned = true;
+            }
+        
 
             yield return new WaitForSeconds(2.0f);
 

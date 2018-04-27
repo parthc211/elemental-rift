@@ -15,9 +15,9 @@ public class gameover : MonoBehaviour {
 		
 	}
 
-    private void OnTriggerEnter(Collider other)
+    void OnCollisionEnter(Collision other)
     {
-        if(other.tag == "Player")
+        if(other.gameObject.tag == "Player")
         {
             SceneManager.LoadScene("Final_GDCScreen");
         }

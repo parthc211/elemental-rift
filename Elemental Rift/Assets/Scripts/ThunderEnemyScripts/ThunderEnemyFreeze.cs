@@ -28,6 +28,8 @@ public class ThunderEnemyFreeze : MonoBehaviour {
                 freezeTimer = resetFreezeTimer;
                 GetComponent<ThunderEnemyAI>().enabled = true;
                 thunderAnim.enabled = true;
+                //thunderAnim.SetBool("isIdle", true);
+
             }
         }
 	}
