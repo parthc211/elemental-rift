@@ -31,7 +31,7 @@ public class FireDmg : MonoBehaviour {
 
             if(col.CompareTag("ThunderEnemy"))
             {
-                col.GetComponent<ThunderEnemyHealth>().TakeDamage(30f);
+                col.GetComponent<ThunderEnemyHealth>().TakeDamage(10f);
             }
 
             if (col.CompareTag("Crystal"))
