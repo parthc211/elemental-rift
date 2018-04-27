@@ -1761,9 +1761,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 537f3307078ae974ba6f94ca22e85de8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minRange: 10
   poisonGasPrefab: {fileID: 1816684928016624, guid: 2d9fb26d9bc01004e909c9ca47d0aa53,
     type: 2}
   poisonSpawnPosition: {fileID: 4449801191386292}
+  BlurrGameObject: {fileID: 0}
 --- !u!136 &136740400786603206
 CapsuleCollider:
   m_ObjectHideFlags: 1

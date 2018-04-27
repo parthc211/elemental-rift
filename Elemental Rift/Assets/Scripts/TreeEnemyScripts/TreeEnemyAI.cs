@@ -6,15 +6,21 @@ public class TreeEnemyAI : MonoBehaviour {
 
     // Use this for initialization
     private float distanceBewteenPlayer;
-    private float minRange = 10.0f;
+    public float minRange = 10.0f;
     private float rotationSpeed = 5.0f;
 
+    private GameObject poisonGasObject;
+
     private bool poisonActive = false;
+
+    private bool blurrVision = false;
+    private float blurrTimer =2.0f;
 
     public GameObject poisonGasPrefab;
     public Transform poisonSpawnPosition;
 
     private Transform target;
+    public GameObject BlurrGameObject;
 
     private Animator treeAnim;
 
@@ -38,12 +44,33 @@ public class TreeEnemyAI : MonoBehaviour {
         {
             LookPlayer();
             PoisonAttack();
+            //BlurPlayerVision();
         }
         else
         {
             treeAnim.SetBool("isIdle", true);
+            if(poisonGasObject != null)
+            {
+                Destroy(poisonGasObject);
+            }
+
+            //Destroy()
             poisonActive = false;
+
+            //Check for blurr timer
+            if (blurrVision)
+            {
+                blurrTimer -= Time.deltaTime;
+                if (blurrTimer <= 0)
+                {
+                    blurrVision = false;
+                    blurrTimer = 2.0f;
+                    BlurrGameObject.SetActive(false);
+                }
+            }
         }
+
+        
         
 	}
     void LookPlayer()
@@ -64,16 +91,21 @@ public class TreeEnemyAI : MonoBehaviour {
         {
             treeAnim.SetBool("isAttacking", true);
             treeAnim.SetBool("isIdle", false);
-            
-        }
-        
-    }
 
+        }        
+    }
     public void InstantiatePoisonVFX()
     {
-        GameObject poison = (GameObject)Instantiate(poisonGasPrefab);
-        poison.transform.position = poisonSpawnPosition.transform.position;
-        Destroy(poison, 5f);
+        poisonGasObject = (GameObject)Instantiate(poisonGasPrefab);
+        poisonGasObject.transform.position = poisonSpawnPosition.transform.position;
+        
+        //Destroy(poison, 5f);
         poisonActive = true;
+    }
+
+    public void BlurrPlayerVision()
+    {
+        blurrVision = true;
+        BlurrGameObject.SetActive(true);
     }
 }
