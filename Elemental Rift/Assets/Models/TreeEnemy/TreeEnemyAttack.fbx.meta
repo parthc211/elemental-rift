@@ -1,0 +1,250 @@
+fileFormatVersion: 2
+guid: 9ffd1e6c1eb62e642a78b2febe56dd2d
+timeCreated: 1524705825
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Ankle_Left
+    100002: Ankle_Right
+    100004: back
+    100006: Badge
+    100008: Body
+    100010: Collar_Bone_Left
+    100012: Collar_Bone_Right
+    100014: CTRL_Chest
+    100016: CTRL_Elbow_Left
+    100018: CTRL_Elbow_Right
+    100020: CTRL_Foot_Left
+    100022: CTRL_Foot_Right
+    100024: CTRL_Global
+    100026: CTRL_Knee_Left
+    100028: CTRL_Knee_Right
+    100030: CTRL_Neck
+    100032: CTRL_Pelvis
+    100034: CTRL_Shoulder_Left
+    100036: CTRL_Shoulder_Right
+    100038: CTRL_Spine
+    100040: CTRL_Thigh_Left
+    100042: CTRL_Thigh_Right
+    100044: CTRL_Wrist_Left
+    100046: CTRL_Wrist_Right
+    100048: Elbow_Left
+    100050: Elbow_Right
+    100052: Head
+    100054: Jaw_Base
+    100056: Knee_Left
+    100058: Knee_Right
+    100060: Middle_1_Left
+    100062: Middle_1_Right
+    100064: Middle_2_Left
+    100066: Middle_2_Right
+    100068: Mouth
+    100070: Neck
+    100072: Pelvis
+    100074: Point_1_Left
+    100076: Point_1_Right
+    100078: Point_2_Left
+    100080: Point_2_Right
+    100082: Shoulder_Left
+    100084: Shoulder_Right
+    100086: Spine_1
+    100088: Spine_2
+    100090: Spine_3
+    100092: Spine_Main
+    100094: Thigh_Left
+    100096: Thigh_Right
+    100098: Tiny_1_Left
+    100100: Tiny_1_Right
+    100102: Tiny_2_Left
+    100104: Tiny_2_Right
+    100106: //RootNode
+    100108: Wrist_Left
+    100110: Wrist_Right
+    400000: Ankle_Left
+    400002: Ankle_Right
+    400004: back
+    400006: Badge
+    400008: Body
+    400010: Collar_Bone_Left
+    400012: Collar_Bone_Right
+    400014: CTRL_Chest
+    400016: CTRL_Elbow_Left
+    400018: CTRL_Elbow_Right
+    400020: CTRL_Foot_Left
+    400022: CTRL_Foot_Right
+    400024: CTRL_Global
+    400026: CTRL_Knee_Left
+    400028: CTRL_Knee_Right
+    400030: CTRL_Neck
+    400032: CTRL_Pelvis
+    400034: CTRL_Shoulder_Left
+    400036: CTRL_Shoulder_Right
+    400038: CTRL_Spine
+    400040: CTRL_Thigh_Left
+    400042: CTRL_Thigh_Right
+    400044: CTRL_Wrist_Left
+    400046: CTRL_Wrist_Right
+    400048: Elbow_Left
+    400050: Elbow_Right
+    400052: Head
+    400054: Jaw_Base
+    400056: Knee_Left
+    400058: Knee_Right
+    400060: Middle_1_Left
+    400062: Middle_1_Right
+    400064: Middle_2_Left
+    400066: Middle_2_Right
+    400068: Mouth
+    400070: Neck
+    400072: Pelvis
+    400074: Point_1_Left
+    400076: Point_1_Right
+    400078: Point_2_Left
+    400080: Point_2_Right
+    400082: Shoulder_Left
+    400084: Shoulder_Right
+    400086: Spine_1
+    400088: Spine_2
+    400090: Spine_3
+    400092: Spine_Main
+    400094: Thigh_Left
+    400096: Thigh_Right
+    400098: Tiny_1_Left
+    400100: Tiny_1_Right
+    400102: Tiny_2_Left
+    400104: Tiny_2_Right
+    400106: //RootNode
+    400108: Wrist_Left
+    400110: Wrist_Right
+    2000000: back
+    2100000: Base_Mat
+    2100002: Badge_Mat
+    4300000: Body
+    4300002: Badge
+    7400000: TreeEnemyAttack
+    9500000: //RootNode
+    13700000: Badge
+    13700002: Body
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: TreeEnemyAttack
+      takeName: Tree_3.0 (Attack_Initial)
+      firstFrame: 1
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.4415107
+        functionName: InstantiatePoisonVFX
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.62940854
+        functionName: BlurrPlayerVision
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
