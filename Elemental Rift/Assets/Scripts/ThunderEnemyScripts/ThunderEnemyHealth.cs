@@ -92,9 +92,10 @@ public class ThunderEnemyHealth : MonoBehaviour {
 
             if (!crystalSpawned)
             {
+                Vector3 spawnPosition1 = new Vector3(transform.position.x, transform.position.y + 2.5f, transform.position.z);
                 //After some time drop the crystal
                 GameObject crystal = (GameObject)Instantiate(CrystralPrefab);
-                crystal.transform.position = spawnPosition;
+                crystal.transform.position = spawnPosition1;
                 crystalSpawned = true;
             }
         

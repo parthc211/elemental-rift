@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class Player_health : MonoBehaviour {
 
     public GameObject healthBar;
-
+    public GameObject playerHealth;
     public float health = 100.0f;
 
     private Image healthBarImage;
@@ -39,10 +39,7 @@ public class Player_health : MonoBehaviour {
         lastCheckPointPos = transform.position;
         lastCheckPointRot = transform.rotation;
 
-        if (isTutorial)
-        {
-            health = 100.0f;
-        }
+        
         //lastCheckpoint = gameObject.transform;
         //Debug.Log(lastCheckpoint.position);
        // Debug.Log(lastCheckpoint.rotation);
@@ -53,7 +50,19 @@ public class Player_health : MonoBehaviour {
         float healthRatio = health / 100.0f;
         healthBarImage.fillAmount = healthRatio;
 
-        
+        if (isTutorial)
+        {
+            health = 100.0f;
+        }
+
+        if(health >= 100)
+        {
+            playerHealth.SetActive(false);
+        }
+        else
+        {
+            playerHealth.SetActive(true);
+        }
 
         DamageSplatter();
         
