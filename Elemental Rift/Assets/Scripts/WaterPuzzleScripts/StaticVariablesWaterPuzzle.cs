@@ -6,4 +6,5 @@ public static class StaticVariablesWaterPuzzle {
 
 
       public static bool stoneRubbled = false;
+    public static bool crystalDestroyed = false;
 }

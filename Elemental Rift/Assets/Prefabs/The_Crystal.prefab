@@ -38,8 +38,7 @@ GameObject:
   - component: {fileID: 33142825680334934}
   - component: {fileID: 23732177653001900}
   - component: {fileID: 135606384241647180}
-  - component: {fileID: 114652020703401254}
-  - component: {fileID: 114133634027184242}
+  - component: {fileID: 114088858117390728}
   - component: {fileID: 54135897135792542}
   m_Layer: 11
   m_Name: The_Crystal
@@ -55,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1807221301197250}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -211.4432, y: 131.03, z: 704.55786}
   m_LocalScale: {x: 12, y: 12, z: 12}
   m_Children:
   - {fileID: 4468833770317144}
@@ -130,7 +129,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 122
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!108 &108299755600824384
 Light:
   m_ObjectHideFlags: 1
@@ -167,7 +166,7 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &114133634027184242
+--- !u!114 &114088858117390728
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -175,25 +174,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1807221301197250}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac4e2b1a51acef341b45367ce713eb7d, type: 3}
+  m_Script: {fileID: 11500000, guid: b8e79f24c1406584c893dc907ce8a2c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114652020703401254
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1807221301197250}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0a8be56f515d974f9e54ea869871f8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hoverX: 0
-  hoverY: 2
-  hoverZ: 0
-  speed: 5
-  offset: 0
 --- !u!135 &135606384241647180
 SphereCollider:
   m_ObjectHideFlags: 1
