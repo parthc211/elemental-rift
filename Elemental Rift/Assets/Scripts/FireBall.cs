@@ -42,7 +42,7 @@ public class FireBall : MonoBehaviour {
         {
             colliderObj = (GameObject)Instantiate(blastCollider, transform.position, transform.rotation);
             GameObject ae = (GameObject)Instantiate(afterEffect, finalPos, Quaternion.identity);
-            Destroy(ae, 1.5f);
+            Destroy(ae, 3.0f);
             Destroy(gameObject);
         }
     }
