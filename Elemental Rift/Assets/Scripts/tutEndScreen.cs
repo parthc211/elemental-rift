@@ -5,11 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class tutEndScreen : MonoBehaviour {
 
-    public GameObject screen1;
-    public GameObject screen2;
-    public GameObject screen3;
-    public GameObject screen4;
 
+    public GameObject crystal_broken;
     bool isBegin = false;
     float timer = 0.0f;
 
@@ -25,31 +22,37 @@ public class tutEndScreen : MonoBehaviour {
         {
             timer += Time.deltaTime;
 
-            if(timer >= 2 && timer < 6)
-            {
-                screen1.SetActive(true);
-                gameObject.GetComponent<AudioSource>().Play();
-            } 
-            if (timer >= 6 && timer < 10)
-            {
-                screen1.SetActive(false);
-                screen2.SetActive(true);
-            }
-            if (timer >= 10 && timer < 14)
-            {
-                screen2.SetActive(false);
-                screen3.SetActive(true);
-            }
+            Destroy(gameObject);
+            
+            
+            //ADD CUTSCENE
+            
+            //if (timer >= 2 && timer < 6)
+            //{
+                
+            //    screen1.SetActive(true);
+            //    gameObject.GetComponent<AudioSource>().Play();
+            //} 
+            //if (timer >= 6 && timer < 10)
+            //{
+            //    screen1.SetActive(false);
+            //    screen2.SetActive(true);
+            //}
+            //if (timer >= 10 && timer < 14)
+            //{
+            //    screen2.SetActive(false);
+            //    screen3.SetActive(true);
+            //}
 
-            if (timer >= 14 && timer < 18)
-            {
-                screen3.SetActive(false);
-                screen4.SetActive(true);
-            }
-            if(timer >= 18)
-            {
-                SceneManager.LoadScene("Prototype_Earth_Level");
-            }
+            //if (timer >= 14 && timer < 18)
+            //{
+            //    screen3.SetActive(false);
+            //    screen4.SetActive(true);
+            //}
+            //if(timer >= 18)
+            //{
+            //    SceneManager.LoadScene("Prototype_Earth_Level");
+            //}
 
         }
     }
@@ -57,5 +60,11 @@ public class tutEndScreen : MonoBehaviour {
     public void StartEndScreen()
     {
         isBegin = true;
+        
+    }
+
+    private void OnDestroy()
+    {
+        Instantiate(crystal_broken, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
     }
 }
