@@ -28,7 +28,8 @@ public class Player_health : MonoBehaviour {
     private Resource_Manager resource_manager;
 
     public bool isTutorial = false;
-    
+
+    public GameObject deathScreen;
 	// Use this for initialization
 	void Start () {
         healthBarImage = healthBar.GetComponent<Image>();
@@ -161,6 +162,11 @@ public class Player_health : MonoBehaviour {
             resource_manager.earthRune = 0;
             resource_manager.airRune = 0;
             health = 100.0f;
+
+            deathScreen.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            Time.timeScale = 0.0f;
         }
     }
 
@@ -189,4 +195,17 @@ public class Player_health : MonoBehaviour {
         //Debug.Log(lastCheckpoint.position);
        // Debug.Log(lastCheckpoint.rotation);
     }
+
+    public void respawn()
+    {
+        deathScreen.SetActive(false);
+        
+        Time.timeScale = 1.0f;
+    }
+
+    public void exit()
+    {
+        SceneManager.LoadScene("ElementalRiftMainScreen");
+    }
+
 }
