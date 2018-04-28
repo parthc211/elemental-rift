@@ -9,7 +9,7 @@ public class Earth_Puzzle1 : MonoBehaviour {
     public GameObject lightGlow;
     public GameObject mover;
 
-    bool isActive = false;
+    public bool isActive = false;
 
     void Start () {
         
@@ -27,6 +27,8 @@ public class Earth_Puzzle1 : MonoBehaviour {
         rightPane.SetActive(true);
         lightGlow.SetActive(true);
         mover.GetComponent<QuickMover>().isMoving = true;
+        isActive = true;
+
     }
 
     public void OnRayStay()

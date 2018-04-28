@@ -83,6 +83,11 @@ public class DrawRayLine : MonoBehaviour
                     reflectInfo.collider.GetComponent<ThunderEnemyHealth>().TakeDamage(laserDamage * Time.deltaTime);
                 }
 
+                else if (reflectInfo.transform.tag == "RockEnemy")
+                {
+                    reflectInfo.collider.GetComponent<EnemyHealth>().TakeDamage(laserDamage * Time.deltaTime);
+                }
+
                 else if (hitting)
                 {
                     //hitObject.SendMessage(ExitTag);

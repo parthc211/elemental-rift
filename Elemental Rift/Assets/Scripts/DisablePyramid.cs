@@ -22,6 +22,12 @@ public class DisablePyramid : MonoBehaviour {
     public GameObject Obj14;
     public GameObject Obj15;
 
+    public GameObject SoundWaterFallBig;
+    public GameObject SoundWaterFallSmall;
+    public GameObject Player;
+
+    public AudioClip SoundInsideAmbient;
+
     // Use this for initialization
     void Start () {
 		
@@ -55,6 +61,18 @@ public class DisablePyramid : MonoBehaviour {
             Obj9.SetActive(true);
             Obj10.SetActive(true);
             gameObject.SetActive(false);
+
+
+
+
+            SoundWaterFallBig.GetComponent<AudioSource>().enabled = false;
+            SoundWaterFallSmall.GetComponent<AudioSource>().enabled = false;
+            Player.GetComponent<AudioSource>().clip = SoundInsideAmbient;
+            Player.GetComponent<AudioSource>().Play();
+
+
+
+
         }
         
     }
