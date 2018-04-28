@@ -6,10 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject playButton;
-    public GameObject instructionsButton;
-    public GameObject creditsButton;
-    public GameObject exitButton;
+    public AudioSource buttonClickAudio;
 
     public GameObject mainScreen;
     public GameObject instructionsScreen;
@@ -61,5 +58,10 @@ public class GameManager : MonoBehaviour
         mainScreen.SetActive(true);
         instructionsScreen.SetActive(false);
         creditsScreen.SetActive(false);
+    }
+
+    public void OnButtonClickAudio()
+    {
+        buttonClickAudio.Play();
     }
 }
