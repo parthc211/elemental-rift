@@ -18,6 +18,6 @@ public class restart : MonoBehaviour {
 
     public void RestartLevel()
     {
-        SceneManager.LoadScene("Level_Arena");
+        SceneManager.LoadScene("ElementalRiftMainScreen");
     }
 }
