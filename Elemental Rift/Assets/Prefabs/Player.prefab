@@ -1084,6 +1084,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1852201190789168
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4395092393505588}
+  - component: {fileID: 33560887609237110}
+  - component: {fileID: 23868583552341702}
+  m_Layer: 2
+  m_Name: Plane
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
 --- !u!1 &1860122167599700
 GameObject:
   m_ObjectHideFlags: 1
@@ -1437,14 +1454,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1636094835528880}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 702.88, y: 149.03, z: 193.8}
+  m_LocalRotation: {x: 0, y: -0.6622278, z: 0, w: 0.7493026}
+  m_LocalPosition: {x: -106.7, y: 138.44, z: 687}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4350550139370824}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -82.94, z: 0}
 --- !u!4 &4246218642553992
 Transform:
   m_ObjectHideFlags: 1
@@ -1565,13 +1582,14 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1407307744715832}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.46, z: 0.11}
+  m_LocalPosition: {x: -0.000010969117, y: 0.58815, z: 0.077059984}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4464142867029904}
   - {fileID: 4469541237005000}
   - {fileID: 4809864168613540}
   - {fileID: 4350896620110724}
+  - {fileID: 4395092393505588}
   m_Father: {fileID: 4237221918736426}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1590,6 +1608,19 @@ Transform:
   m_Father: {fileID: 4350550139370824}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 19.973001, y: 180.00002, z: 0}
+--- !u!4 &4395092393505588
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1852201190789168}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -0, y: -0.15, z: 0.44}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_Children: []
+  m_Father: {fileID: 4350550139370824}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!4 &4418723700549880
 Transform:
   m_ObjectHideFlags: 1
@@ -2433,6 +2464,40 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!23 &23868583552341702
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1852201190789168}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: baea27b157a64254e9d08e25f76e6fa5, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!33 &33056268023780758
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -2440,6 +2505,13 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1081067629447544}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!33 &33560887609237110
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1852201190789168}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &33990015100573710
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -2701,11 +2773,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
+  playerHealth: {fileID: 0}
   health: 100
   splatterImage: {fileID: 0}
   splatterColor: {r: 0.99264705, g: 0, b: 0, a: 0.913}
   splatterSpeed: 2
   fadeHealth: {fileID: 0}
+  isTutorial: 0
 --- !u!114 &114838678840963218
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2756,19 +2830,19 @@ MonoBehaviour:
     type: 2}
   knockbackDecal: {fileID: 119913072992913838, guid: 4bccaaf0f9efcf44ca5faeea02b98f85,
     type: 2}
-  fireBallSprite: {fileID: 21300000, guid: 7b0c52e0267fa7349a0bf3d9a2db4a93, type: 3}
-  deactFireBallSprite: {fileID: 21300000, guid: 785c54a8ebd18514b820932eccfe4f3f,
+  fireBallSprite: {fileID: 21300000, guid: 149341076d71b2e44a8ef643214f0677, type: 3}
+  deactFireBallSprite: {fileID: 21300000, guid: bcd4494b4282df747b3f5a320c21f36e,
     type: 3}
-  weldSprite: {fileID: 21300000, guid: 0113cc3a691f39746aaa320b1a522c54, type: 3}
-  deactWeldSprite: {fileID: 21300000, guid: b1ea0eaeecec92a409208ef4cd4be900, type: 3}
-  freezeSprite: {fileID: 21300000, guid: 8104477f3ec5bc74b88ea4d6cc548f5e, type: 3}
-  deactFreezeSprite: {fileID: 21300000, guid: 84d4748fd70abe845b05e86d80fc3688, type: 3}
-  shieldSprite: {fileID: 21300000, guid: cd2077f10d7863f48bf8afd1b619d7d9, type: 3}
-  deactShieldSprite: {fileID: 21300000, guid: 813ef50b4b3740f4b82fb3821bf2d1f5, type: 3}
-  eqSprite: {fileID: 21300000, guid: 0220062728178c7469b3ee4dc2288f4e, type: 3}
-  deactEQSprite: {fileID: 21300000, guid: b5841f0c54d8dbd49b18466b0c043e53, type: 3}
-  telekSprite: {fileID: 21300000, guid: a445a0fca0af8c748bd52c1ff0f4aadf, type: 3}
-  deactTelekSprite: {fileID: 21300000, guid: 561003332aa84d14fa19a3e42afaa942, type: 3}
+  weldSprite: {fileID: 21300000, guid: ab039ba700705ec4d9b0884de3606cba, type: 3}
+  deactWeldSprite: {fileID: 21300000, guid: 51bda02d23748164c8c3479678b6af2e, type: 3}
+  freezeSprite: {fileID: 21300000, guid: 3be1fb2ec5380e84da586fe0f6a50d97, type: 3}
+  deactFreezeSprite: {fileID: 21300000, guid: a61d85ff14abdc640b971c88093cc680, type: 3}
+  shieldSprite: {fileID: 21300000, guid: 2f9797502ac8b7342ac691c24a0e67db, type: 3}
+  deactShieldSprite: {fileID: 21300000, guid: e9e61868f1414bf46b56a9842adc569f, type: 3}
+  eqSprite: {fileID: 21300000, guid: 1ee807af87d89024fac485d40700479c, type: 3}
+  deactEQSprite: {fileID: 21300000, guid: c391f549dbff1f24da36aec928bc1539, type: 3}
+  telekSprite: {fileID: 21300000, guid: 8e832075284674044ba17ef2d3a63f6a, type: 3}
+  deactTelekSprite: {fileID: 21300000, guid: 585c74f421e43484bbb0052f4f8fc2b2, type: 3}
   singleTargetReticle: {fileID: 21300000, guid: 18c2c4bd61b64d946b92b49f2cae6b69,
     type: 3}
   outOfRangeReticle: {fileID: 21300000, guid: 729b01ddc226e11499a9d3a7f213c505, type: 3}
@@ -2783,10 +2857,10 @@ MonoBehaviour:
   telekImage: {fileID: 0}
   spellLogoImage: {fileID: 0}
   uiBck: {fileID: 0}
-  uiBckFire: {fileID: 21300000, guid: bda7d9e3c491be84f98221895b9a4031, type: 3}
-  uiBckWater: {fileID: 21300000, guid: 1df8c04fa6f4f8a40a1b03bdae3137b4, type: 3}
-  uiBckEarth: {fileID: 21300000, guid: 60a7f897d6c727f42a31b01bb6f24cfa, type: 3}
-  uiBckAir: {fileID: 21300000, guid: 346120facccbe794d8b0cfebd4dd076d, type: 3}
+  uiBckFire: {fileID: 21300000, guid: a9a546892ace9fe4fa24c7263d0d68a6, type: 3}
+  uiBckWater: {fileID: 21300000, guid: a9a546892ace9fe4fa24c7263d0d68a6, type: 3}
+  uiBckEarth: {fileID: 21300000, guid: a9a546892ace9fe4fa24c7263d0d68a6, type: 3}
+  uiBckAir: {fileID: 21300000, guid: a9a546892ace9fe4fa24c7263d0d68a6, type: 3}
   wheelFireballBack: {fileID: 0}
   wheelWeldBack: {fileID: 0}
   wheelFreezeBack: {fileID: 0}
@@ -2809,8 +2883,10 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 9c5accb989e3bd14197b3680e9bca8de, type: 2}
   waterHandL:
   - {fileID: 2100000, guid: 892ce45b8d866b8468e19aae2f4bbdc1, type: 2}
-  airHandR: []
-  airHandL: []
+  airHandR:
+  - {fileID: 2100000, guid: 4b7389522a518624b914dbc35f9f3ec4, type: 2}
+  airHandL:
+  - {fileID: 2100000, guid: 931c233bce119744cbe2a7013ef3ed6e, type: 2}
   HandLeft: {fileID: 1207660873463026}
   HandRight: {fileID: 1158579798151748}
   weldTool: {fileID: 0}

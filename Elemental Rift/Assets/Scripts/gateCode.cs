@@ -7,6 +7,8 @@ public class gateCode : MonoBehaviour {
     public GameObject torch1;
     public GameObject torch2;
 
+   
+
     // Use this for initialization
     void Start () {
 		
@@ -17,6 +19,7 @@ public class gateCode : MonoBehaviour {
 		if(torch1.GetComponent<FlameTorch>().isActive && torch2.GetComponent<FlameTorch>().isActive)
         {
             GetComponent<QuickMover>().isMoving = true;
+            
         }
 	}
 }

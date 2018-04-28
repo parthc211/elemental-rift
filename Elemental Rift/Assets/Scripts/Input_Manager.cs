@@ -650,18 +650,19 @@ public class Input_Manager : MonoBehaviour {
             spellLogoImage.color = Color.Lerp(Color.white, Color.gray, Mathf.PingPong(Time.time, 1));
             //uiBck.sprite = uiBckFire;
             //uiBck.fillAmount = 1;
-
+           
             weldTool.SetActive(false);
             fireballTool.SetActive(true);
             freezeTool.SetActive(false);
             shieldTool.SetActive(false);
             telekTool.SetActive(false);
             eqTool.SetActive(false);
-
             
+
         }
         else if (fireBallFlag == true)
         {
+            Debug.Log("fbC");
             spellLogoImage.sprite = deactFireBallSprite;
             spellLogoImage.color = Color.gray;
            // uiBck.sprite = uiBckFire;
