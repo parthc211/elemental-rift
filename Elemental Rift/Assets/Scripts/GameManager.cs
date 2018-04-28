@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
 
     public void OnClickPlayButton()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Level_Arena");
     }
 
     public void OnClickInstructionButton()
