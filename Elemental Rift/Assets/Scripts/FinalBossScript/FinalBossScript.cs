@@ -13,6 +13,10 @@ public class FinalBossScript : MonoBehaviour {
     public GameObject Portal;
 
 
+    public GameObject Player;
+
+    public AudioClip SoundBossAmbient;
+
     // Use this for initialization
     void Start () {
 		
@@ -30,7 +34,9 @@ public class FinalBossScript : MonoBehaviour {
                 //Debug.Log("Boss Activated!");
                 ThunderEnemyEntryModel.SetActive(false);
                 ThunderEnemyMainModel.SetActive(true);
- 
+                Player.GetComponent<AudioSource>().clip = SoundBossAmbient;
+                Player.GetComponent<AudioSource>().Play();
+
             }
         }
 
