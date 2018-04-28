@@ -22,9 +22,9 @@ GameObject:
   - component: {fileID: 95953653893180096}
   - component: {fileID: 65386590408078488}
   - component: {fileID: 82109319641682578}
-  - component: {fileID: 114727465741463010}
   - component: {fileID: 54572835566391512}
   - component: {fileID: 64630386088811472}
+  - component: {fileID: 114045028397455762}
   m_Layer: 0
   m_Name: Crystal_Broken
   m_TagString: Crystal
@@ -564,7 +564,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114727465741463010
+--- !u!114 &114045028397455762
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -572,10 +572,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1281610853365980}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4bc20b42b4b4114c8134ec7ca43022e, type: 3}
+  m_Script: {fileID: 11500000, guid: 4f1ef0ed0a1f3f847b353a417791dcae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screen1: {fileID: 0}
-  screen2: {fileID: 0}
-  screen3: {fileID: 0}
-  screen4: {fileID: 0}
