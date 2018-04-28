@@ -19,9 +19,7 @@ public class freezeobj : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        Debug.Log("what is this faltu nonsense!");
-
-		if(isActive == false)
+        if(isActive == false)
         {
             timer += Time.deltaTime;
             if(timer >= 5.0f)

@@ -35,6 +35,11 @@ public class RockEnemyAI : MonoBehaviour
     {
         fov = GetComponent<FieldOfView>();
         enemyAnim = GetComponent<Animator>();
+        
+        //Set random animation start frame
+        AnimatorStateInfo rockStateInfo = enemyAnim.GetCurrentAnimatorStateInfo(0);
+        enemyAnim.Play(rockStateInfo.fullPathHash, -1, Random.Range(0f, 1f));
+
         Player = GameObject.FindGameObjectWithTag("Player");
         enemyPatrol = GetComponent<RockEnemyPatrol>();
 

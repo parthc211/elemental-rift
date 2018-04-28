@@ -10,10 +10,11 @@ public class FinalBossScript : MonoBehaviour {
 
     public GameObject ThunderEnemyEntryModel;
     public GameObject ThunderEnemyMainModel;
-   
+    public GameObject Portal;
 
-	// Use this for initialization
-	void Start () {
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -29,7 +30,7 @@ public class FinalBossScript : MonoBehaviour {
                 //Debug.Log("Boss Activated!");
                 ThunderEnemyEntryModel.SetActive(false);
                 ThunderEnemyMainModel.SetActive(true);
-
+ 
             }
         }
 

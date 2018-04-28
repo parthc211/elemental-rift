@@ -1,0 +1,261 @@
+fileFormatVersion: 2
+guid: a7362a89f689b5c41a4e36e034226d44
+timeCreated: 1524873240
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Ankle_Left
+    100002: Ankle_Right
+    100004: Arm_Left
+    100006: Arm_Right
+    100008: Body
+    100010: Chin
+    100012: Collar_Bone_Left
+    100014: Collar_Bone_Right
+    100016: CTRL_Ankle_Left
+    100018: CTRL_Ankle_Right
+    100020: CTRL_Back
+    100022: CTRL_Chest
+    100024: CTRL_Collar_Left
+    100026: CTRL_Collar_Right
+    100028: CTRL_Elbow_Left
+    100030: CTRL_Elbow_Right
+    100032: CTRL_Global
+    100034: CTRL_Index_Left
+    100036: CTRL_Index_Right
+    100038: CTRL_Jaw
+    100040: CTRL_Knee_Left
+    100042: CTRL_Knee_Right
+    100044: CTRL_Middle_Left
+    100046: CTRL_Middle_Right
+    100048: CTRL_Neck
+    100050: CTRL_Pelvis
+    100052: CTRL_Thigh_Left
+    100054: CTRL_Thigh_Right
+    100056: CTRL_Thumb_Left
+    100058: CTRL_Thumb_Right
+    100060: CTRL_Wrist_Left
+    100062: CTRL_Wrist_Right
+    100064: Elbow_Left
+    100066: Elbow_Right
+    100068: Foot_Left
+    100070: Foot_Right
+    100072: Head
+    100074: //RootNode
+    100076: Index_1_Left
+    100078: Index_1_Right
+    100080: Index_2_Left
+    100082: Index_2_Right
+    100084: Jaw
+    100086: Jaw_Base
+    100088: Knee_Left
+    100090: Knee_Right
+    100092: Leg_Left
+    100094: Leg_Right
+    100096: Middle_1_Left
+    100098: Middle_1_Right
+    100100: Middle_2_Left
+    100102: Middle_2_Right
+    100104: Neck
+    100106: Pelvis
+    100108: Shoulder_Left
+    100110: Shoulder_Right
+    100112: Spine_1
+    100114: Spine_2
+    100116: Spine_3
+    100118: Spine_4
+    100120: Spine_Main
+    100122: Thigh_Left
+    100124: Thigh_Right
+    100126: Thumb_1_Left
+    100128: Thumb_1_Right
+    100130: Thumb_2_Left
+    100132: Thumb_2_Right
+    100134: Wrist_Left
+    100136: Wrist_Right
+    400000: Ankle_Left
+    400002: Ankle_Right
+    400004: Arm_Left
+    400006: Arm_Right
+    400008: Body
+    400010: Chin
+    400012: Collar_Bone_Left
+    400014: Collar_Bone_Right
+    400016: CTRL_Ankle_Left
+    400018: CTRL_Ankle_Right
+    400020: CTRL_Back
+    400022: CTRL_Chest
+    400024: CTRL_Collar_Left
+    400026: CTRL_Collar_Right
+    400028: CTRL_Elbow_Left
+    400030: CTRL_Elbow_Right
+    400032: CTRL_Global
+    400034: CTRL_Index_Left
+    400036: CTRL_Index_Right
+    400038: CTRL_Jaw
+    400040: CTRL_Knee_Left
+    400042: CTRL_Knee_Right
+    400044: CTRL_Middle_Left
+    400046: CTRL_Middle_Right
+    400048: CTRL_Neck
+    400050: CTRL_Pelvis
+    400052: CTRL_Thigh_Left
+    400054: CTRL_Thigh_Right
+    400056: CTRL_Thumb_Left
+    400058: CTRL_Thumb_Right
+    400060: CTRL_Wrist_Left
+    400062: CTRL_Wrist_Right
+    400064: Elbow_Left
+    400066: Elbow_Right
+    400068: Foot_Left
+    400070: Foot_Right
+    400072: Head
+    400074: //RootNode
+    400076: Index_1_Left
+    400078: Index_1_Right
+    400080: Index_2_Left
+    400082: Index_2_Right
+    400084: Jaw
+    400086: Jaw_Base
+    400088: Knee_Left
+    400090: Knee_Right
+    400092: Leg_Left
+    400094: Leg_Right
+    400096: Middle_1_Left
+    400098: Middle_1_Right
+    400100: Middle_2_Left
+    400102: Middle_2_Right
+    400104: Neck
+    400106: Pelvis
+    400108: Shoulder_Left
+    400110: Shoulder_Right
+    400112: Spine_1
+    400114: Spine_2
+    400116: Spine_3
+    400118: Spine_4
+    400120: Spine_Main
+    400122: Thigh_Left
+    400124: Thigh_Right
+    400126: Thumb_1_Left
+    400128: Thumb_1_Right
+    400130: Thumb_2_Left
+    400132: Thumb_2_Right
+    400134: Wrist_Left
+    400136: Wrist_Right
+    2100000: Minion_Base_Mat
+    2100002: Minion_Highlight_Mat
+    2100004: Minion_Eyes_Mat
+    2100006: Minion_Badge_Mat
+    4300000: Body
+    7400000: RockEnemyIdleFixed
+    9500000: //RootNode
+    13700000: Body
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: RockEnemyIdleFixed
+      takeName: Minion_Remastered_4.0
+      firstFrame: 1
+      lastFrame: 120
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

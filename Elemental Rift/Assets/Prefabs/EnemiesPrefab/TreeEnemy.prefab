@@ -1189,9 +1189,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1263013067035212}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 581.8568, y: 149.4018, z: 481.73648}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalRotation: {x: -0, y: -0.6669384, z: -0, w: 0.74511284}
+  m_LocalPosition: {x: 544.6634, y: 148.64, z: 364.53918}
+  m_LocalScale: {x: 3.8666685, y: 3.8666685, z: 3.8666685}
   m_Children:
   - {fileID: 4888132046935008}
   - {fileID: 4850662967380316}
@@ -1200,7 +1200,7 @@ Transform:
   - {fileID: 4449801191386292}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -83.662, z: 0}
 --- !u!4 &4426653817263482
 Transform:
   m_ObjectHideFlags: 1
@@ -1761,7 +1761,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 537f3307078ae974ba6f94ca22e85de8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minRange: 10
+  minRange: 17
   poisonGasPrefab: {fileID: 1816684928016624, guid: 2d9fb26d9bc01004e909c9ca47d0aa53,
     type: 2}
   poisonSpawnPosition: {fileID: 4449801191386292}

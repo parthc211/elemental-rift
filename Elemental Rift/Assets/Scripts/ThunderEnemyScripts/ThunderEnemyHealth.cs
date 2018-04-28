@@ -7,7 +7,7 @@ public class ThunderEnemyHealth : MonoBehaviour {
 
     // Use this for initialization
     public float thunderHealth = 100f;
-
+    public GameObject Portal;
     public Slider healthBar;
 
     private GameObject player;
@@ -83,6 +83,8 @@ public class ThunderEnemyHealth : MonoBehaviour {
             Vector3 spawnPosition = new Vector3(transform.position.x, transform.position.y + 1.0f, transform.position.z);
             smoke.transform.position = spawnPosition;
             Destroy(smoke, 5f);
+
+            Portal.SetActive(true);
 
             //Disable the thunder mesh    
             for (int i = 0; i < transform.childCount; ++i)
