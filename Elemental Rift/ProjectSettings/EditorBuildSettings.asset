@@ -20,3 +20,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Cutscene.unity
     guid: 58fc47688525e6244a988a9efcfb98eb
+  - enabled: 0
+    path: Assets/Scenes/Research/Prototype_Earth_Level_FWD_NO_OPT.unity
+    guid: 728b6ef6d1132044a939425cd8aeddec
+  - enabled: 1
+    path: Assets/Scenes/Research/Prototype_Earth_Level_DFD_NO_OPT.unity
+    guid: 68c8b08a4c0230547b3ad24131ab193d
