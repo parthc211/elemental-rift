@@ -26,7 +26,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1096350870075458
 GameObject:
@@ -76,7 +76,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1704246233836548
 GameObject:
@@ -434,6 +434,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flamelight: {fileID: 1158424785034386}
   flame: {fileID: 1096350870075458}
+  isActive: 0
 --- !u!198 &198296214320111592
 ParticleSystem:
   m_ObjectHideFlags: 1

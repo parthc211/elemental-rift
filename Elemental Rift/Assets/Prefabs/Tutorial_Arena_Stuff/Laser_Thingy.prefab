@@ -93,7 +93,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1990210873035944
 GameObject:
@@ -422,3 +422,4 @@ MonoBehaviour:
   rightPane: {fileID: 1990210873035944}
   lightGlow: {fileID: 1336551001743062}
   mover: {fileID: 0}
+  isActive: 0
